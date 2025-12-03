@@ -13,10 +13,10 @@ export default function Home() {
             <span className="text-2xl font-bold text-foreground">Learne</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/login">
+            <Link href="https://app.learne.org/login">
               <Button variant="ghost">Log In</Button>
             </Link>
-            <Link href="/signup">
+            <Link href="https://app.learne.org/signup">
               <Button>Get Started</Button>
             </Link>
           </div>
@@ -43,12 +43,12 @@ export default function Home() {
           </p>
           
           <div className="flex items-center justify-center gap-4">
-            <Link href="/signup">
+            <Link href="https://app.learne.org/signup">
               <Button size="lg" className="text-lg px-8">
                 Start Learning Free
               </Button>
             </Link>
-            <Link href="/login">
+            <Link href="https://app.learne.org/login">
               <Button size="lg" variant="outline" className="text-lg px-8">
                 Sign In
               </Button>
@@ -107,7 +107,7 @@ export default function Home() {
           <p className="text-xl mb-8 opacity-90">
             Join thousands of students improving their English every day
           </p>
-          <Link href="/signup">
+          <Link href="https://app.learne.org/signup">
             <Button size="lg" variant="secondary" className="text-lg px-8">
               Create Free Account
             </Button>
