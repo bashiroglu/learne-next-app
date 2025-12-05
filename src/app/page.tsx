@@ -1,27 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/Navbar";
 import Link from "next/link";
 import { BookOpen, TrendingUp, Award, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <BookOpen className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-bold text-foreground">Learne</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="https://app.learne.org/login">
-              <Button variant="ghost">Log In</Button>
-            </Link>
-            <Link href="https://app.learne.org/signup">
-              <Button>Get Started</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
