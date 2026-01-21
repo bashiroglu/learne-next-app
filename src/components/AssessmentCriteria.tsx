@@ -195,8 +195,8 @@ export const AssessmentCriteria = () => {
         <h3 className="font-semibold text-foreground mb-4">Writing Criteria</h3>
         <Tabs defaultValue="task1" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="task1">Writing Task 1</TabsTrigger>
-            <TabsTrigger value="task2">Writing Task 2</TabsTrigger>
+            <TabsTrigger value="task1" className="cursor-pointer">Writing Task 1</TabsTrigger>
+            <TabsTrigger value="task2" className="cursor-pointer">Writing Task 2</TabsTrigger>
           </TabsList>
           
           <TabsContent value="task1">

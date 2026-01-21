@@ -13,6 +13,8 @@ import { convertListeningScore, convertReadingScore, calculateOverallBand } from
 import { Calculator } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const IELTSCalculatorPage = () => {
   const [testType, setTestType] = useState<'academic' | 'general'>('academic');
@@ -48,7 +50,9 @@ const IELTSCalculatorPage = () => {
   }, [listeningRaw, readingRaw, writingBand, speakingBand, testType]);
 
   return (
-    <div className="min-h-screen bg-background py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Navbar />
+      <div className="flex-1 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 animate-in fade-in slide-in-from-top duration-500">
@@ -73,6 +77,7 @@ const IELTSCalculatorPage = () => {
                 variant={testType === 'academic' ? 'default' : 'outline'}
                 onClick={() => setTestType('academic')}
                 size="sm"
+                className="cursor-pointer"
               >
                 Academic
               </Button>
@@ -80,6 +85,7 @@ const IELTSCalculatorPage = () => {
                 variant={testType === 'general' ? 'default' : 'outline'}
                 onClick={() => setTestType('general')}
                 size="sm"
+                className="cursor-pointer"
               >
                 General
               </Button>
@@ -152,7 +158,7 @@ const IELTSCalculatorPage = () => {
         {/* Score Conversion Tables */}
         <Card className="mt-6 p-6 shadow-xl border-border/50 animate-in fade-in duration-1000 delay-150">
           <Collapsible defaultOpen>
-            <CollapsibleTrigger className="flex items-center justify-between w-full group">
+            <CollapsibleTrigger className="flex items-center justify-between w-full group cursor-pointer">
               <h2 className="text-2xl font-semibold text-foreground">Score Conversion Tables</h2>
               <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
@@ -165,7 +171,7 @@ const IELTSCalculatorPage = () => {
         {/* Assessment Criteria */}
         <Card className="mt-6 p-6 shadow-xl border-border/50 animate-in fade-in duration-1000 delay-200">
           <Collapsible defaultOpen>
-            <CollapsibleTrigger className="flex items-center justify-between w-full group">
+            <CollapsibleTrigger className="flex items-center justify-between w-full group cursor-pointer">
               <h2 className="text-2xl font-semibold text-foreground">Assessment Criteria</h2>
               <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
@@ -191,6 +197,8 @@ const IELTSCalculatorPage = () => {
           <WritingCalculator />
         </div>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 };

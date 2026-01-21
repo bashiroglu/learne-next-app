@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { grammarTests } from "@/frontend-data/grammar_tests";
 import { grammarTopics } from "@/frontend-data/grammar_topics";
 
@@ -39,9 +40,9 @@ export default function GrammarOverviewPage() {
   }).filter(group => group.tests.length > 0);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <div className="container mx-auto px-4 py-8">
+      <div className="flex-1 container mx-auto px-4 py-8">
         <div className="mb-8 space-y-4">
           <h1 className="text-3xl font-bold tracking-tight">Grammar Library</h1>
           <p className="text-muted-foreground text-lg">
@@ -114,6 +115,7 @@ export default function GrammarOverviewPage() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

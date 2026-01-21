@@ -7,6 +7,8 @@ import { ArrowLeft, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import QuestionRenderer from "@/components/QuestionRenderer";
 import { grammarTests } from "@/frontend-data/grammar_tests";
 import { grammarQuestions } from "@/frontend-data/grammar_questions";
@@ -88,8 +90,12 @@ export default function GrammarTestPage({ params }: { params: Promise<{ "topic-s
 
   if (!test) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className="min-h-screen bg-background flex flex-col">
+        <Navbar />
+        <div className="flex-1 flex items-center justify-center">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+        <Footer />
       </div>
     );
   }
@@ -182,7 +188,9 @@ export default function GrammarTestPage({ params }: { params: Promise<{ "topic-s
 
   if (isFinished) {
     return (
-      <div className="min-h-screen bg-background p-8">
+      <div className="min-h-screen bg-background flex flex-col">
+        <Navbar />
+        <div className="flex-1 p-8">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="text-center space-y-6">
             <h1 className="text-3xl font-bold">Test Completed!</h1>
@@ -348,9 +356,11 @@ export default function GrammarTestPage({ params }: { params: Promise<{ "topic-s
           </div>
 
           <div className="flex justify-center pt-6 pb-12">
-            <Button onClick={() => router.push('/grammar')} size="lg">Back to Grammar Library</Button>
+            <Button onClick={() => router.push('/grammar')} size="lg" className="cursor-pointer">Back to Grammar Library</Button>
           </div>
         </div>
+        </div>
+        <Footer />
       </div>
     );
   }
@@ -358,12 +368,14 @@ export default function GrammarTestPage({ params }: { params: Promise<{ "topic-s
   if (!currentQuestion) return null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Navbar />
+      <div className="flex-1">
       <div className="container mx-auto px-4 py-6">
-        <Link href="/">
-          <Button variant="ghost" className="mb-2">
+        <Link href="/grammar">
+          <Button variant="ghost" className="mb-2 cursor-pointer">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Home
+            Back to Grammar
           </Button>
         </Link>
         <h1 className="text-2xl font-bold text-foreground mb-4">{test.title}</h1>
@@ -435,7 +447,7 @@ export default function GrammarTestPage({ params }: { params: Promise<{ "topic-s
                   key={index}
                   onClick={() => setCurrentQuestionIndex(index)}
                   className={cn(
-                    "w-10 h-10 rounded-md text-sm font-medium transition-colors",
+                    "w-10 h-10 rounded-md text-sm font-medium transition-colors cursor-pointer",
                     index === currentQuestionIndex
                       ? "bg-primary text-primary-foreground"
                       : answered
@@ -450,6 +462,8 @@ export default function GrammarTestPage({ params }: { params: Promise<{ "topic-s
           </div>
         </div>
       </main>
+      </div>
+      <Footer />
     </div>
   );
 }

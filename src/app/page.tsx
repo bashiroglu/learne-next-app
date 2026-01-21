@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { BookOpen, TrendingUp, Award, Sparkles } from "lucide-react";
 
@@ -100,12 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border/50 py-8">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} Learne. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
