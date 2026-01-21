@@ -1,12 +1,14 @@
 "use client";
 
+import { useState, useTransition } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Loader2 } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Skeleton } from "@/components/ui/skeleton";
 import type { ReadingCategory, ReadingArticle } from "@/types/reading";
 
 interface ReadingPageContentProps {
@@ -22,15 +24,20 @@ export function ReadingPageContent({
 }: ReadingPageContentProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [isPending, startTransition] = useTransition();
+  const [pendingCategory, setPendingCategory] = useState<string | null>(null);
 
   const handleCategoryChange = (value: string) => {
+    setPendingCategory(value);
     const params = new URLSearchParams(searchParams.toString());
     if (value === "all") {
       params.delete("category");
     } else {
       params.set("category", value);
     }
-    router.push(`/reading${params.toString() ? `?${params.toString()}` : ""}`);
+    startTransition(() => {
+      router.push(`/reading${params.toString() ? `?${params.toString()}` : ""}`);
+    });
   };
 
   return (
@@ -44,6 +51,9 @@ export function ReadingPageContent({
               className="px-4 py-2 text-sm cursor-pointer data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-sm"
             >
               All
+              {isPending && pendingCategory === "all" && (
+                <Loader2 className="ml-1.5 h-3.5 w-3.5 animate-spin" />
+              )}
             </TabsTrigger>
             {categories.map((category) => (
               <TabsTrigger
@@ -54,6 +64,9 @@ export function ReadingPageContent({
                 }`}
               >
                 {category.name}
+                {isPending && pendingCategory === category.slug && (
+                  <Loader2 className="ml-1.5 h-3.5 w-3.5 animate-spin" />
+                )}
               </TabsTrigger>
             ))}
           </TabsList>
@@ -61,7 +74,9 @@ export function ReadingPageContent({
       </div>
 
       {/* Articles Grid */}
-      {articles.length === 0 ? (
+      {isPending ? (
+        <ArticlesGridSkeleton />
+      ) : articles.length === 0 ? (
         <div className="text-center py-16">
           <BookOpen className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
           <p className="text-muted-foreground">No articles found for this category.</p>
@@ -118,5 +133,36 @@ function ArticleCard({ article }: { article: ReadingArticle }) {
         </Link>
       </CardFooter>
     </Card>
+  );
+}
+
+function ArticleCardSkeleton() {
+  return (
+    <Card className="overflow-hidden">
+      <Skeleton className="aspect-[4/3] rounded-none" />
+      <CardContent className="p-4">
+        <div className="mb-2">
+          <Skeleton className="h-5 w-full mb-1" />
+          <Skeleton className="h-5 w-3/4" />
+        </div>
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-6 w-20 rounded-full" />
+          <Skeleton className="h-4 w-16" />
+        </div>
+      </CardContent>
+      <CardFooter className="p-4 pt-0">
+        <Skeleton className="h-10 w-full" />
+      </CardFooter>
+    </Card>
+  );
+}
+
+function ArticlesGridSkeleton() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      {[...Array(6)].map((_, i) => (
+        <ArticleCardSkeleton key={i} />
+      ))}
+    </div>
   );
 }
