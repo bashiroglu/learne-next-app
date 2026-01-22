@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Revalidate every 12 hours (ISR - Incremental Static Regeneration)
+export const revalidate = 43200;
 
 const DEFAULT_LIMIT = 9;
 const VALID_LIMITS = [9, 18, 27, 36];

@@ -49,8 +49,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Revalidate every 12 hours (ISR - Incremental Static Regeneration)
+export const revalidate = 43200;
 
 export default async function ArticlePage({ params }: PageProps) {
   const { category, slug } = await params;
