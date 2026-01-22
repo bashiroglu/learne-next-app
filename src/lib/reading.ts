@@ -29,6 +29,7 @@ function transformArticle(article: Record<string, unknown>): ReadingArticle {
 
   return {
     id: article.id as string,
+    slug: article.slug as string,
     title: article.title as string,
     content: article.content as string,
     image_url: article.image_url as string | null,
@@ -45,7 +46,7 @@ export async function getReadingArticles(categorySlug?: string): Promise<Reading
   let query = supabase
     .from("reading_articles")
     .select(
-      "id, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
+      "id, slug, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
     )
     .eq("is_published", true)
     .is("cambridge_number", null)
@@ -78,7 +79,7 @@ export async function getArticleById(id: string): Promise<ReadingArticle | null>
   const { data, error } = await supabase
     .from("reading_articles")
     .select(
-      "id, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
+      "id, slug, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
     )
     .eq("id", id)
     .eq("is_published", true)
@@ -86,6 +87,24 @@ export async function getArticleById(id: string): Promise<ReadingArticle | null>
 
   if (error) {
     console.error("Error fetching article:", error);
+    return null;
+  }
+
+  return transformArticle(data);
+}
+
+export async function getArticleBySlug(slug: string): Promise<ReadingArticle | null> {
+  const { data, error } = await supabase
+    .from("reading_articles")
+    .select(
+      "id, slug, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
+    )
+    .eq("slug", slug)
+    .eq("is_published", true)
+    .single();
+
+  if (error) {
+    console.error("Error fetching article by slug:", error);
     return null;
   }
 
@@ -119,6 +138,37 @@ export async function getArticleHighlights(articleId: string): Promise<{
   };
 }
 
+export async function getAllArticleSlugs(): Promise<{ slug: string; categorySlug: string }[]> {
+  const { data, error } = await supabase
+    .from("reading_articles")
+    .select("slug, reading_categories:reading_categories!fk_reading_articles_category(slug)")
+    .eq("is_published", true)
+    .is("cambridge_number", null);
+
+  if (error) {
+    console.error("Error fetching article slugs:", error);
+    return [];
+  }
+
+  return (data || []).map((article) => {
+    // Handle reading_categories - may be array or object
+    let categorySlug = "general";
+    const rawCategories = article.reading_categories as unknown;
+
+    if (Array.isArray(rawCategories) && rawCategories.length > 0) {
+      categorySlug = (rawCategories[0] as { slug: string }).slug;
+    } else if (rawCategories && typeof rawCategories === "object" && "slug" in rawCategories) {
+      categorySlug = (rawCategories as { slug: string }).slug;
+    }
+
+    return {
+      slug: article.slug,
+      categorySlug,
+    };
+  });
+}
+
+// Keep old function for backwards compatibility
 export async function getAllArticleIds(): Promise<{ id: string; categorySlug: string }[]> {
   const { data, error } = await supabase
     .from("reading_articles")
@@ -132,7 +182,6 @@ export async function getAllArticleIds(): Promise<{ id: string; categorySlug: st
   }
 
   return (data || []).map((article) => {
-    // Handle reading_categories - may be array or object
     let slug = "general";
     const rawCategories = article.reading_categories as unknown;
 

@@ -10,6 +10,7 @@ export interface ReadingCategory {
 
 export interface ReadingArticle {
   id: string;
+  slug: string;
   title: string;
   content: string;
   image_url: string | null;

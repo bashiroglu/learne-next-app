@@ -128,7 +128,7 @@ function ArticleCard({ article }: { article: ReadingArticle }) {
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Link href={`/reading/${categorySlug}/${article.id}`} className="w-full">
+        <Link href={`/reading/${categorySlug}/${article.slug}`} className="w-full">
           <Button className="w-full cursor-pointer">Read</Button>
         </Link>
       </CardFooter>

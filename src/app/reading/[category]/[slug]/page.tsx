@@ -5,29 +5,29 @@ import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { getArticleById, getArticleHighlights, getAllArticleIds } from "@/lib/reading";
+import { getArticleBySlug, getArticleHighlights, getAllArticleSlugs } from "@/lib/reading";
 import { ArticleContent } from "./article-content";
 
 interface PageProps {
   params: Promise<{
     category: string;
-    id: string;
+    slug: string;
   }>;
 }
 
 // Generate static params for all articles
 export async function generateStaticParams() {
-  const articles = await getAllArticleIds();
+  const articles = await getAllArticleSlugs();
   return articles.map((article) => ({
     category: article.categorySlug,
-    id: article.id,
+    slug: article.slug,
   }));
 }
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  const article = await getArticleById(id);
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     return {
@@ -53,14 +53,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export const revalidate = 3600;
 
 export default async function ArticlePage({ params }: PageProps) {
-  const { category, id } = await params;
-  const article = await getArticleById(id);
+  const { category, slug } = await params;
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     notFound();
   }
 
-  const highlights = await getArticleHighlights(id);
+  const highlights = await getArticleHighlights(article.id);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/30 flex flex-col">
