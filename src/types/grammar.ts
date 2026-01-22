@@ -22,6 +22,7 @@ export interface GrammarTest {
     name: string;
     slug: string;
   } | null;
+  question_count?: number;
 }
 
 export interface GrammarQuestion {

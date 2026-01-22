@@ -20,18 +20,11 @@ export const metadata: Metadata = {
 // Revalidate every hour
 export const revalidate = 3600;
 
-interface PageProps {
-  searchParams: Promise<{ level?: string }>;
-}
-
-export default async function GrammarPage({ searchParams }: PageProps) {
-  const params = await searchParams;
-  const selectedLevel = params.level || null;
-
-  // Fetch data server-side
+export default async function GrammarPage() {
+  // Fetch all data server-side - filtering happens client-side
   const [topics, tests] = await Promise.all([
     getGrammarTopics(),
-    getGrammarTests(undefined, selectedLevel || undefined),
+    getGrammarTests(),
   ]);
 
   return (
@@ -42,7 +35,7 @@ export default async function GrammarPage({ searchParams }: PageProps) {
           <GrammarPageContent
             topics={topics}
             tests={tests}
-            selectedLevel={selectedLevel}
+            selectedLevel={null}
           />
         </Suspense>
       </div>

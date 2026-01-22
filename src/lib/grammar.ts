@@ -45,7 +45,7 @@ export async function getGrammarTests(topicSlug?: string, level?: string): Promi
   let query = supabase
     .from("grammar_tests")
     .select(
-      "id, topic_id, title, description, level, topic, duration, is_published, created_at, grammar_topics:grammar_topics!fk_grammar_tests_topic(id, name, slug)"
+      "id, topic_id, title, description, level, topic, duration, is_published, created_at, grammar_topics:grammar_topics!fk_grammar_tests_topic(id, name, slug), grammar_questions!fk_grammar_questions_test(count)"
     )
     .eq("is_published", true)
     .order("level");
@@ -74,7 +74,17 @@ export async function getGrammarTests(topicSlug?: string, level?: string): Promi
     return [];
   }
 
-  return (data || []).map(transformTest);
+  return (data || []).map((test) => {
+    const transformed = transformTest(test);
+    // Extract question count from the aggregated result
+    const questionData = test.grammar_questions as unknown;
+    if (Array.isArray(questionData) && questionData.length > 0) {
+      transformed.question_count = (questionData[0] as { count: number }).count;
+    } else {
+      transformed.question_count = 0;
+    }
+    return transformed;
+  });
 }
 
 export async function getGrammarTestBySlug(
