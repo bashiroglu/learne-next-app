@@ -4,7 +4,7 @@ import type { ReadingCategory, ReadingArticle, ArticleHighlight } from "@/types/
 export async function getReadingCategories(): Promise<ReadingCategory[]> {
   const { data, error } = await supabase
     .from("reading_categories")
-    .select("id, name, slug, description, display_order, is_special, color_class")
+    .select("id, name, slug, is_special")
     .order("display_order");
 
   if (error) {
@@ -12,7 +12,15 @@ export async function getReadingCategories(): Promise<ReadingCategory[]> {
     return [];
   }
 
-  return data || [];
+  return (data || []).map(category => ({
+    id: category.id as string,
+    name: category.name as string,
+    slug: category.slug as string,
+    description: null,
+    display_order: 0,
+    is_special: category.is_special as boolean,
+    color_class: null,
+  }));
 }
 
 // Helper to transform Supabase article data to our ReadingArticle type
@@ -46,7 +54,7 @@ export async function getReadingArticles(categorySlug?: string): Promise<Reading
   let query = supabase
     .from("reading_articles")
     .select(
-      "id, slug, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
+      "id, slug, title, image_url, word_count, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
     )
     .eq("is_published", true)
     .is("cambridge_number", null)
@@ -72,7 +80,30 @@ export async function getReadingArticles(categorySlug?: string): Promise<Reading
     return [];
   }
 
-  return (data || []).map(transformArticle);
+  return (data || []).map(article => {
+    const rawCategories = article.reading_categories as unknown;
+    let categories: { slug: string; name: string } | null = null;
+
+    if (Array.isArray(rawCategories) && rawCategories.length > 0) {
+      categories = rawCategories[0] as { slug: string; name: string };
+    } else if (rawCategories && typeof rawCategories === "object") {
+      categories = rawCategories as { slug: string; name: string };
+    }
+
+    return {
+      id: article.id as string,
+      slug: article.slug as string,
+      title: article.title as string,
+      content: "",
+      image_url: article.image_url as string | null,
+      word_count: article.word_count as number | null,
+      category_id: null,
+      display_order: 0,
+      is_published: true,
+      has_quiz: false,
+      reading_categories: categories,
+    };
+  });
 }
 
 // Paginated version for better performance
@@ -97,11 +128,11 @@ export async function getReadingArticlesPaginated(
     }
   }
 
-  // Build query for articles with count
+  // Build query for articles with count (optimized: only select needed fields)
   let query = supabase
     .from("reading_articles")
     .select(
-      "id, slug, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)",
+      "id, slug, title, image_url, word_count, reading_categories:reading_categories!fk_reading_articles_category(slug, name)",
       { count: "exact" }
     )
     .eq("is_published", true)
@@ -121,7 +152,30 @@ export async function getReadingArticlesPaginated(
   }
 
   return {
-    articles: (data || []).map(transformArticle),
+    articles: (data || []).map(article => {
+      const rawCategories = article.reading_categories as unknown;
+      let categories: { slug: string; name: string } | null = null;
+
+      if (Array.isArray(rawCategories) && rawCategories.length > 0) {
+        categories = rawCategories[0] as { slug: string; name: string };
+      } else if (rawCategories && typeof rawCategories === "object") {
+        categories = rawCategories as { slug: string; name: string };
+      }
+
+      return {
+        id: article.id as string,
+        slug: article.slug as string,
+        title: article.title as string,
+        content: "",
+        image_url: article.image_url as string | null,
+        word_count: article.word_count as number | null,
+        category_id: null,
+        display_order: 0,
+        is_published: true,
+        has_quiz: false,
+        reading_categories: categories,
+      };
+    }),
     totalCount: count || 0,
   };
 }

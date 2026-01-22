@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { GripVertical } from "lucide-react";
-import { Question } from "@/types";
+import { Question, MultiGapCorrectAnswer } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -19,6 +19,10 @@ interface QuestionRendererProps {
   isCorrect?: boolean;
   disabled?: boolean;
   externalLockedPositions?: boolean[];
+  // Multi-gap-fill specific props
+  gapStates?: ('correct' | 'incorrect' | 'unanswered' | 'revealed')[];
+  attempts?: number;
+  maxAttempts?: number;
 }
 
 const QuestionRenderer = ({
@@ -29,7 +33,10 @@ const QuestionRenderer = ({
   isValidated = false,
   isCorrect = false,
   disabled = false,
-  externalLockedPositions
+  externalLockedPositions,
+  gapStates,
+  attempts = 0,
+  maxAttempts = 5
 }: QuestionRendererProps) => {
   // Drag-drop state
   const [draggedWords, setDraggedWords] = useState<string[]>([]);
@@ -483,6 +490,95 @@ const QuestionRenderer = ({
               );
             }
             return null;
+          })}
+        </div>
+      </div>
+    );
+  }
+
+  if (question.type === "multi-gap-fill") {
+    const correctAnswerData = question.correctAnswer as unknown as MultiGapCorrectAnswer;
+    const gaps = correctAnswerData?.gaps || [];
+    const parts = question.question.split(/\[gap\]/gi);
+    const gapCount = parts.length - 1;
+    const currentAnswers = Array.isArray(answer) ? answer as string[] : new Array(gapCount).fill("");
+
+    const handleGapChange = (gapIndex: number, value: string) => {
+      // Only allow changes if gap is not correct/revealed
+      const gapState = gapStates?.[gapIndex];
+      if (gapState === 'correct' || gapState === 'revealed') return;
+
+      const newAnswers = [...currentAnswers];
+      newAnswers[gapIndex] = value;
+      onAnswer(newAnswers);
+    };
+
+    // Get the correct answer for a gap (first accepted answer)
+    const getCorrectAnswer = (gapIndex: number): string => {
+      const gap = gaps[gapIndex];
+      return gap?.accepted?.[0] || "";
+    };
+
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <p className="text-lg font-medium text-foreground">
+            Fill in the gaps with the correct words:
+          </p>
+          {attempts > 0 && !isValidated && (
+            <span className="text-sm font-medium px-3 py-1 rounded-full bg-muted text-muted-foreground">
+              Attempt {attempts}/{maxAttempts}
+            </span>
+          )}
+          {isValidated && isCorrect && (
+            <span className="text-sm font-medium px-3 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200">
+              All Correct!
+            </span>
+          )}
+          {isValidated && !isCorrect && (
+            <span className="text-sm font-medium px-3 py-1 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200">
+              Answers Revealed
+            </span>
+          )}
+        </div>
+
+        <div className="text-base leading-loose text-foreground">
+          {parts.map((part, index) => {
+            if (index >= gapCount) {
+              return <span key={index}>{part}</span>;
+            }
+
+            const gapState = gapStates?.[index];
+            const isGapCorrect = gapState === 'correct';
+            const isGapIncorrect = gapState === 'incorrect';
+            const isGapRevealed = gapState === 'revealed';
+            const isGapLocked = isGapCorrect || isGapRevealed;
+
+            // If revealed, show the correct answer
+            const displayValue = isGapRevealed
+              ? getCorrectAnswer(index)
+              : (currentAnswers[index] || "");
+
+            return (
+              <React.Fragment key={index}>
+                <span>{part}</span>
+                <span className="inline-flex items-center mx-1 align-baseline">
+                  <Input
+                    type="text"
+                    value={displayValue}
+                    onChange={(e) => handleGapChange(index, e.target.value)}
+                    disabled={isGapLocked}
+                    className={cn(
+                      "w-28 h-8 text-center inline-flex px-2 py-1 text-base transition-colors",
+                      isGapCorrect && "border-green-500 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-medium",
+                      isGapIncorrect && "border-red-500 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300",
+                      isGapRevealed && "border-muted bg-muted/50 text-muted-foreground font-medium"
+                    )}
+                    placeholder={`(${index + 1})`}
+                  />
+                </span>
+              </React.Fragment>
+            );
           })}
         </div>
       </div>

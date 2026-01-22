@@ -18,3 +18,11 @@ export interface Answer {
   questionId: string;
   answer: string | string[];
 }
+
+export interface MultiGapCorrectAnswer {
+  gaps: Array<{
+    id: number;
+    accepted: string[];
+    caseSensitive?: boolean;
+  }>;
+}

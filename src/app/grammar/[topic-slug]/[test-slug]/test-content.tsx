@@ -10,13 +10,15 @@ import { Progress } from "@/components/ui/progress";
 import QuestionRenderer from "@/components/QuestionRenderer";
 import { ExplanationRenderer } from "@/components/ExplanationRenderer";
 import type { GrammarTest, ParsedGrammarQuestion } from "@/types/grammar";
-import type { Answer } from "@/types";
+import type { Answer, MultiGapCorrectAnswer } from "@/types";
 import { cn } from "@/lib/utils";
 
 // Question types that allow two attempts (written-input questions)
 const WRITTEN_QUESTION_TYPES = ["short-answer", "long-answer", "fill-in-blank"];
 // Question types that allow unlimited attempts
 const UNLIMITED_ATTEMPT_TYPES = ["drag-drop-sentence"];
+// Multi-gap-fill has special 5-attempt handling
+const MULTI_GAP_FILL_MAX_ATTEMPTS = 5;
 
 interface QuestionState {
   attempts: number;
@@ -25,6 +27,8 @@ interface QuestionState {
   explanationSeen: boolean;
   showExplanation: boolean;
   lockedPositions?: boolean[];
+  // Multi-gap-fill specific state
+  gapStates?: ('correct' | 'incorrect' | 'unanswered' | 'revealed')[];
 }
 
 interface TestContentProps {
@@ -53,6 +57,7 @@ export function TestContent({ test, questions }: TestContentProps) {
   };
   const isWrittenQuestion = WRITTEN_QUESTION_TYPES.includes(currentQuestion?.type);
   const isUnlimitedAttemptType = UNLIMITED_ATTEMPT_TYPES.includes(currentQuestion?.type);
+  const isMultiGapFill = currentQuestion?.type === "multi-gap-fill";
   const currentAnswer = answers.find((a) => a.questionId === currentQuestion?.id);
 
   const checkAnswerCorrectness = useCallback(
@@ -102,6 +107,31 @@ export function TestContent({ test, questions }: TestContentProps) {
           return String(correctObj).toLowerCase().trim() === userAns;
         });
       } else if (
+        question.type === "multi-gap-fill" &&
+        Array.isArray(userAnswer.answer)
+      ) {
+        const correctAnswerData = question.correctAnswer as unknown as MultiGapCorrectAnswer;
+        const gaps = correctAnswerData?.gaps || [];
+        const userAnswers = userAnswer.answer as string[];
+        return gaps.every((gap, idx) => {
+          const userAns = userAnswers[idx] || "";
+          const caseSensitive = gap.caseSensitive ?? false;
+          const normalizedUserAns = (caseSensitive ? userAns.trim() : userAns.trim().toLowerCase()).replace(/['']/g, "'");
+
+          // Check if any accepted answer is empty (meaning empty is a valid answer)
+          const acceptsEmpty = gap.accepted.some(accepted => accepted.trim() === "");
+
+          // If user left it blank and empty is NOT accepted, it's incorrect
+          if (!userAns.trim() && !acceptsEmpty) {
+            return false;
+          }
+
+          return gap.accepted.some(accepted => {
+            const normalizedAccepted = (caseSensitive ? accepted.trim() : accepted.trim().toLowerCase()).replace(/['']/g, "'");
+            return normalizedUserAns === normalizedAccepted;
+          });
+        });
+      } else if (
         question.type === "drag-drop-sentence" &&
         Array.isArray(userAnswer.answer)
       ) {
@@ -146,7 +176,10 @@ export function TestContent({ test, questions }: TestContentProps) {
   );
 
   const handleAnswer = (answer: string | string[]) => {
-    if (currentQuestionState.isValidated && !isUnlimitedAttemptType) return;
+    // For unlimited attempt types, always allow answer changes
+    // For multi-gap-fill, only allow changes to non-correct gaps (handled in renderer)
+    // For other types, don't allow changes after final validation
+    if (currentQuestionState.isValidated && !isUnlimitedAttemptType && !isMultiGapFill) return;
 
     const newAnswers = answers.filter((a) => a.questionId !== currentQuestion.id);
     newAnswers.push({ questionId: currentQuestion.id, answer });
@@ -216,6 +249,81 @@ export function TestContent({ test, questions }: TestContentProps) {
       return;
     }
 
+    // Special handling for multi-gap-fill: per-gap validation with 5 attempts
+    if (
+      currentQuestion.type === "multi-gap-fill" &&
+      Array.isArray(userAnswer.answer)
+    ) {
+      const correctAnswerData = currentQuestion.correctAnswer as unknown as MultiGapCorrectAnswer;
+      const gaps = correctAnswerData?.gaps || [];
+      const userAnswers = userAnswer.answer as string[];
+
+      // Get existing gap states or initialize
+      const existingGapStates = currentQuestionState.gapStates || [];
+      const newGapStates: ('correct' | 'incorrect' | 'unanswered' | 'revealed')[] = [];
+
+      let allCorrect = true;
+
+      gaps.forEach((gap, idx) => {
+        // If already correct, keep it correct
+        if (existingGapStates[idx] === 'correct') {
+          newGapStates[idx] = 'correct';
+          return;
+        }
+
+        const userAns = userAnswers[idx] || "";
+        const caseSensitive = gap.caseSensitive ?? false;
+        const normalizedUserAns = (caseSensitive ? userAns.trim() : userAns.trim().toLowerCase()).replace(/['']/g, "'");
+
+        // Check if any accepted answer is empty (meaning empty is a valid answer)
+        const acceptsEmpty = gap.accepted.some(accepted => accepted.trim() === "");
+
+        // If user left it blank and empty is NOT accepted, mark as unanswered
+        if (!userAns.trim() && !acceptsEmpty) {
+          newGapStates[idx] = 'unanswered';
+          allCorrect = false;
+          return;
+        }
+
+        const isGapCorrect = gap.accepted.some(accepted => {
+          const normalizedAccepted = (caseSensitive ? accepted.trim() : accepted.trim().toLowerCase()).replace(/['']/g, "'");
+          return normalizedUserAns === normalizedAccepted;
+        });
+
+        if (isGapCorrect) {
+          newGapStates[idx] = 'correct';
+        } else {
+          newGapStates[idx] = 'incorrect';
+          allCorrect = false;
+        }
+      });
+
+      // Check if max attempts reached (5th attempt)
+      const isFinalAttempt = newAttempts >= MULTI_GAP_FILL_MAX_ATTEMPTS;
+
+      // If final attempt, mark all remaining incorrect as 'revealed'
+      if (isFinalAttempt && !allCorrect) {
+        newGapStates.forEach((state, idx) => {
+          if (state !== 'correct') {
+            newGapStates[idx] = 'revealed';
+          }
+        });
+      }
+
+      setQuestionStates((prev) => ({
+        ...prev,
+        [currentQuestion.id]: {
+          attempts: newAttempts,
+          isValidated: allCorrect || isFinalAttempt,
+          isCorrect: allCorrect,
+          explanationSeen: allCorrect || isFinalAttempt,
+          showExplanation: allCorrect || isFinalAttempt,
+          gapStates: newGapStates,
+        },
+      }));
+      return;
+    }
+
     const isCorrect = checkAnswerCorrectness(currentQuestion, userAnswer);
     const maxAttemptsReached = isWrittenQuestion ? newAttempts >= 2 : true;
     const isFinalValidation = isCorrect || maxAttemptsReached;
@@ -278,7 +386,7 @@ export function TestContent({ test, questions }: TestContentProps) {
   const hasAnswer = !!currentAnswer;
   const canCheck =
     hasAnswer &&
-    (isUnlimitedAttemptType
+    (isUnlimitedAttemptType || isMultiGapFill
       ? !currentQuestionState.isCorrect
       : !currentQuestionState.isValidated);
   const canTryAgain =
@@ -519,6 +627,8 @@ export function TestContent({ test, questions }: TestContentProps) {
                     "Incorrect"
                   ) : isUnlimitedAttemptType ? (
                     `Attempt ${currentQuestionState.attempts}`
+                  ) : isMultiGapFill ? (
+                    `Attempt ${currentQuestionState.attempts}/${MULTI_GAP_FILL_MAX_ATTEMPTS}`
                   ) : (
                     `Attempt ${currentQuestionState.attempts}/2`
                   )}
@@ -535,11 +645,14 @@ export function TestContent({ test, questions }: TestContentProps) {
               isValidated={currentQuestionState.isValidated}
               isCorrect={currentQuestionState.isCorrect}
               disabled={
-                isUnlimitedAttemptType
+                isUnlimitedAttemptType || isMultiGapFill
                   ? currentQuestionState.isCorrect
                   : currentQuestionState.isValidated
               }
               externalLockedPositions={currentQuestionState.lockedPositions}
+              gapStates={currentQuestionState.gapStates}
+              attempts={currentQuestionState.attempts}
+              maxAttempts={MULTI_GAP_FILL_MAX_ATTEMPTS}
             />
 
             {/* Check Answer Button */}
