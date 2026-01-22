@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ReadingPageContent } from "./reading-content";
-import { getReadingCategories, getReadingArticles } from "@/lib/reading";
+import { getReadingCategories, getReadingArticlesPaginated } from "@/lib/reading";
 
 export const metadata: Metadata = {
   title: "Reading Practice - Learne",
@@ -20,19 +20,27 @@ export const metadata: Metadata = {
 // Revalidate every hour
 export const revalidate = 3600;
 
+const DEFAULT_LIMIT = 9;
+const VALID_LIMITS = [9, 18, 27, 36];
+
 interface PageProps {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: Promise<{ category?: string; page?: string; limit?: string }>;
 }
 
 export default async function ReadingPage({ searchParams }: PageProps) {
   const params = await searchParams;
   const selectedCategory = params.category || "all";
+  const page = Math.max(1, parseInt(params.page || "1", 10) || 1);
+  const requestedLimit = parseInt(params.limit || String(DEFAULT_LIMIT), 10);
+  const limit = VALID_LIMITS.includes(requestedLimit) ? requestedLimit : DEFAULT_LIMIT;
 
-  // Fetch data server-side
-  const [categories, articles] = await Promise.all([
+  // Fetch data server-side with pagination
+  const [categories, { articles, totalCount }] = await Promise.all([
     getReadingCategories(),
-    getReadingArticles(selectedCategory),
+    getReadingArticlesPaginated(selectedCategory, page, limit),
   ]);
+
+  const totalPages = Math.ceil(totalCount / limit);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -54,6 +62,10 @@ export default async function ReadingPage({ searchParams }: PageProps) {
             categories={categories}
             articles={articles}
             selectedCategory={selectedCategory}
+            currentPage={page}
+            totalPages={totalPages}
+            totalCount={totalCount}
+            limit={limit}
           />
         </Suspense>
       </div>

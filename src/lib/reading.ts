@@ -75,6 +75,57 @@ export async function getReadingArticles(categorySlug?: string): Promise<Reading
   return (data || []).map(transformArticle);
 }
 
+// Paginated version for better performance
+export async function getReadingArticlesPaginated(
+  categorySlug?: string,
+  page: number = 1,
+  limit: number = 9
+): Promise<{ articles: ReadingArticle[]; totalCount: number }> {
+  const offset = (page - 1) * limit;
+
+  // Get category ID if needed
+  let categoryId: string | null = null;
+  if (categorySlug && categorySlug !== "all") {
+    const { data: category } = await supabase
+      .from("reading_categories")
+      .select("id")
+      .eq("slug", categorySlug)
+      .single();
+
+    if (category) {
+      categoryId = category.id;
+    }
+  }
+
+  // Build query for articles with count
+  let query = supabase
+    .from("reading_articles")
+    .select(
+      "id, slug, title, content, image_url, word_count, category_id, display_order, is_published, has_quiz, reading_categories:reading_categories!fk_reading_articles_category(slug, name)",
+      { count: "exact" }
+    )
+    .eq("is_published", true)
+    .is("cambridge_number", null)
+    .order("display_order")
+    .range(offset, offset + limit - 1);
+
+  if (categoryId) {
+    query = query.eq("category_id", categoryId);
+  }
+
+  const { data, error, count } = await query;
+
+  if (error) {
+    console.error("Error fetching paginated articles:", error);
+    return { articles: [], totalCount: 0 };
+  }
+
+  return {
+    articles: (data || []).map(transformArticle),
+    totalCount: count || 0,
+  };
+}
+
 export async function getArticleById(id: string): Promise<ReadingArticle | null> {
   const { data, error } = await supabase
     .from("reading_articles")
