@@ -38,16 +38,33 @@ const QuestionRenderer = ({
   const [feedback, setFeedback] = useState<string>("");
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
 
+  // Helper to parse correctAnswer into an array of words (for drag-drop-sentence)
+  const getCorrectAnswerArray = (): string[] => {
+    if (Array.isArray(question.correctAnswer)) {
+      return question.correctAnswer;
+    } else if (typeof question.correctAnswer === 'string') {
+      try {
+        const parsed = JSON.parse(question.correctAnswer);
+        return Array.isArray(parsed) ? parsed : question.correctAnswer.split(' ');
+      } catch {
+        return question.correctAnswer.split(' ');
+      }
+    }
+    return [];
+  };
+
   // Initialize drag-drop words when question changes
+  // Derive available words from correctAnswer (not config.words)
   useEffect(() => {
-    if (question.type === "drag-drop-sentence" && question.words) {
-      const shuffled = [...question.words].sort(() => Math.random() - 0.5);
+    if (question.type === "drag-drop-sentence") {
+      const correctWords = getCorrectAnswerArray();
+      const shuffled = [...correctWords].sort(() => Math.random() - 0.5);
       setAvailableWords(shuffled);
       setDraggedWords([]);
       setLockedPositions([]);
       setFeedback("");
     }
-  }, [question.id, question.type, question.words]);
+  }, [question.id, question.type]);
 
   // Sync external locked positions for drag-drop-sentence
   useEffect(() => {
@@ -60,7 +77,7 @@ const QuestionRenderer = ({
 
     const wordsToReset: string[] = [];
     const newDraggedWords: string[] = [];
-    const correctWords = question.words || [];
+    const correctWords = getCorrectAnswerArray();
 
     for (let i = 0; i < correctWords.length; i++) {
       if (externalLockedPositions[i]) {
@@ -89,7 +106,7 @@ const QuestionRenderer = ({
     }
 
     onAnswer(newDraggedWords);
-  }, [externalLockedPositions, question.type, question.words]);
+  }, [externalLockedPositions, question.type]);
 
   // Helper to check if an option is the correct answer
   const isOptionCorrect = (option: string): boolean => {
@@ -551,7 +568,7 @@ const QuestionRenderer = ({
       onAnswer(newDraggedWords);
     };
 
-    const correctWords = question.words || [];
+    const correctAnswerArray = getCorrectAnswerArray();
     const normalizeWord = (w: string) => w?.toLowerCase().replace(/[.,!?;:'"]/g, '').trim() || '';
 
     return (
@@ -561,7 +578,7 @@ const QuestionRenderer = ({
         <div className="space-y-4">
           <p className="text-sm font-medium text-muted-foreground">Build the sentence:</p>
           <div className="flex flex-wrap gap-2 min-h-[60px] p-4 border-2 border-dashed rounded-lg bg-accent/20">
-            {correctWords.map((correctWord, idx) => {
+            {correctAnswerArray.map((correctWord, idx) => {
               const userWord = draggedWords[idx];
               const isLockedCorrect = lockedPositions[idx] && userWord;
               const isCorrectWord = showFeedback && isValidated && userWord && normalizeWord(userWord) === normalizeWord(correctWord);

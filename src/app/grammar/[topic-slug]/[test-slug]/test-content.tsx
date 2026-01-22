@@ -186,10 +186,6 @@ export function TestContent({ test, questions }: TestContentProps) {
         }
       }
 
-      if (currentQuestion.words) {
-        correctWords = currentQuestion.words;
-      }
-
       const normalize = (str: string) =>
         str?.toLowerCase().replace(/[.,!?;:'"]/g, "").trim() || "";
 
