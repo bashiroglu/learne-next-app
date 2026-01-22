@@ -5,7 +5,6 @@ import { GripVertical } from "lucide-react";
 import { Question } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -15,20 +14,29 @@ interface QuestionRendererProps {
   question: Question;
   answer?: string | string[];
   onAnswer: (answer: string | string[]) => void;
+  showFeedback?: boolean;
+  isValidated?: boolean;
+  isCorrect?: boolean;
+  disabled?: boolean;
+  externalLockedPositions?: boolean[];
 }
 
-const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps) => {
-  const [showFeedback, setShowFeedback] = useState(false);
-  
+const QuestionRenderer = ({
+  question,
+  answer,
+  onAnswer,
+  showFeedback = false,
+  isValidated = false,
+  isCorrect = false,
+  disabled = false,
+  externalLockedPositions
+}: QuestionRendererProps) => {
   // Drag-drop state
   const [draggedWords, setDraggedWords] = useState<string[]>([]);
   const [availableWords, setAvailableWords] = useState<string[]>([]);
   const [lockedPositions, setLockedPositions] = useState<boolean[]>([]);
   const [feedback, setFeedback] = useState<string>("");
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
-  
-  // Inline conditional choice state
-  const [checkedState, setCheckedState] = useState<"none" | "checked">("none");
 
   // Initialize drag-drop words when question changes
   useEffect(() => {
@@ -39,70 +47,139 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
       setLockedPositions([]);
       setFeedback("");
     }
-    
-    // Reset checked state when question changes
-    if (question.type === "inline-conditional-choice") {
-      setCheckedState("none");
-    }
-    
-    setShowFeedback(false);
   }, [question.id, question.type, question.words]);
 
-  const compareAnswers = (userAnswer: string, correctAnswer: string) => {
-    const userWords = userAnswer.trim().toLowerCase().split(/\s+/);
-    const correctWords = correctAnswer.trim().toLowerCase().split(/\s+/);
-    
-    const result = userWords.map((word, index) => ({
-      word: userAnswer.trim().split(/\s+/)[index],
-      isCorrect: word === correctWords[index],
-      position: index
-    }));
+  // Sync external locked positions for drag-drop-sentence
+  useEffect(() => {
+    if (question.type !== "drag-drop-sentence") return;
+    if (!externalLockedPositions || externalLockedPositions.length === 0) return;
 
-    const missingWords = correctWords.slice(userWords.length).map((word, index) => ({
-      word: correctAnswer.trim().split(/\s+/)[userWords.length + index],
-      isMissing: true,
-      position: userWords.length + index
-    }));
+    const currentDragged = draggedWords.length > 0 ? draggedWords : (Array.isArray(answer) ? answer as string[] : []);
 
-    return { result, missingWords };
+    if (currentDragged.length === 0) return;
+
+    const wordsToReset: string[] = [];
+    const newDraggedWords: string[] = [];
+    const correctWords = question.words || [];
+
+    for (let i = 0; i < correctWords.length; i++) {
+      if (externalLockedPositions[i]) {
+        newDraggedWords[i] = currentDragged[i] || '';
+      } else {
+        if (currentDragged[i] && currentDragged[i].trim() !== '') {
+          wordsToReset.push(currentDragged[i]);
+        }
+        newDraggedWords[i] = '';
+      }
+    }
+
+    setDraggedWords(newDraggedWords);
+    setLockedPositions(externalLockedPositions);
+
+    if (wordsToReset.length > 0) {
+      setAvailableWords(prev => {
+        const newAvailable = [...prev];
+        wordsToReset.forEach(word => {
+          if (!newAvailable.includes(word)) {
+            newAvailable.push(word);
+          }
+        });
+        return newAvailable;
+      });
+    }
+
+    onAnswer(newDraggedWords);
+  }, [externalLockedPositions, question.type, question.words]);
+
+  // Helper to check if an option is the correct answer
+  const isOptionCorrect = (option: string): boolean => {
+    if (question.type === "multiple-choice" || question.type === "true-false") {
+      return String(question.correctAnswer).toLowerCase() === option.toLowerCase();
+    }
+    if (question.type === "multiple-select" && Array.isArray(question.correctAnswer)) {
+      return question.correctAnswer.some(a => String(a).toLowerCase() === option.toLowerCase());
+    }
+    return false;
   };
 
-  const handleCheck = () => {
-    setShowFeedback(true);
+  // Helper to check if an option was selected by user
+  const isOptionSelected = (option: string): boolean => {
+    if (question.type === "multiple-choice" || question.type === "true-false") {
+      return String(answer).toLowerCase() === option.toLowerCase();
+    }
+    if (question.type === "multiple-select" && Array.isArray(answer)) {
+      return answer.some(a => String(a).toLowerCase() === option.toLowerCase());
+    }
+    return false;
   };
 
-  const resetFeedback = () => {
-    setShowFeedback(false);
+  // Get option styling based on feedback state
+  const getOptionStyles = (option: string): string => {
+    if (!showFeedback || !isValidated) {
+      return isOptionSelected(option)
+        ? "border-primary bg-primary/5"
+        : "hover:bg-accent/50";
+    }
+
+    const correct = isOptionCorrect(option);
+    const selected = isOptionSelected(option);
+
+    if (correct) {
+      return "border-green-500 bg-green-50 dark:bg-green-900/20";
+    }
+    if (selected && !correct) {
+      return "border-red-500 bg-red-50 dark:bg-red-900/20";
+    }
+    return "opacity-50";
   };
 
   if (question.type === "multiple-choice") {
     if (!question.question) {
       return <div className="text-red-500">Error: Question text is missing</div>;
     }
-    
+
     return (
       <div className="space-y-4">
         <p className="text-lg font-medium text-foreground">{question.question}</p>
         <RadioGroup
           value={answer as string || ""}
-          onValueChange={(value) => onAnswer(value)}
+          onValueChange={(value) => !disabled && onAnswer(value)}
+          disabled={disabled}
         >
           <div className="space-y-3">
-            {question.options?.map((option, index) => (
-              <div
-                key={index}
-                onClick={() => onAnswer(option)}
-                className="flex items-center space-x-3 border rounded-lg p-4 hover:bg-accent/50 transition-colors cursor-pointer"
-              >
-                <RadioGroupItem value={option} id={`option-${index}`} />
-                <Label
-                  htmlFor={`option-${index}`}
-                  className="flex-1 cursor-pointer text-base"
+            {question.options?.map((option, index) => {
+              const optionStyles = getOptionStyles(option);
+              const correct = isOptionCorrect(option);
+              const selected = isOptionSelected(option);
+
+              return (
+                <div
+                  key={index}
+                  onClick={() => !disabled && onAnswer(option)}
+                  className={cn(
+                    "flex items-center space-x-3 border rounded-lg p-4 transition-colors",
+                    disabled ? "cursor-default" : "cursor-pointer",
+                    optionStyles
+                  )}
                 >
-                  {option}
-                </Label>
-              </div>
-            ))}
+                  <RadioGroupItem value={option} id={`option-${index}`} disabled={disabled} />
+                  <Label
+                    htmlFor={`option-${index}`}
+                    className={cn(
+                      "flex-1 text-base",
+                      disabled ? "cursor-default" : "cursor-pointer",
+                      showFeedback && isValidated && correct && "font-medium text-green-700 dark:text-green-300",
+                      showFeedback && isValidated && selected && !correct && "text-red-700 dark:text-red-300"
+                    )}
+                  >
+                    {option}
+                  </Label>
+                  {showFeedback && isValidated && correct && (
+                    <span className="text-green-600 text-sm font-medium">Correct</span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </RadioGroup>
       </div>
@@ -113,7 +190,7 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
     if (!question.question) {
       return <div className="text-red-500">Error: Question text is missing</div>;
     }
-    
+
     const parts = question.question.split("[blank]");
     const blankAnswers = Array.isArray(answer) ? answer : [];
 
@@ -141,6 +218,7 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
                     }}
                     className="w-48"
                     placeholder="Your answer"
+                    disabled={disabled}
                   />
                 </div>
               )}
@@ -153,7 +231,7 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
 
   if (question.type === "multiple-select") {
     const selectedAnswers = Array.isArray(answer) ? answer : [];
-    
+
     return (
       <div className="space-y-4">
         <p className="text-lg font-medium text-foreground">{question.question}</p>
@@ -161,28 +239,47 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
         <div className="space-y-3">
           {question.options?.map((option, index) => {
             const isChecked = selectedAnswers.includes(option);
+            const optionStyles = getOptionStyles(option);
+            const correct = isOptionCorrect(option);
+            const selected = isOptionSelected(option);
+
             return (
               <div
                 key={index}
-                className="flex items-center space-x-3 border rounded-lg p-4 hover:bg-accent/50 transition-colors"
+                onClick={() => {
+                  if (disabled) return;
+                  if (isChecked) {
+                    onAnswer(selectedAnswers.filter(a => a !== option));
+                  } else {
+                    onAnswer([...selectedAnswers, option]);
+                  }
+                }}
+                className={cn(
+                  "flex items-center space-x-3 border rounded-lg p-4 transition-colors",
+                  disabled ? "cursor-default" : "cursor-pointer",
+                  optionStyles
+                )}
               >
                 <Checkbox
                   id={`option-${index}`}
                   checked={isChecked}
-                  onCheckedChange={(checked) => {
-                    if (checked) {
-                      onAnswer([...selectedAnswers, option]);
-                    } else {
-                      onAnswer(selectedAnswers.filter(a => a !== option));
-                    }
-                  }}
+                  disabled={disabled}
+                  className="pointer-events-none"
                 />
                 <Label
                   htmlFor={`option-${index}`}
-                  className="flex-1 cursor-pointer text-base"
+                  className={cn(
+                    "flex-1 text-base",
+                    disabled ? "cursor-default" : "cursor-pointer",
+                    showFeedback && isValidated && correct && "font-medium text-green-700 dark:text-green-300",
+                    showFeedback && isValidated && selected && !correct && "text-red-700 dark:text-red-300"
+                  )}
                 >
                   {option}
                 </Label>
+                {showFeedback && isValidated && correct && (
+                  <span className="text-green-600 text-sm font-medium">Correct</span>
+                )}
               </div>
             );
           })}
@@ -192,26 +289,45 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
   }
 
   if (question.type === "true-false") {
+    const trueCorrect = isOptionCorrect("true");
+    const falseCorrect = isOptionCorrect("false");
+
     return (
       <div className="space-y-4">
         <p className="text-lg font-medium text-foreground">{question.question}</p>
         <div className="flex gap-4">
-          <Button
+          <button
             type="button"
-            variant={answer === "true" ? "default" : "outline"}
-            onClick={() => onAnswer("true")}
-            className="flex-1 h-16 text-lg"
+            onClick={() => !disabled && onAnswer("true")}
+            disabled={disabled}
+            className={cn(
+              "flex-1 h-16 text-lg border-2 rounded-md font-medium transition-all",
+              answer === "true" && !showFeedback && "border-primary bg-primary/5",
+              answer !== "true" && !showFeedback && "border-border hover:bg-accent/50",
+              showFeedback && isValidated && trueCorrect && "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300",
+              showFeedback && isValidated && answer === "true" && !trueCorrect && "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300",
+              disabled && "cursor-default"
+            )}
           >
             True
-          </Button>
-          <Button
+            {showFeedback && isValidated && trueCorrect && <span className="ml-2">Correct</span>}
+          </button>
+          <button
             type="button"
-            variant={answer === "false" ? "default" : "outline"}
-            onClick={() => onAnswer("false")}
-            className="flex-1 h-16 text-lg"
+            onClick={() => !disabled && onAnswer("false")}
+            disabled={disabled}
+            className={cn(
+              "flex-1 h-16 text-lg border-2 rounded-md font-medium transition-all",
+              answer === "false" && !showFeedback && "border-primary bg-primary/5",
+              answer !== "false" && !showFeedback && "border-border hover:bg-accent/50",
+              showFeedback && isValidated && falseCorrect && "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300",
+              showFeedback && isValidated && answer === "false" && !falseCorrect && "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300",
+              disabled && "cursor-default"
+            )}
           >
             False
-          </Button>
+            {showFeedback && isValidated && falseCorrect && <span className="ml-2">Correct</span>}
+          </button>
         </div>
       </div>
     );
@@ -219,10 +335,6 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
 
   if (question.type === "short-answer") {
     const userAnswer = (answer as string) || "";
-    const correctAnswer = Array.isArray(question.correctAnswer) 
-      ? question.correctAnswer[0] 
-      : question.correctAnswer;
-    const comparison = showFeedback && userAnswer ? compareAnswers(userAnswer, correctAnswer) : null;
 
     return (
       <div className="space-y-4">
@@ -230,142 +342,28 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
         <Input
           type="text"
           value={userAnswer}
-          onChange={(e) => {
-            onAnswer(e.target.value);
-            resetFeedback();
-          }}
+          onChange={(e) => onAnswer(e.target.value)}
           placeholder="Type your answer here"
           className="text-base"
+          disabled={disabled}
         />
-        <Button 
-          type="button"
-          onClick={handleCheck}
-          variant="outline"
-          className="w-full"
-        >
-          Check Answer
-        </Button>
-        
-        {showFeedback && comparison && (
-          <div className="space-y-3 p-4 bg-muted rounded-lg">
-            <div className="space-y-2">
-              <p className="text-sm font-medium">Your answer:</p>
-              <div className="flex flex-wrap gap-1">
-                {comparison.result.map((item, idx) => (
-                  <span
-                    key={idx}
-                    className={cn(
-                      "px-2 py-1 rounded",
-                      item.isCorrect
-                        ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-                        : "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 line-through"
-                    )}
-                  >
-                    {item.word}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            {comparison.missingWords.length > 0 && (
-              <div className="space-y-2">
-                <p className="text-sm font-medium text-amber-600 dark:text-amber-400">
-                  Missing words:
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {comparison.missingWords.map((item, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200"
-                    >
-                      {item.word}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            <p className="text-sm text-muted-foreground mt-2">
-              Correct the red words and add the missing words to complete your answer.
-            </p>
-          </div>
-        )}
       </div>
     );
   }
 
   if (question.type === "long-answer") {
     const userAnswer = (answer as string) || "";
-    const correctAnswer = Array.isArray(question.correctAnswer) 
-      ? question.correctAnswer[0] 
-      : question.correctAnswer;
-    const comparison = showFeedback && userAnswer ? compareAnswers(userAnswer, correctAnswer) : null;
 
     return (
       <div className="space-y-4">
         <p className="text-lg font-medium text-foreground">{question.question}</p>
         <Textarea
           value={userAnswer}
-          onChange={(e) => {
-            onAnswer(e.target.value);
-            resetFeedback();
-          }}
+          onChange={(e) => onAnswer(e.target.value)}
           placeholder="Type your answer here"
           className="text-base min-h-[120px]"
+          disabled={disabled}
         />
-        <Button 
-          type="button"
-          onClick={handleCheck}
-          variant="outline"
-          className="w-full"
-        >
-          Check Answer
-        </Button>
-        
-        {showFeedback && comparison && (
-          <div className="space-y-3 p-4 bg-muted rounded-lg">
-            <div className="space-y-2">
-              <p className="text-sm font-medium">Your answer:</p>
-              <div className="flex flex-wrap gap-1">
-                {comparison.result.map((item, idx) => (
-                  <span
-                    key={idx}
-                    className={cn(
-                      "px-2 py-1 rounded",
-                      item.isCorrect
-                        ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-                        : "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 line-through"
-                    )}
-                  >
-                    {item.word}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            {comparison.missingWords.length > 0 && (
-              <div className="space-y-2">
-                <p className="text-sm font-medium text-amber-600 dark:text-amber-400">
-                  Missing words:
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {comparison.missingWords.map((item, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200"
-                    >
-                      {item.word}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            <p className="text-sm text-muted-foreground mt-2">
-              Correct the red words and add the missing words to complete your answer.
-            </p>
-          </div>
-        )}
       </div>
     );
   }
@@ -374,57 +372,44 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
     const selectedChoices = Array.isArray(answer) ? answer : [];
 
     const handleChoiceClick = (segmentIndex: number, optionIndex: number) => {
-      if (checkedState === "checked") return; // Don't allow changes after checking
-      
+      if (disabled) return;
+
       const segment = question.segments?.[segmentIndex];
       if (segment?.type !== "choice" || !segment.options) return;
-      
+
       const selectedWord = segment.options[optionIndex];
       const newChoices = [...selectedChoices];
       newChoices[segmentIndex] = selectedWord;
       onAnswer(newChoices);
     };
 
-    const handleCheck = () => {
-      setCheckedState("checked");
-    };
-
-    const handleTryAgain = () => {
-      if (!question.segments) return;
-      
-      const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer : [];
-      const newChoices = [...selectedChoices];
-      
-      let choiceIndex = 0;
-      question.segments.forEach((segment, index) => {
-        if (segment.type === "choice") {
-          const userChoice = selectedChoices[index];
-          const correctChoice = correctAnswers[choiceIndex];
-          if (userChoice !== correctChoice) {
-            newChoices[index] = "";
-          }
-          choiceIndex++;
-        }
-      });
-      onAnswer(newChoices);
-      setCheckedState("none");
-    };
-
-    const isCorrect = (segmentIndex: number) => {
+    const isChoiceCorrect = (segmentIndex: number) => {
       const segment = question.segments?.[segmentIndex];
       if (segment?.type !== "choice") return false;
-      
+
       const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer : [];
       let choiceIndex = 0;
-      
-      // Find which choice index this segment is
+
       for (let i = 0; i < segmentIndex; i++) {
         if (question.segments?.[i]?.type === "choice") {
           choiceIndex++;
         }
       }
-      
+
       return selectedChoices[segmentIndex] === correctAnswers[choiceIndex];
+    };
+
+    const getCorrectChoice = (segmentIndex: number) => {
+      const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer : [];
+      let choiceIndex = 0;
+
+      for (let i = 0; i < segmentIndex; i++) {
+        if (question.segments?.[i]?.type === "choice") {
+          choiceIndex++;
+        }
+      }
+
+      return correctAnswers[choiceIndex];
     };
 
     const isSelected = (segmentIndex: number, optionIndex: number) => {
@@ -433,18 +418,10 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
       return selectedChoices[segmentIndex] === segment.options[optionIndex];
     };
 
-    const getChoiceStatus = (segmentIndex: number, optionIndex: number) => {
-      if (checkedState !== "checked") return "normal";
-      if (!isSelected(segmentIndex, optionIndex)) return "normal";
-      return isCorrect(segmentIndex) ? "correct" : "incorrect";
-    };
-
-    let choiceIndex = 0;
-
     return (
       <div className="space-y-6">
         <p className="text-lg font-medium text-foreground">{question.question}</p>
-        
+
         <div className="text-base leading-relaxed">
           {question.segments?.map((segment, segmentIndex) => {
             if (segment.type === "text") {
@@ -454,29 +431,27 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
                 </span>
               );
             } else if (segment.options) {
-              const currentChoiceIndex = choiceIndex++;
+              const correctChoice = getCorrectChoice(segmentIndex);
               return (
                 <span key={segmentIndex} className="inline-flex gap-1 mx-1">
                   {segment.options.map((option, optionIndex) => {
-                    const status = getChoiceStatus(segmentIndex, optionIndex);
                     const selected = isSelected(segmentIndex, optionIndex);
-                    
+                    const correct = option === correctChoice;
+
                     return (
                       <React.Fragment key={optionIndex}>
                         <button
                           type="button"
                           onClick={() => handleChoiceClick(segmentIndex, optionIndex)}
-                          disabled={checkedState === "checked"}
+                          disabled={disabled}
                           className={cn(
                             "px-2 py-0.5 rounded transition-all",
-                            status === "correct"
-                              ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200 font-semibold"
-                              : status === "incorrect"
-                              ? "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200 font-semibold"
-                              : selected
-                              ? "bg-primary text-primary-foreground font-semibold"
-                              : "hover:bg-accent text-muted-foreground",
-                            checkedState === "checked" ? "cursor-default" : "cursor-pointer"
+                            disabled ? "cursor-default" : "cursor-pointer",
+                            !showFeedback && selected && "bg-primary text-primary-foreground font-semibold",
+                            !showFeedback && !selected && "hover:bg-accent text-muted-foreground",
+                            showFeedback && isValidated && correct && "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200 font-semibold",
+                            showFeedback && isValidated && selected && !correct && "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200 font-semibold",
+                            showFeedback && isValidated && !selected && !correct && "text-muted-foreground opacity-50"
                           )}
                         >
                           {option}
@@ -493,35 +468,13 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
             return null;
           })}
         </div>
-
-        <div className="flex gap-3">
-          <Button
-            type="button"
-            onClick={handleCheck}
-            variant="default"
-            className="flex-1"
-            disabled={checkedState === "checked"}
-          >
-            Check Answer
-          </Button>
-          {checkedState === "checked" && (
-            <Button
-              type="button"
-              onClick={handleTryAgain}
-              variant="outline"
-              className="flex-1"
-            >
-              Try Again
-            </Button>
-          )}
-        </div>
       </div>
     );
   }
 
   if (question.type === "drag-drop-sentence") {
-
     const handleDragStart = (e: React.DragEvent, word: string, sourceIndex: number, isFromAvailable: boolean) => {
+      if (disabled) return;
       e.dataTransfer.effectAllowed = "move";
       e.dataTransfer.setData("word", word);
       e.dataTransfer.setData("sourceIndex", sourceIndex.toString());
@@ -530,11 +483,13 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
     };
 
     const handleDragOver = (e: React.DragEvent) => {
+      if (disabled) return;
       e.preventDefault();
       e.dataTransfer.dropEffect = "move";
     };
 
     const handleDropOnSlot = (e: React.DragEvent, targetIndex: number) => {
+      if (disabled) return;
       e.preventDefault();
       const word = e.dataTransfer.getData("word");
       const sourceIndex = parseInt(e.dataTransfer.getData("sourceIndex"));
@@ -571,6 +526,7 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
     };
 
     const handleDropOnAvailable = (e: React.DragEvent) => {
+      if (disabled) return;
       e.preventDefault();
       const word = e.dataTransfer.getData("word");
       const sourceIndex = parseInt(e.dataTransfer.getData("sourceIndex"));
@@ -595,72 +551,60 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
       onAnswer(newDraggedWords);
     };
 
-    const checkAnswer = () => {
-      const correctWords = question.words || [];
-      const newLockedPositions = draggedWords.map((word, idx) => word === correctWords[idx]);
-      setLockedPositions(newLockedPositions);
-
-      const allCorrect = newLockedPositions.every((locked, idx) => locked && draggedWords[idx]);
-      const hasAnyCorrect = newLockedPositions.some((locked) => locked);
-
-      if (allCorrect && draggedWords.filter(w => w).length === correctWords.length) {
-        setFeedback("Correct! 🎉");
-      } else if (hasAnyCorrect) {
-        setFeedback("Some parts are incorrect. Correct words are locked in place.");
-        const incorrectWords = draggedWords
-          .map((word, idx) => (!newLockedPositions[idx] && word ? word : null))
-          .filter(Boolean) as string[];
-        setAvailableWords([...availableWords, ...incorrectWords]);
-        
-        const newDraggedWords = draggedWords.map((word, idx) => 
-          newLockedPositions[idx] ? word : ""
-        );
-        setDraggedWords(newDraggedWords);
-      } else {
-        setFeedback("All parts are incorrect. Try again!");
-      }
-    };
+    const correctWords = question.words || [];
+    const normalizeWord = (w: string) => w?.toLowerCase().replace(/[.,!?;:'"]/g, '').trim() || '';
 
     return (
       <div className="space-y-6">
         <p className="text-lg font-medium text-foreground">{question.question}</p>
-        
+
         <div className="space-y-4">
           <p className="text-sm font-medium text-muted-foreground">Build the sentence:</p>
           <div className="flex flex-wrap gap-2 min-h-[60px] p-4 border-2 border-dashed rounded-lg bg-accent/20">
-            {(question.words || []).map((_, idx) => (
-              <div
-                key={idx}
-                onDragOver={handleDragOver}
-                onDrop={(e) => handleDropOnSlot(e, idx)}
-                className={cn(
-                  "min-w-[80px] h-12 flex items-center justify-center border-2 rounded-lg transition-all",
-                  draggedWords[idx]
-                    ? lockedPositions[idx]
-                      ? "bg-green-100 border-green-500 dark:bg-green-900/30 dark:border-green-700"
-                      : "bg-background border-primary"
-                    : draggedIndex === idx
-                    ? "border-primary bg-primary/10"
-                    : "border-dashed border-muted-foreground/30 bg-muted/30"
-                )}
-              >
-                {draggedWords[idx] && (
-                  <div
-                    draggable={!lockedPositions[idx]}
-                    onDragStart={(e) => handleDragStart(e, draggedWords[idx], idx, false)}
-                    className={cn(
-                      "px-3 py-2 rounded flex items-center gap-2",
-                      lockedPositions[idx]
-                        ? "cursor-not-allowed opacity-100"
-                        : "cursor-move hover:bg-accent"
-                    )}
-                  >
-                    {!lockedPositions[idx] && <GripVertical className="w-4 h-4 text-muted-foreground" />}
-                    <span className="font-medium">{draggedWords[idx]}</span>
-                  </div>
-                )}
-              </div>
-            ))}
+            {correctWords.map((correctWord, idx) => {
+              const userWord = draggedWords[idx];
+              const isLockedCorrect = lockedPositions[idx] && userWord;
+              const isCorrectWord = showFeedback && isValidated && userWord && normalizeWord(userWord) === normalizeWord(correctWord);
+              const isIncorrectWord = showFeedback && isValidated && userWord && normalizeWord(userWord) !== normalizeWord(correctWord);
+              const showGreenStyle = isLockedCorrect || isCorrectWord;
+
+              return (
+                <div
+                  key={idx}
+                  onDragOver={handleDragOver}
+                  onDrop={(e) => handleDropOnSlot(e, idx)}
+                  className={cn(
+                    "min-w-[80px] h-12 flex items-center justify-center border-2 rounded-lg transition-all",
+                    draggedWords[idx]
+                      ? showGreenStyle
+                        ? "bg-green-100 border-green-500 dark:bg-green-900/30 dark:border-green-700"
+                        : isIncorrectWord
+                          ? "bg-red-100 border-red-500 dark:bg-red-900/30 dark:border-red-700"
+                          : "bg-background border-primary"
+                      : draggedIndex === idx
+                        ? "border-primary bg-primary/10"
+                        : "border-dashed border-muted-foreground/30 bg-muted/30"
+                  )}
+                >
+                  {draggedWords[idx] && (
+                    <div
+                      draggable={!disabled && !lockedPositions[idx]}
+                      onDragStart={(e) => handleDragStart(e, draggedWords[idx], idx, false)}
+                      className={cn(
+                        "px-3 py-2 rounded flex items-center gap-2",
+                        showGreenStyle && "text-green-800 dark:text-green-200",
+                        disabled || lockedPositions[idx]
+                          ? "cursor-not-allowed opacity-100"
+                          : "cursor-move hover:bg-accent"
+                      )}
+                    >
+                      {!disabled && !lockedPositions[idx] && <GripVertical className="w-4 h-4 text-muted-foreground" />}
+                      <span className="font-medium">{draggedWords[idx]}</span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -674,39 +618,19 @@ const QuestionRenderer = ({ question, answer, onAnswer }: QuestionRendererProps)
             {availableWords.map((word, idx) => (
               <div
                 key={idx}
-                draggable
+                draggable={!disabled}
                 onDragStart={(e) => handleDragStart(e, word, idx, true)}
-                className="px-4 py-2 bg-background border-2 border-border rounded-lg cursor-move hover:bg-accent transition-colors flex items-center gap-2"
+                className={cn(
+                  "px-4 py-2 bg-background border-2 border-border rounded-lg transition-colors flex items-center gap-2",
+                  disabled ? "cursor-default" : "cursor-move hover:bg-accent"
+                )}
               >
-                <GripVertical className="w-4 h-4 text-muted-foreground" />
+                {!disabled && <GripVertical className="w-4 h-4 text-muted-foreground" />}
                 <span className="font-medium">{word}</span>
               </div>
             ))}
           </div>
         </div>
-
-        <Button
-          type="button"
-          onClick={checkAnswer}
-          variant="default"
-          className="w-full"
-          disabled={draggedWords.filter(w => w).length !== (question.words || []).length}
-        >
-          Check Answer
-        </Button>
-
-        {feedback && (
-          <div
-            className={cn(
-              "p-4 rounded-lg",
-              feedback.includes("Correct")
-                ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200"
-                : "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200"
-            )}
-          >
-            <p className="font-medium">{feedback}</p>
-          </div>
-        )}
       </div>
     );
   }
