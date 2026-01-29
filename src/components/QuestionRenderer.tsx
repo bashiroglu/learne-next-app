@@ -42,7 +42,6 @@ const QuestionRenderer = ({
   const [draggedWords, setDraggedWords] = useState<string[]>([]);
   const [availableWords, setAvailableWords] = useState<string[]>([]);
   const [lockedPositions, setLockedPositions] = useState<boolean[]>([]);
-  const [feedback, setFeedback] = useState<string>("");
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
 
   // Helper to parse correctAnswer into an array of words (for drag-drop-sentence)
@@ -69,7 +68,6 @@ const QuestionRenderer = ({
       setAvailableWords(shuffled);
       setDraggedWords([]);
       setLockedPositions([]);
-      setFeedback("");
     }
   }, [question.id, question.type]);
 
@@ -113,7 +111,7 @@ const QuestionRenderer = ({
     }
 
     onAnswer(newDraggedWords);
-  }, [externalLockedPositions, question.type]);
+  }, [externalLockedPositions, question.type, draggedWords, answer, onAnswer]);
 
   // Helper to check if an option is the correct answer
   const isOptionCorrect = (option: string): boolean => {
@@ -407,22 +405,6 @@ const QuestionRenderer = ({
       onAnswer(newChoices);
     };
 
-    const isChoiceCorrect = (segmentIndex: number) => {
-      const segment = question.segments?.[segmentIndex];
-      if (segment?.type !== "choice") return false;
-
-      const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer : [];
-      let choiceIndex = 0;
-
-      for (let i = 0; i < segmentIndex; i++) {
-        if (question.segments?.[i]?.type === "choice") {
-          choiceIndex++;
-        }
-      }
-
-      return selectedChoices[segmentIndex] === correctAnswers[choiceIndex];
-    };
-
     const getCorrectChoice = (segmentIndex: number) => {
       const correctAnswers = Array.isArray(question.correctAnswer) ? question.correctAnswer : [];
       let choiceIndex = 0;
@@ -632,7 +614,6 @@ const QuestionRenderer = ({
       setDraggedWords(newDraggedWords);
       setAvailableWords(newAvailableWords);
       setLockedPositions(newLockedPositions);
-      setFeedback("");
       setDraggedIndex(null);
 
       onAnswer(newDraggedWords);
@@ -658,7 +639,6 @@ const QuestionRenderer = ({
       setDraggedWords(newDraggedWords);
       setAvailableWords(newAvailableWords);
       setLockedPositions(newLockedPositions);
-      setFeedback("");
       setDraggedIndex(null);
 
       onAnswer(newDraggedWords);

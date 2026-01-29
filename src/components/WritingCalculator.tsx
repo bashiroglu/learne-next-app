@@ -1,82 +1,77 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { BandScoreInput } from "./BandScoreInput";
 
-const calculateWritingScore = (scores: number[]): number | null => {
+interface TaskScores {
+  taskAchievementOrResponse: string;
+  coherence: string;
+  lexical: string;
+  grammar: string;
+}
+
+const calculateTaskScore = (scores: number[]): number | null => {
   if (scores.some(s => s === 0)) return null;
   const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
-  
-  // Apply downgrade rounding
+
   const base = Math.floor(avg);
   const dec = avg - base;
-  
-  if (dec < 0.5) {
-    return base;
-  } else {
-    return base + 0.5;
-  }
+
+  return dec < 0.5 ? base : base + 0.5;
+};
+
+const calculateOverallScore = (task1: number | null, task2: number | null): number | null => {
+  if (task1 === null || task2 === null) return null;
+
+  // Task 1 is 1/3 weight, Task 2 is 2/3 weight
+  const avg = (task1 + 2 * task2) / 3;
+  const base = Math.floor(avg);
+  const dec = avg - base;
+
+  if (dec < 0.25) return base;
+  if (dec < 0.75) return base + 0.5;
+  return base + 1;
 };
 
 export const WritingCalculator = () => {
-  // Writing Task 1
-  const [task1TaskAchievement, setTask1TaskAchievement] = useState<string>("0");
-  const [task1Coherence, setTask1Coherence] = useState<string>("0");
-  const [task1Lexical, setTask1Lexical] = useState<string>("0");
-  const [task1Grammar, setTask1Grammar] = useState<string>("0");
-  const [task1Score, setTask1Score] = useState<number | null>(null);
+  const [task1, setTask1] = useState<TaskScores>({
+    taskAchievementOrResponse: "0",
+    coherence: "0",
+    lexical: "0",
+    grammar: "0"
+  });
 
-  // Writing Task 2
-  const [task2TaskResponse, setTask2TaskResponse] = useState<string>("0");
-  const [task2Coherence, setTask2Coherence] = useState<string>("0");
-  const [task2Lexical, setTask2Lexical] = useState<string>("0");
-  const [task2Grammar, setTask2Grammar] = useState<string>("0");
-  const [task2Score, setTask2Score] = useState<number | null>(null);
+  const [task2, setTask2] = useState<TaskScores>({
+    taskAchievementOrResponse: "0",
+    coherence: "0",
+    lexical: "0",
+    grammar: "0"
+  });
 
-  // Overall Writing Score
-  const [overallWriting, setOverallWriting] = useState<number | null>(null);
-
-  useEffect(() => {
-    const t1Scores = [
-      Number(task1TaskAchievement),
-      Number(task1Coherence),
-      Number(task1Lexical),
-      Number(task1Grammar)
+  const task1Score = useMemo(() => {
+    const scores = [
+      Number(task1.taskAchievementOrResponse),
+      Number(task1.coherence),
+      Number(task1.lexical),
+      Number(task1.grammar)
     ];
-    setTask1Score(calculateWritingScore(t1Scores));
+    return calculateTaskScore(scores);
+  }, [task1]);
 
-    const t2Scores = [
-      Number(task2TaskResponse),
-      Number(task2Coherence),
-      Number(task2Lexical),
-      Number(task2Grammar)
+  const task2Score = useMemo(() => {
+    const scores = [
+      Number(task2.taskAchievementOrResponse),
+      Number(task2.coherence),
+      Number(task2.lexical),
+      Number(task2.grammar)
     ];
-    setTask2Score(calculateWritingScore(t2Scores));
-  }, [
-    task1TaskAchievement, task1Coherence, task1Lexical, task1Grammar,
-    task2TaskResponse, task2Coherence, task2Lexical, task2Grammar
-  ]);
+    return calculateTaskScore(scores);
+  }, [task2]);
 
-  useEffect(() => {
-    if (task1Score !== null && task2Score !== null) {
-      // Task 1 is 1/3 weight, Task 2 is 2/3 weight (2:1 ratio)
-      const avg = (task1Score + 2 * task2Score) / 3;
-      
-      // Apply standard IELTS rounding to nearest 0.5
-      const base = Math.floor(avg);
-      const dec = avg - base;
-      
-      if (dec < 0.25) {
-        setOverallWriting(base);
-      } else if (dec < 0.75) {
-        setOverallWriting(base + 0.5);
-      } else {
-        setOverallWriting(base + 1);
-      }
-    } else {
-      setOverallWriting(null);
-    }
-  }, [task1Score, task2Score]);
+  const overallWriting = useMemo(
+    () => calculateOverallScore(task1Score, task2Score),
+    [task1Score, task2Score]
+  );
 
   return (
     <div className="space-y-6">
@@ -88,25 +83,41 @@ export const WritingCalculator = () => {
             <Label htmlFor="t1-task-achievement" className="text-sm font-medium text-foreground">
               Task Achievement
             </Label>
-            <BandScoreInput id="t1-task-achievement" value={task1TaskAchievement} onChange={setTask1TaskAchievement} />
+            <BandScoreInput
+              id="t1-task-achievement"
+              value={task1.taskAchievementOrResponse}
+              onChange={(val) => setTask1({ ...task1, taskAchievementOrResponse: val })}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="t1-coherence" className="text-sm font-medium text-foreground">
               Coherence & Cohesion
             </Label>
-            <BandScoreInput id="t1-coherence" value={task1Coherence} onChange={setTask1Coherence} />
+            <BandScoreInput
+              id="t1-coherence"
+              value={task1.coherence}
+              onChange={(val) => setTask1({ ...task1, coherence: val })}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="t1-lexical" className="text-sm font-medium text-foreground">
               Lexical Resource
             </Label>
-            <BandScoreInput id="t1-lexical" value={task1Lexical} onChange={setTask1Lexical} />
+            <BandScoreInput
+              id="t1-lexical"
+              value={task1.lexical}
+              onChange={(val) => setTask1({ ...task1, lexical: val })}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="t1-grammar" className="text-sm font-medium text-foreground">
               Grammatical Range & Accuracy
             </Label>
-            <BandScoreInput id="t1-grammar" value={task1Grammar} onChange={setTask1Grammar} />
+            <BandScoreInput
+              id="t1-grammar"
+              value={task1.grammar}
+              onChange={(val) => setTask1({ ...task1, grammar: val })}
+            />
           </div>
         </div>
         {task1Score !== null && (
@@ -125,25 +136,41 @@ export const WritingCalculator = () => {
             <Label htmlFor="t2-task-response" className="text-sm font-medium text-foreground">
               Task Response
             </Label>
-            <BandScoreInput id="t2-task-response" value={task2TaskResponse} onChange={setTask2TaskResponse} />
+            <BandScoreInput
+              id="t2-task-response"
+              value={task2.taskAchievementOrResponse}
+              onChange={(val) => setTask2({ ...task2, taskAchievementOrResponse: val })}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="t2-coherence" className="text-sm font-medium text-foreground">
               Coherence & Cohesion
             </Label>
-            <BandScoreInput id="t2-coherence" value={task2Coherence} onChange={setTask2Coherence} />
+            <BandScoreInput
+              id="t2-coherence"
+              value={task2.coherence}
+              onChange={(val) => setTask2({ ...task2, coherence: val })}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="t2-lexical" className="text-sm font-medium text-foreground">
               Lexical Resource
             </Label>
-            <BandScoreInput id="t2-lexical" value={task2Lexical} onChange={setTask2Lexical} />
+            <BandScoreInput
+              id="t2-lexical"
+              value={task2.lexical}
+              onChange={(val) => setTask2({ ...task2, lexical: val })}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="t2-grammar" className="text-sm font-medium text-foreground">
               Grammatical Range & Accuracy
             </Label>
-            <BandScoreInput id="t2-grammar" value={task2Grammar} onChange={setTask2Grammar} />
+            <BandScoreInput
+              id="t2-grammar"
+              value={task2.grammar}
+              onChange={(val) => setTask2({ ...task2, grammar: val })}
+            />
           </div>
         </div>
         {task2Score !== null && (
