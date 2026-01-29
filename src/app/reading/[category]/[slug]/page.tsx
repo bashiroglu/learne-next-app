@@ -5,7 +5,9 @@ import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { getArticleBySlug, getArticleHighlights, getAllArticleSlugs } from "@/lib/reading";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { RelatedArticles } from "@/components/RelatedArticles";
+import { getArticleBySlug, getArticleHighlights, getAllArticleSlugs, getRelatedArticles } from "@/lib/reading";
 import { ArticleContent } from "./article-content";
 
 interface PageProps {
@@ -26,7 +28,7 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { category, slug } = await params;
   const article = await getArticleBySlug(slug);
 
   if (!article) {
@@ -36,14 +38,39 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const description = article.content.slice(0, 160).replace(/\n/g, " ").trim() + "...";
+  const categorySlug = article.reading_categories?.slug || category;
+  const categoryName = article.reading_categories?.name || category;
+  const canonicalUrl = `https://learne.org/reading/${categorySlug}/${slug}`;
+
+  // Build keywords array
+  const keywords = [
+    article.title,
+    categoryName,
+    "English reading",
+    "reading practice",
+    "English learning",
+    "ESL reading",
+    "reading comprehension",
+  ];
 
   return {
-    title: `${article.title} - Reading Practice | Learne`,
+    title: `${article.title} - Reading Practice`,
     description,
+    keywords,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: article.title,
       description,
+      url: canonicalUrl,
       type: "article",
+      images: article.image_url ? [article.image_url] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description,
       images: article.image_url ? [article.image_url] : undefined,
     },
   };
@@ -61,9 +88,30 @@ export default async function ArticlePage({ params }: PageProps) {
   }
 
   const highlights = await getArticleHighlights(article.id);
+  const relatedArticles = article.category_id
+    ? await getRelatedArticles(article.category_id, article.id, 10)
+    : [];
+  const categorySlug = article.reading_categories?.slug || category;
+  const categoryName = article.reading_categories?.name || category;
+  const description = article.content.slice(0, 160).replace(/\n/g, " ").trim() + "...";
+  const canonicalUrl = `https://learne.org/reading/${categorySlug}/${slug}`;
+
+  const breadcrumbItems = [
+    { name: "Home", url: "https://learne.org" },
+    { name: "Reading", url: "https://learne.org/reading" },
+    { name: categoryName, url: `https://learne.org/reading?category=${categorySlug}` },
+    { name: article.title, url: canonicalUrl },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/30 flex flex-col">
+      <ArticleJsonLd
+        title={article.title}
+        description={description}
+        url={canonicalUrl}
+        imageUrl={article.image_url || undefined}
+      />
+      <BreadcrumbJsonLd items={breadcrumbItems} />
       <Navbar />
 
       <div className="flex-1 container max-w-3xl mx-auto px-4 py-8">
@@ -89,6 +137,9 @@ export default async function ArticlePage({ params }: PageProps) {
 
         {/* Article Content */}
         <ArticleContent article={article} highlights={highlights} />
+
+        {/* Related Articles */}
+        <RelatedArticles articles={relatedArticles} categoryName={categoryName} categorySlug={categorySlug} />
 
         {/* Call to Action */}
         <div className="mt-8 p-6 bg-primary/5 rounded-xl border border-primary/10 text-center">

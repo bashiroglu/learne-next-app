@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Grammar Library - Learne",
   description:
     "Master English grammar with our comprehensive collection of tests and exercises. Practice grammar at all CEFR levels from A1 to C2.",
+  keywords: [
+    "English grammar",
+    "grammar practice",
+    "grammar tests",
+    "grammar exercises",
+    "CEFR grammar",
+    "English learning",
+    "ESL grammar",
+  ],
   openGraph: {
     title: "Grammar Library - Learne",
     description:

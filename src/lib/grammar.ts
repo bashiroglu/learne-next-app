@@ -217,6 +217,39 @@ export async function getAllTestIds(): Promise<{ topicSlug: string; testSlug: st
   });
 }
 
+// Get related tests by level (excluding current test)
+export async function getRelatedTests(
+  level: string,
+  currentTestId: string,
+  limit: number = 10
+): Promise<GrammarTest[]> {
+  const { data, error } = await supabase
+    .from("grammar_tests")
+    .select(
+      "id, topic_id, title, description, level, topic, duration, is_published, created_at, grammar_topics:grammar_topics!fk_grammar_tests_topic(id, name, slug), grammar_questions!fk_grammar_questions_test(count)"
+    )
+    .eq("is_published", true)
+    .eq("level", level)
+    .neq("id", currentTestId)
+    .limit(limit);
+
+  if (error) {
+    console.error("Error fetching related tests:", error);
+    return [];
+  }
+
+  return (data || []).map((test) => {
+    const transformed = transformTest(test);
+    const questionData = test.grammar_questions as unknown;
+    if (Array.isArray(questionData) && questionData.length > 0) {
+      transformed.question_count = (questionData[0] as { count: number }).count;
+    } else {
+      transformed.question_count = 0;
+    }
+    return transformed;
+  });
+}
+
 // Helper to generate URL-friendly slug from title
 export function generateSlug(text: string): string {
   return text

@@ -303,6 +303,55 @@ export async function getAllArticleIds(): Promise<{ id: string; categorySlug: st
   });
 }
 
+// Get related articles from the same category (excluding current article)
+export async function getRelatedArticles(
+  categoryId: string,
+  currentArticleId: string,
+  limit: number = 10
+): Promise<ReadingArticle[]> {
+  const { data, error } = await supabase
+    .from("reading_articles")
+    .select(
+      "id, slug, title, image_url, word_count, reading_categories:reading_categories!fk_reading_articles_category(slug, name)"
+    )
+    .eq("is_published", true)
+    .eq("category_id", categoryId)
+    .neq("id", currentArticleId)
+    .is("cambridge_number", null)
+    .order("display_order")
+    .limit(limit);
+
+  if (error) {
+    console.error("Error fetching related articles:", error);
+    return [];
+  }
+
+  return (data || []).map(article => {
+    const rawCategories = article.reading_categories as unknown;
+    let categories: { slug: string; name: string } | null = null;
+
+    if (Array.isArray(rawCategories) && rawCategories.length > 0) {
+      categories = rawCategories[0] as { slug: string; name: string };
+    } else if (rawCategories && typeof rawCategories === "object") {
+      categories = rawCategories as { slug: string; name: string };
+    }
+
+    return {
+      id: article.id as string,
+      slug: article.slug as string,
+      title: article.title as string,
+      content: "",
+      image_url: article.image_url as string | null,
+      word_count: article.word_count as number | null,
+      category_id: categoryId,
+      display_order: 0,
+      is_published: true,
+      has_quiz: false,
+      reading_categories: categories,
+    };
+  });
+}
+
 // Helper to generate URL-friendly slug from title
 export function generateSlug(title: string): string {
   return title

@@ -1,6 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ChevronDown, PlayCircle, FileText, PenLine, Calculator, MessageCircle } from "lucide-react";
 
 export const Navbar = () => {
   return (
@@ -11,18 +13,86 @@ export const Navbar = () => {
           <span className="text-2xl font-bold text-foreground">Learne</span>
         </Link>
         <div className="flex items-center gap-6">
-          <Link href="/reading" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/reading"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
             Reading
           </Link>
-          <Link href="/grammar" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Grammar
+          <Link
+            href="/listening"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Listening
           </Link>
-          <Link href="/ielts-calculator" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            IELTS Calculator
-          </Link>
+
+          {/* Grammar Dropdown - CSS hover based */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+              Grammar
+              <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+            </button>
+
+            {/* Dropdown menu */}
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-popover border border-border rounded-md shadow-md py-1 min-w-[180px]">
+                <Link
+                  href="/grammar-videos"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                >
+                  <PlayCircle className="w-4 h-4" />
+                  Grammar Videos
+                </Link>
+                <Link
+                  href="/grammar"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                >
+                  <FileText className="w-4 h-4" />
+                  Grammar Tests
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* IELTS Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+              IELTS
+              <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+            </button>
+
+            {/* Dropdown menu */}
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-popover border border-border rounded-md shadow-md py-1 min-w-[180px]">
+                <Link
+                  href="/speaking-questions"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Speaking Questions
+                </Link>
+                <Link
+                  href="/writing-practice"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                >
+                  <PenLine className="w-4 h-4" />
+                  Writing Practice
+                </Link>
+                <Link
+                  href="/ielts-calculator"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                >
+                  <Calculator className="w-4 h-4" />
+                  Calculator
+                </Link>
+              </div>
+            </div>
+          </div>
           <div className="flex items-center gap-2 ml-2">
             <Link href="https://app.learne.org/login">
-              <Button variant="ghost" size="sm">Log In</Button>
+              <Button variant="ghost" size="sm">
+                Log In
+              </Button>
             </Link>
             <Link href="https://app.learne.org/signup">
               <Button size="sm">Get Started</Button>

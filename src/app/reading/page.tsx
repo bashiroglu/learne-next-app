@@ -5,27 +5,80 @@ import { Footer } from "@/components/Footer";
 import { ReadingPageContent } from "./reading-content";
 import { getReadingCategories, getReadingArticlesPaginated } from "@/lib/reading";
 
-export const metadata: Metadata = {
-  title: "Reading Practice - Learne",
-  description:
-    "Improve your English reading skills with articles across different topics and levels. Practice reading comprehension with curated content.",
-  openGraph: {
-    title: "Reading Practice - Learne",
-    description:
-      "Improve your English reading skills with articles across different topics and levels.",
-    type: "website",
-  },
-};
+interface PageProps {
+  searchParams: Promise<{ category?: string; page?: string; limit?: string }>;
+}
+
+export async function generateMetadata({
+  searchParams,
+}: PageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const page = parseInt(params.page || "1", 10) || 1;
+  const category = params.category || "all";
+
+  const baseTitle = "Reading Practice";
+  const title = page > 1 ? `${baseTitle} - Page ${page}` : baseTitle;
+
+  const description =
+    "Improve your English reading skills with articles across different topics and levels. Practice reading comprehension with curated content.";
+
+  // Build canonical URL (without pagination params for page 1)
+  let canonicalUrl = "https://learne.org/reading";
+  const urlParams: string[] = [];
+
+  if (category && category !== "all") {
+    urlParams.push(`category=${category}`);
+  }
+  if (page > 1) {
+    urlParams.push(`page=${page}`);
+  }
+
+  if (urlParams.length > 0) {
+    canonicalUrl += `?${urlParams.join("&")}`;
+  }
+
+  // Build keywords array
+  const keywords = [
+    "English reading",
+    "reading practice",
+    "English articles",
+    "reading comprehension",
+    "English learning",
+    "ESL reading",
+  ];
+
+  // Add category-specific keyword if filtering
+  if (category && category !== "all") {
+    const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
+    keywords.unshift(`${categoryName} English reading`);
+  }
+
+  return {
+    title,
+    description,
+    keywords,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${title} | Learne`,
+      description,
+      url: canonicalUrl,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Learne`,
+      description,
+    },
+  };
+}
 
 // Revalidate every 12 hours (ISR - Incremental Static Regeneration)
 export const revalidate = 43200;
 
 const DEFAULT_LIMIT = 9;
 const VALID_LIMITS = [9, 18, 27, 36];
-
-interface PageProps {
-  searchParams: Promise<{ category?: string; page?: string; limit?: string }>;
-}
 
 export default async function ReadingPage({ searchParams }: PageProps) {
   const params = await searchParams;

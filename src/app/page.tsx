@@ -1,12 +1,38 @@
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { BookOpen, TrendingUp, Award, Sparkles } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Learne - Your Journey to English Fluency",
+  description:
+    "Practice speaking, reading, and testing in one place. Track your progress, build streaks, and achieve your language learning goals.",
+  alternates: {
+    canonical: "https://learne.org",
+  },
+  openGraph: {
+    title: "Learne - Your Journey to English Fluency",
+    description:
+      "Practice speaking, reading, and testing in one place. Track your progress, build streaks, and achieve your language learning goals.",
+    url: "https://learne.org",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Learne - Your Journey to English Fluency",
+    description:
+      "Practice speaking, reading, and testing in one place. Track your progress, build streaks, and achieve your language learning goals.",
+  },
+};
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
+      <OrganizationJsonLd />
+      <WebSiteJsonLd />
       <Navbar />
 
       {/* Hero Section */}
