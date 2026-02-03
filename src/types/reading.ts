@@ -19,6 +19,9 @@ export interface ReadingArticle {
   display_order: number;
   is_published: boolean;
   has_quiz: boolean;
+  video_url: string | null;
+  grammar_test_slug: string | null;
+  grammar_topic_slug: string | null;
   reading_categories: {
     slug: string;
     name: string;

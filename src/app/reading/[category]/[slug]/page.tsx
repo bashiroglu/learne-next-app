@@ -115,28 +115,8 @@ export default async function ArticlePage({ params }: PageProps) {
       <Navbar />
 
       <div className="flex-1 container max-w-3xl mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="flex items-center gap-4 mb-6">
-          <Link href="/reading">
-            <Button variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary cursor-pointer">
-              <ArrowLeft className="w-5 h-5" />
-            </Button>
-          </Link>
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-medium px-2 py-1 bg-primary/10 text-primary rounded-full capitalize">
-                {article.reading_categories?.name || category}
-              </span>
-              {article.word_count && (
-                <span className="text-xs text-muted-foreground">{article.word_count} words</span>
-              )}
-            </div>
-            <h1 className="text-2xl font-bold text-foreground">{article.title}</h1>
-          </div>
-        </div>
-
         {/* Article Content */}
-        <ArticleContent article={article} highlights={highlights} />
+        <ArticleContent article={article} highlights={highlights} categoryName={categoryName} />
 
         {/* Related Articles */}
         <RelatedArticles articles={relatedArticles} categoryName={categoryName} categorySlug={categorySlug} />

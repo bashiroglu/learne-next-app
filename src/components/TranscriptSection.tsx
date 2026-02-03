@@ -116,7 +116,8 @@ export default function TranscriptSection({
                 "hover:bg-primary/5 cursor-pointer",
                 isActive && "bg-primary/10 border-l-3 border-primary",
                 isPast && !isActive && "text-muted-foreground",
-                !isPast && !isActive && "text-foreground"
+                !isPast && !isActive && "text-foreground",
+                !isActive && "hidden sm:block" // Mobile: show only active line
               )}
             >
               <div className="flex items-start gap-2.5">

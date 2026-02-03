@@ -99,9 +99,9 @@ const VideoTranscript = forwardRef<VideoTranscriptRef, VideoTranscriptProps>(
           />
         </div>
 
-        {/* Transcript - absolute on desktop */}
+        {/* Transcript - compact on mobile, full sidebar on desktop */}
         {hasTranscript && (
-          <div className="w-full lg:w-[380px] lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:h-auto h-[300px]">
+          <div className="w-full lg:w-[380px] lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:h-auto">
             <TranscriptSection
               transcript={transcript}
               currentTime={currentTime}

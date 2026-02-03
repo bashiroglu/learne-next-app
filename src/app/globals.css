@@ -107,6 +107,189 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  /* Blog article typography */
+  .prose h2 {
+    color: #1a1a4e !important;
+    font-size: 1.75rem !important;
+    font-weight: 800 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .prose h3 {
+    color: #1a1a4e !important;
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.375rem !important;
+  }
+
+  .dark .prose h2,
+  .dark .prose h3 {
+    color: #e2e8f0 !important;
+  }
+
+  .prose ul,
+  .prose ol {
+    list-style-position: outside !important;
+    padding-left: 1.75rem !important;
+    margin: 0.75rem 0 !important;
+  }
+
+  .prose ul {
+    list-style-type: disc !important;
+  }
+
+  .prose ol {
+    list-style-type: decimal !important;
+  }
+
+  .prose li {
+    display: list-item !important;
+    margin: 0.25rem 0 !important;
+    line-height: 1.75 !important;
+  }
+
+  .prose li::marker {
+    color: #1a1a4e !important;
+    font-weight: bold !important;
+  }
+
+  .dark .prose li::marker {
+    color: #e2e8f0 !important;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid #d1d5db !important;
+    padding-left: 1.25rem !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    margin: 0.75rem 0 !important;
+    font-style: normal !important;
+    background: transparent !important;
+  }
+
+  /* Blog special elements */
+  .example-block {
+    border-left: 4px solid hsl(var(--primary) / 0.4);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    background: hsl(var(--muted) / 0.4);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .correct,
+  .incorrect {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    line-height: 1.75;
+  }
+
+  .correct {
+    background: hsl(142 76% 36% / 0.08);
+    border-left: 3px solid hsl(142 76% 36%);
+  }
+
+  .correct::before {
+    content: '✓ Correct: ';
+    color: hsl(142 71% 40%);
+    font-weight: 600;
+  }
+
+  .incorrect {
+    background: hsl(0 84% 60% / 0.08);
+    border-left: 3px solid hsl(0 84% 60%);
+  }
+
+  .incorrect::before {
+    content: '✗ Incorrect: ';
+    color: hsl(0 84% 55%);
+    font-weight: 600;
+  }
+
+  .note {
+    background: hsl(45 93% 94%);
+    border: 1px solid hsl(45 90% 80%);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+  }
+
+  .dark .note {
+    background: hsl(45 50% 15%);
+    border-color: hsl(45 50% 30%);
+  }
+
+  .tip {
+    background: hsl(var(--primary) / 0.08);
+    border: 1px solid hsl(var(--primary) / 0.2);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+  }
+
+  /* Blog tables */
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(var(--border));
+  }
+
+  .prose thead {
+    background: hsl(var(--muted) / 0.6);
+  }
+
+  .prose th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: hsl(222 47% 20%);
+    border-bottom: 2px solid hsl(var(--border));
+  }
+
+  .dark .prose th {
+    color: hsl(210 40% 98%);
+  }
+
+  .prose td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .prose tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .prose tbody tr:nth-child(even) {
+    background: hsl(var(--muted) / 0.3);
+  }
+
+  .prose tbody tr:hover {
+    background: hsl(var(--muted) / 0.5);
+  }
+
+  .quiz-item {
+    background: hsl(var(--muted) / 0.3);
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .quiz-item .correct::before {
+    content: '✓ Correct — ';
+  }
+
+  .quiz-item .incorrect::before {
+    content: '✗ Incorrect — ';
+  }
+
   /* Panel system for Writing Practice */
   .panel-card {
     @apply bg-card rounded-xl border border-border shadow-sm;
@@ -215,6 +398,16 @@ All colors MUST be HSL.
     box-shadow: 0 0 30px hsl(var(--accent) / 0.4);
   }
 
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+    20%, 40%, 60%, 80% { transform: translateX(4px); }
+  }
+
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -222,5 +415,16 @@ All colors MUST be HSL.
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Prevent iOS callout menu on text selection while allowing selection */
+  .no-callout {
+    -webkit-touch-callout: none;
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  .no-callout::selection {
+    background-color: hsl(var(--primary) / 0.3);
   }
 }
