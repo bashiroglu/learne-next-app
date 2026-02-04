@@ -3,6 +3,7 @@ import { getAllTestIds } from "@/lib/grammar";
 import { getAllArticleSlugs } from "@/lib/reading";
 import { getAllGrammarVideoSlugs } from "@/lib/grammar-videos";
 import { getAllListeningVideoSlugs } from "@/lib/listening";
+import { getAllPosts, getAllCategories } from "@/lib/blog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://learne.org";
@@ -57,6 +58,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 
   // Dynamic grammar test pages
@@ -95,5 +102,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...grammarPages, ...readingPages, ...grammarVideoPages, ...listeningPages];
+  // Blog category pages
+  const blogCategories = getAllCategories();
+  const blogCategoryPages: MetadataRoute.Sitemap = blogCategories.map((category) => ({
+    url: `${baseUrl}/blog/${category.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  // Individual blog post pages
+  const blogPosts = getAllPosts();
+  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updated_at || post.published_at),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticPages,
+    ...grammarPages,
+    ...readingPages,
+    ...grammarVideoPages,
+    ...listeningPages,
+    ...blogCategoryPages,
+    ...blogPostPages,
+  ];
 }

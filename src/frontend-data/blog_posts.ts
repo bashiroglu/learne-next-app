@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
     id: "1",
     slug: "mastering-english-articles-a-an-the",
     title: "How to Use A, An and The",
-    excerpt: "Learn when to use 'a', 'an', and 'the' in English. This guide covers all the essential rules with clear examples.",
+    excerpt: "When should you use 'a', 'an', or 'the'? This guide covers all the essential rules with clear examples.",
     content: `
 <p>Articles are small words that come before nouns, but they cause big problems for English learners. Let's break down the rules for using <strong>a</strong>, <strong>an</strong>, and <strong>the</strong> correctly.</p>
 
@@ -161,7 +161,7 @@ export const blogPosts: BlogPost[] = [
     id: "2",
     slug: "zero-conditional-complete-guide",
     title: "Zero Conditional Rules",
-    excerpt: "Master the zero conditional to express scientific facts, general truths, and cause-effect relationships. Learn the structure and see clear examples.",
+    excerpt: "Express scientific facts, general truths, and cause-effect relationships with the zero conditional. Covers structure and usage with clear examples.",
     content: `
 <p>The <strong>zero conditional</strong> is one of the simplest yet most powerful structures in English. We use it to talk about things that are <em>always true</em>—scientific facts, natural laws, and universal truths. If you want to sound confident and accurate when discussing facts, this is the conditional you need to master.</p>
 
@@ -462,7 +462,7 @@ export const blogPosts: BlogPost[] = [
     id: "3",
     slug: "first-conditional-complete-guide",
     title: "First Conditional Rules",
-    excerpt: "Learn to express real future possibilities, make predictions, promises, and warnings using the first conditional. Master the structure with clear examples.",
+    excerpt: "Talk about real future possibilities, predictions, promises, and warnings. Covers first conditional structure with clear examples.",
     content: `
 <p>The <strong>first conditional</strong> is your go-to structure for talking about <em>real possibilities</em> in the future. Unlike the zero conditional (which deals with facts), the first conditional helps you discuss things that <strong>might happen</strong>—predictions, plans, promises, and warnings that depend on certain conditions.</p>
 
@@ -836,7 +836,7 @@ export const blogPosts: BlogPost[] = [
     id: "4",
     slug: "second-conditional-complete-guide",
     title: "Second Conditional Rules",
-    excerpt: "Learn to talk about hypothetical situations, dreams, and unlikely scenarios using the second conditional. Master the structure for expressing 'what if' in English.",
+    excerpt: "Discuss hypothetical situations, dreams, and unlikely scenarios. Covers second conditional structure for expressing 'what if' in English.",
     content: `
 <p>The <strong>second conditional</strong> lets you step into the world of imagination. It's how we talk about <em>hypothetical situations</em>—things that aren't real, aren't likely, or are simply impossible. When you want to dream, give advice, or explore "what if" scenarios, this is the conditional you need.</p>
 
@@ -1211,8 +1211,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: "5",
     slug: "how-to-write-dates-in-ielts",
-    title: "How to Write Dates in IELTS: A Complete Guide",
-    excerpt: "Master the correct way to write dates in IELTS Writing and Listening tests. Learn British vs American formats, formal letter conventions, and avoid common mistakes.",
+    title: "How to Write Dates in IELTS",
+    excerpt: "British or American date format? Here's everything you need to know about writing dates correctly in IELTS Writing and Listening tests.",
     content: `
 <p>Knowing how to write dates correctly is essential for IELTS success. Whether you're completing the Listening test or writing a formal letter in Writing Task 1, using the wrong date format can cost you marks. This guide covers everything you need to know about writing dates in English for your IELTS exam.</p>
 
@@ -1490,7 +1490,7 @@ export const blogPosts: BlogPost[] = [
     id: "6",
     slug: "irregular-verbs-complete-guide",
     title: "Irregular Verbs List and Examples",
-    excerpt: "Master English irregular verbs with our comprehensive guide. Includes complete verb tables organized by pattern, pronunciation tips, memory techniques, and common mistakes to avoid.",
+    excerpt: "Why do we say 'go-went-gone'? Irregular verbs organized by pattern with tables, pronunciation tips, and memory techniques.",
     content: `
 <p>If you've ever wondered why we say "go-went-gone" instead of "go-goed-goed," you've encountered <strong>irregular verbs</strong>. These verbs don't follow the standard rules and must be memorized. This comprehensive guide will help you master the most important irregular verbs in English.</p>
 
@@ -2008,7 +2008,7 @@ export const blogPosts: BlogPost[] = [
     id: "7",
     slug: "third-conditional-complete-guide",
     title: "Third Conditional Rules",
-    excerpt: "Learn to talk about past regrets, missed opportunities, and imaginary past situations using the third conditional. Master the structure for expressing 'what could have been' in English.",
+    excerpt: "Express past regrets and missed opportunities with the third conditional. Covers structure for talking about 'what could have been'.",
     content: `
 <p>The <strong>third conditional</strong> is your time machine in English. It lets you travel back to the past and imagine <em>different outcomes</em>—things that didn't happen but could have. When you want to express regret, analyze past decisions, or simply wonder "what if," the third conditional is your tool.</p>
 
@@ -2427,7 +2427,7 @@ export const blogPosts: BlogPost[] = [
     id: "8",
     slug: "mixed-conditionals-complete-guide",
     title: "Mixed Conditionals Rules",
-    excerpt: "Master mixed conditionals to express how past actions affect the present, and how present situations relate to past events. Learn the two main types with clear examples.",
+    excerpt: "Connect different time periods in English. Covers how past actions affect the present and how present situations relate to past events.",
     content: `
 <p>You've learned the zero, first, second, and third conditionals. But what happens when you need to connect <strong>different time periods</strong>? That's where <strong>mixed conditionals</strong> come in. They allow you to talk about how a past action affects your present situation, or how a present reality relates to a past event.</p>
 
@@ -2810,7 +2810,7 @@ export const blogPosts: BlogPost[] = [
     id: "9",
     slug: "comparative-adjectives-complete-guide",
     title: "Comparative Adjectives Rules",
-    excerpt: "Learn how to form and use comparative adjectives to compare two things in English. Master the rules for short adjectives, long adjectives, and irregular forms.",
+    excerpt: "Compare two things using comparative adjectives. Covers rules for short adjectives, long adjectives, and irregular forms like better and worse.",
     content: `
 <p>When you want to compare two people, places, or things in English, you need <strong>comparative adjectives</strong>. Whether you're saying that something is bigger, more expensive, or better, understanding how to form comparatives correctly is essential for clear communication.</p>
 
@@ -3290,7 +3290,7 @@ export const blogPosts: BlogPost[] = [
     id: "10",
     slug: "adjectives-complete-guide",
     title: "What Are Adjectives",
-    excerpt: "Master English adjectives with this comprehensive guide. Learn what adjectives are, where to place them, the different types, and how to use them correctly in sentences.",
+    excerpt: "What are adjectives and where do they go in a sentence? Covers types, adjective order, and correct usage with clear examples.",
     content: `
 <p><strong>Adjectives</strong> are the words that bring your English to life. They transform "I saw a dog" into "I saw a big, fluffy, brown dog." Without adjectives, language would be flat and colorless. This guide covers everything you need to know about using adjectives correctly and effectively.</p>
 
@@ -3814,7 +3814,7 @@ export const blogPosts: BlogPost[] = [
     id: "11",
     slug: "superlative-adjectives-complete-guide",
     title: "Superlative Adjectives Rules",
-    excerpt: "Learn how to form and use superlative adjectives to describe the highest degree of a quality. Master the rules for -est endings, 'most', and irregular forms like best and worst.",
+    excerpt: "Describe the highest degree of a quality using superlatives. Covers -est endings, 'most', and irregular forms like best and worst.",
     content: `
 <p>When you want to say that something is the biggest, the most beautiful, or the best in a group, you need <strong>superlative adjectives</strong>. While comparatives compare two things, superlatives identify the extreme—the one that stands above all others.</p>
 
@@ -4332,7 +4332,7 @@ export const blogPosts: BlogPost[] = [
     id: "12",
     slug: "adverbs-complete-guide",
     title: "What Are Adverbs",
-    excerpt: "Master English adverbs with this comprehensive guide. Learn what adverbs are, how to form them, where to place them, and the different types including manner, frequency, time, place, and degree.",
+    excerpt: "What are adverbs and how do you form them? Covers placement and types including manner, frequency, time, place, and degree.",
     content: `
 <p><strong>Adverbs</strong> are the versatile words that tell us <em>how</em>, <em>when</em>, <em>where</em>, <em>how often</em>, and <em>to what degree</em> something happens. While adjectives describe nouns, adverbs modify verbs, adjectives, and even other adverbs. Mastering adverbs will make your English more precise and expressive.</p>
 
@@ -4943,7 +4943,7 @@ export const blogPosts: BlogPost[] = [
     id: "13",
     slug: "adverbs-of-time-complete-guide",
     title: "Adverbs of Time Rules",
-    excerpt: "Master adverbs of time to express when actions occur. Learn about now, then, already, yet, still, just, recently, and more with clear examples and positioning rules.",
+    excerpt: "When does something happen? Covers now, then, already, yet, still, just, recently, and positioning rules for adverbs of time.",
     content: `
 <p><strong>Adverbs of time</strong> answer the question "When?" They tell us when an action happens, how long it lasts, or how often it occurs. From simple words like "now" and "yesterday" to more nuanced ones like "already" and "yet," these adverbs are essential for expressing time relationships in English.</p>
 
@@ -5506,7 +5506,7 @@ export const blogPosts: BlogPost[] = [
     id: "14",
     slug: "adverbs-of-frequency-complete-guide",
     title: "Adverbs of Frequency Rules",
-    excerpt: "Master adverbs of frequency to express how often actions occur. Learn always, usually, often, sometimes, rarely, never, and more with clear position rules and examples.",
+    excerpt: "How often does something happen? Covers always, usually, often, sometimes, rarely, never, and correct position in sentences.",
     content: `
 <p><strong>Adverbs of frequency</strong> answer the question "How often?" They tell us whether an action happens all the time, sometimes, or never. From "always" to "never," these essential adverbs help you describe habits, routines, and how regularly things occur.</p>
 
@@ -6073,7 +6073,7 @@ export const blogPosts: BlogPost[] = [
     id: "15",
     slug: "adverbs-of-manner-complete-guide",
     title: "Adverbs of Manner Rules",
-    excerpt: "Master adverbs of manner to describe how actions are performed. Learn to form adverbs from adjectives, understand irregular forms like well and fast, and use them correctly in sentences.",
+    excerpt: "Describe how actions are performed with adverbs of manner. Covers forming adverbs from adjectives and irregular forms like well and fast.",
     content: `
 <p><strong>Adverbs of manner</strong> answer the question "How?" They describe the way an action is performed—whether someone does something quickly, carefully, beautifully, or badly. These are among the most commonly used adverbs in English and are essential for vivid, descriptive communication.</p>
 
@@ -6663,7 +6663,7 @@ export const blogPosts: BlogPost[] = [
     id: "16",
     slug: "comparative-adverbs-complete-guide",
     title: "Comparative Adverbs Rules",
-    excerpt: "Learn how to use comparative adverbs to compare actions, speeds, and manners. Master the rules for forming comparatives with -er, more, and irregular forms.",
+    excerpt: "Compare actions, speeds, and manners using comparative adverbs. Covers -er forms, 'more', and irregular comparatives.",
     content: `
 <p>When we want to compare <strong>how</strong> people do things—how fast, how carefully, how well—we use <strong>comparative adverbs</strong>. These essential grammar tools help you express differences between actions, making your English more precise and expressive.</p>
 
@@ -6933,7 +6933,7 @@ export const blogPosts: BlogPost[] = [
     id: "17",
     slug: "superlative-adverbs-complete-guide",
     title: "Superlative Adverbs Rules",
-    excerpt: "Master superlative adverbs to describe the highest degree of how actions are performed. Learn the rules for 'most', irregular forms like 'best' and 'worst', and avoid common mistakes.",
+    excerpt: "Describe the highest degree of how actions are performed. Covers 'most', irregular forms like 'best' and 'worst', and correct usage.",
     content: `
 <p>When you want to say that someone does something <em>the fastest</em>, <em>the most carefully</em>, or <em>the best</em> in a group, you need <strong>superlative adverbs</strong>. While superlative adjectives describe nouns at their extreme, superlative adverbs describe <em>actions</em> at their extreme—how something is done to the highest or lowest degree.</p>
 
@@ -7267,7 +7267,7 @@ export const blogPosts: BlogPost[] = [
     id: "18",
     slug: "nouns-complete-guide",
     title: "What Are Nouns",
-    excerpt: "Master English nouns with this comprehensive guide. Learn about common, proper, abstract, concrete, countable, and uncountable nouns with clear examples.",
+    excerpt: "Common, proper, abstract, concrete, countable, uncountable—what's the difference? Covers all noun types with clear examples.",
     content: `
 <p><strong>Nouns</strong> are the building blocks of every sentence. They name people, places, things, and ideas. Without nouns, we couldn't talk about anything! This guide covers everything you need to know about nouns in English.</p>
 
@@ -7582,7 +7582,7 @@ export const blogPosts: BlogPost[] = [
     id: "19",
     slug: "countable-uncountable-nouns-complete-guide",
     title: "Countable and Uncountable Nouns",
-    excerpt: "Master the difference between countable and uncountable nouns. Learn the rules, common mistakes, and how to use determiners like much, many, some, and any correctly.",
+    excerpt: "Is it 'much water' or 'many water'? Understand countable vs uncountable nouns and determiners like much, many, some, and any.",
     content: `
 <p>One of the trickiest aspects of English grammar is knowing whether a noun is <strong>countable</strong> or <strong>uncountable</strong>. This distinction affects which determiners you use, whether to add -s for plurals, and how to form questions. This comprehensive guide will help you master this essential grammar concept.</p>
 
@@ -7973,7 +7973,7 @@ export const blogPosts: BlogPost[] = [
     id: "20",
     slug: "irregular-plurals-complete-guide",
     title: "Irregular Plural Nouns",
-    excerpt: "Learn the rules for irregular plural nouns in English. Master words like children, teeth, mice, and other tricky plurals that don't follow the standard -s rule.",
+    excerpt: "Why 'children' and not 'childs'? Covers irregular plural nouns like teeth, mice, and other tricky plurals that break the standard -s rule.",
     content: `
 <p>Most English nouns form their plural by simply adding <strong>-s</strong> or <strong>-es</strong>. But many common words break this rule completely. These <strong>irregular plurals</strong> must be memorized because they follow older patterns from Old English, Latin, Greek, and other languages. This guide covers all the major types of irregular plurals you need to know.</p>
 
@@ -8328,7 +8328,7 @@ export const blogPosts: BlogPost[] = [
     id: "21",
     slug: "quantifiers-complete-guide",
     title: "Quantifiers in English",
-    excerpt: "Master English quantifiers like some, any, much, many, few, little, and more. Learn which quantifiers work with countable and uncountable nouns with clear examples and visual guides.",
+    excerpt: "Some, any, much, many, few, little—which one do you need? Covers quantifiers for countable and uncountable nouns with visual guides.",
     content: `
 <p>How do you talk about amounts in English? Whether you want to say you have <em>a lot of</em> friends, <em>little</em> time, or <em>no</em> money, you need <strong>quantifiers</strong>. These essential words tell us <em>how much</em> or <em>how many</em> of something we're talking about.</p>
 
@@ -8868,7 +8868,7 @@ export const blogPosts: BlogPost[] = [
     id: "22",
     slug: "possessives-complete-guide",
     title: "Possessive Nouns and Pronouns",
-    excerpt: "Master English possessives including possessive nouns ('s and s'), possessive adjectives (my, your), and possessive pronouns (mine, yours). Learn all the rules with clear examples.",
+    excerpt: "Possessive nouns, adjectives, and pronouns explained. Covers 's and s', my/your/his, and mine/yours/his with clear examples.",
     content: `
 <p>How do you show that something belongs to someone in English? You use <strong>possessives</strong>! Whether it's <em>John's car</em>, <em>my book</em>, or <em>the dog's tail</em>, possessives are essential for expressing ownership, relationships, and connections between people and things.</p>
 
@@ -9609,7 +9609,7 @@ export const blogPosts: BlogPost[] = [
     id: "23",
     slug: "compound-nouns-spelling-rules",
     title: "How to Spell Compound Nouns",
-    excerpt: "Master compound noun spelling in English. Learn when to write compounds as one word, two words, or with hyphens, plus rules for forming plurals and possessives.",
+    excerpt: "One word, two words, or hyphenated? Covers compound noun spelling rules plus forming plurals and possessives.",
     content: `
 <p>Is it <em>ice cream</em>, <em>ice-cream</em>, or <em>icecream</em>? What about <em>mother in law</em> or <em>mother-in-law</em>? <strong>Compound nouns</strong> combine two or more words to create a new meaning, but their spelling can be confusing. This guide covers all the rules you need to write compound nouns correctly.</p>
 
@@ -10168,7 +10168,7 @@ export const blogPosts: BlogPost[] = [
     id: "24",
     slug: "modal-verb-should-complete-guide",
     title: "How to Use Should",
-    excerpt: "Master the modal verb 'should' for giving advice, expressing expectations, and making recommendations. Learn all uses with clear examples and common mistakes to avoid.",
+    excerpt: "Give advice, express expectations, and make recommendations with 'should'. Covers all uses with clear examples.",
     content: `
 <p>The modal verb <strong>should</strong> is one of the most useful words in English. Whether you're giving advice, expressing expectations, or making polite suggestions, <em>should</em> helps you communicate with nuance and tact. This guide covers all the ways to use <em>should</em> correctly.</p>
 
@@ -10690,7 +10690,7 @@ export const blogPosts: BlogPost[] = [
     id: "25",
     slug: "must-have-to-complete-guide",
     title: "Must vs Have To",
-    excerpt: "Master the difference between 'must' and 'have to' for expressing obligation, necessity, and prohibition. Learn when to use each with clear examples and comparison tables.",
+    excerpt: "What's the difference between 'must' and 'have to'? Covers obligation, necessity, and prohibition with comparison tables.",
     content: `
 <p>Both <strong>must</strong> and <strong>have to</strong> express obligation and necessity, but they're not always interchangeable. Understanding the subtle differences between them will help you communicate more precisely and naturally in English.</p>
 
@@ -14067,7 +14067,7 @@ This formal structure is used in toasts, prayers, and ceremonial language.
     id: "30",
     slug: "modal-verbs-complete-guide",
     title: "Modal Verbs Overview",
-    excerpt: "Master all English modal verbs in one complete guide. Learn can, could, may, might, will, would, shall, should, must, ought to, need, and dare with detailed explanations and examples.",
+    excerpt: "Learn all English modal verbs: can, could, may, might, will, would, shall, should, must, ought to, need, and dare. Includes usage explanations and examples.",
     content: `
 <p><strong>Modal verbs</strong> are the essential building blocks of English that express ability, possibility, permission, obligation, and more. This comprehensive guide covers every modal verb in English, their uses, structures, and the subtle differences between them.</p>
 
@@ -15389,8 +15389,8 @@ This formal structure is used in toasts, prayers, and ceremonial language.
   {
     id: "31",
     slug: "ielts-writing-task-1-line-graph",
-    title: "IELTS Writing Task 1: How to Describe a Line Graph",
-    excerpt: "Master line graph descriptions for IELTS Writing Task 1. Learn the structure, useful phrases for trends, and see a complete sample answer with a step-by-step guide.",
+    title: "IELTS Task 1 Line Graph",
+    excerpt: "Describe trends, peaks, and changes over time in IELTS Academic Writing Task 1. Includes structure, vocabulary, and a sample answer.",
     content: `
 <p>In this lesson, you will learn how to describe a <strong>line graph</strong> in IELTS Writing Task 1. We'll work through a real example step by step, so you know exactly what to do in the exam.</p>
 
@@ -15776,8 +15776,8 @@ points="115,178 205,168 295,127 375,107"/>
   {
     id: "32",
     slug: "ielts-writing-task-1-bar-chart-guide",
-    title: "IELTS Writing Task 1: How to Describe a Bar Chart",
-    excerpt: "Learn how to write a Band 7+ bar chart description for IELTS Academic Writing Task 1. Master the structure, vocabulary, and techniques with a step-by-step guide and model answer.",
+    title: "IELTS Task 1 Bar Chart",
+    excerpt: "Compare categories and highlight differences in IELTS Academic Writing Task 1. Includes structure, useful phrases, and a sample answer.",
     content: `
 <p>Bar charts are one of the most common question types in IELTS Writing Task 1. They show data using rectangular bars, making it easy to compare values across different categories. This guide will teach you exactly how to describe a bar chart and achieve a high band score.</p>
 
@@ -16162,8 +16162,8 @@ points="115,178 205,168 295,127 375,107"/>
   {
     id: "33",
     slug: "ielts-writing-task-1-table-guide",
-    title: "IELTS Writing Task 1: How to Describe a Table",
-    excerpt: "Learn how to write a Band 7+ table description for IELTS Academic Writing Task 1. Master the structure, vocabulary, and techniques with a step-by-step guide and model answer.",
+    title: "IELTS Task 1 Table",
+    excerpt: "Select key data and write clear comparisons for IELTS Academic Writing Task 1. Includes how to organize information with a sample answer.",
     content: `
 <p>Tables are a common data type in IELTS Writing Task 1. Unlike charts or graphs, tables present raw numbers in rows and columns, which means you need to identify the key patterns yourself. This guide will teach you exactly how to describe a table effectively and achieve a high band score.</p>
 
@@ -16579,8 +16579,8 @@ points="115,178 205,168 295,127 375,107"/>
   {
     id: "34",
     slug: "ielts-writing-task-1-pie-chart-guide",
-    title: "IELTS Writing Task 1: How to Describe Pie Charts",
-    excerpt: "Learn how to write a Band 7+ pie chart description for IELTS Academic Writing Task 1. Master comparing multiple pie charts with structure, vocabulary, and a complete model answer.",
+    title: "IELTS Task 1 Pie Chart",
+    excerpt: "Describe percentages and proportions in IELTS Academic Writing Task 1. Covers comparing multiple charts with vocabulary and a sample answer.",
     content: `
 <p>Pie charts show data as percentages of a whole. In IELTS Writing Task 1, you will often see two or more pie charts that you need to compare. This guide will teach you exactly how to describe and compare pie charts effectively.</p>
 
@@ -17020,8 +17020,8 @@ points="115,178 205,168 295,127 375,107"/>
   {
     id: "35",
     slug: "ielts-writing-task-1-process-diagram-guide",
-    title: "IELTS Writing Task 1: How to Describe a Process Diagram",
-    excerpt: "Learn how to write a Band 7+ process description for IELTS Academic Writing Task 1. Master passive voice, sequencing language, and structure with a step-by-step guide and model answer.",
+    title: "IELTS Task 1 Process Diagram",
+    excerpt: "Describe stages of natural or man-made processes in IELTS Academic Writing Task 1. Covers passive voice, sequencing, and a sample answer.",
     content: `
 <p>Process diagrams show how something is made or how something works. Unlike charts and graphs, process diagrams do not contain numbers or statistics. Instead, you must describe <strong>what happens</strong> at each stage and <strong>how the stages connect</strong>. This guide will teach you exactly how to describe a process diagram effectively.</p>
 
@@ -17531,8 +17531,8 @@ points="115,178 205,168 295,127 375,107"/>
   {
     id: "36",
     slug: "ielts-writing-task-2-opinion-essay",
-    title: "IELTS Writing Task 2: Opinion Essay (Agree or Disagree)",
-    excerpt: "Master the IELTS opinion essay with this complete guide. Learn how to structure your response, express your view clearly, and write a Band 7+ essay with model answers and expert tips.",
+    title: "IELTS Task 2 Opinion Essay",
+    excerpt: "Write a clear agree or disagree essay for IELTS Writing Task 2. Covers essay structure, how to express your opinion, and a sample answer.",
     content: `
 <p>The <strong>opinion essay</strong> (also called the <strong>agree/disagree essay</strong> or <strong>argumentative essay</strong>) is one of the most common question types in IELTS Writing Task 2. You are presented with a statement or viewpoint and asked whether you agree or disagree with it. This guide will teach you everything you need to write a high-scoring opinion essay.</p>
 
@@ -18117,8 +18117,8 @@ There is a growing belief that traditional petrol and diesel vehicles should be 
   {
     id: "37",
     slug: "ielts-writing-task-2-discussion-essay",
-    title: "IELTS Writing Task 2: Discussion Essay (Discuss Both Views)",
-    excerpt: "Master the IELTS discussion essay with this complete guide. Learn how to present both sides of an argument, structure your response, and achieve Band 7+ with model answers and expert tips.",
+    title: "IELTS Task 2 Discussion Essay",
+    excerpt: "Present both sides of an argument in IELTS Writing Task 2. Covers balanced structure, giving your opinion, and a sample answer.",
     content: `
 <p>The <strong>discussion essay</strong> (also called the <strong>discuss both views essay</strong>) is one of the most common question types in IELTS Writing Task 2. Unlike an opinion essay where you argue for one side, a discussion essay requires you to <strong>present both perspectives</strong> on an issue. This guide will teach you everything you need to write a high-scoring discussion essay.</p>
 
@@ -18684,8 +18684,8 @@ In conclusion, both perspectives offer valuable insights into language education
   {
     id: "38",
     slug: "ielts-writing-task-2-advantage-disadvantage-essay",
-    title: "IELTS Writing Task 2: Advantage & Disadvantage Essay (Complete Guide)",
-    excerpt: "Master both types of IELTS advantage/disadvantage essays. Learn how to write a standard advantages and disadvantages essay AND the challenging 'outweigh' essay with structures, model answers, and Band 7+ tips.",
+    title: "IELTS Task 2 Advantage Disadvantage Essay",
+    excerpt: "Handle both standard and 'outweigh' questions in IELTS Writing Task 2. Covers two essay structures with sample answers for each type.",
     content: `
 <p>Advantage and disadvantage questions are among the most common in IELTS Writing Task 2. However, many students don't realise there are <strong>two different types</strong> of questions in this category, each requiring a different approach. This guide will teach you how to identify and write both types effectively.</p>
 
@@ -19311,8 +19311,8 @@ In conclusion, while tourism provides economic benefits, the environmental degra
   {
     id: "39",
     slug: "ielts-writing-task-2-problem-solution-essay",
-    title: "IELTS Writing Task 2: Problem & Solution Essay (Complete Guide)",
-    excerpt: "Master the IELTS problem and solution essay with this complete guide. Learn how to identify problems, propose effective solutions, and structure your essay for Band 7+ with model answers and expert tips.",
+    title: "IELTS Task 2 Problem Solution Essay",
+    excerpt: "Identify problems and propose solutions in IELTS Writing Task 2. Covers essay structure, linking ideas, and a sample answer.",
     content: `
 <p>The <strong>problem and solution essay</strong> is a common question type in IELTS Writing Task 2. You are presented with a problem or issue and asked to discuss its causes, effects, or solutions. This guide will teach you how to identify, structure, and write a high-scoring problem-solution essay.</p>
 
@@ -19886,8 +19886,8 @@ To sum up, the rise in mental health issues among young people is driven by soci
   {
     id: "40",
     slug: "ielts-writing-task-2-double-question-essay",
-    title: "IELTS Writing Task 2: Double Question Essay (Two-Part Question)",
-    excerpt: "Master the IELTS double question essay with this complete guide. Learn how to identify two-part questions, structure your response to answer both questions fully, and achieve Band 7+ with model answers.",
+    title: "IELTS Task 2 Double Question Essay",
+    excerpt: "Answer two-part questions fully in IELTS Writing Task 2. Covers how to structure your response and address both questions with a sample answer.",
     content: `
 <p>The <strong>double question essay</strong> (also called a <strong>two-part question</strong> or <strong>multi-part essay</strong>) is a common but often misunderstood question type in IELTS Writing Task 2. Unlike other essay types, you are given <strong>two separate questions</strong> that you must answer fully. This guide will teach you how to identify, structure, and write a high-scoring double question essay.</p>
 
@@ -20382,8 +20382,8 @@ To sum up, rural-to-urban migration is driven by the search for better employmen
   {
     id: "41",
     slug: "ielts-writing-task-2-multi-part-opinion-essay",
-    title: "Multi-Part and Opinion Essays: Complete Guide",
-    excerpt: "Master the multi-part opinion essay that combines descriptive questions with outweigh/opinion elements. Learn the structure, techniques, and model answers for this hybrid essay type.",
+    title: "IELTS Task 2 Multi-Part Opinion Essay",
+    excerpt: "Address multiple points while expressing your opinion in IELTS Writing Task 2. Covers organization and structure with a sample answer.",
     content: `
 <p>Some IELTS Task 2 questions combine multiple elements: they ask you to <strong>describe or explain</strong> something AND give your <strong>opinion on whether benefits outweigh drawbacks</strong> (or vice versa). This hybrid format requires you to both analyse a topic and make a clear judgement, making it one of the more demanding essay types.</p>
 

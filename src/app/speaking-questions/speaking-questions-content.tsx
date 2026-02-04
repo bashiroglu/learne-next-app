@@ -112,7 +112,7 @@ function Part1Content() {
         <CardHeader>
           <CardTitle className="text-primary flex items-center gap-2">
             <MessageCircle className="w-5 h-5" />
-            About Part 1
+            IELTS Speaking Part 1: Interview Questions
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-muted-foreground">
@@ -125,6 +125,10 @@ function Part1Content() {
           <p>• Keep answers brief and natural (2-3 sentences per question)</p>
         </CardContent>
       </Card>
+
+      <p className="text-muted-foreground mb-6">
+        Practice the latest IELTS Speaking Part 1 questions from the January-April 2026 test period. Each topic includes 4-5 common interview questions with Band 9 model answers and useful vocabulary highlighted.
+      </p>
 
       <Tabs defaultValue={Object.keys(part1Topics)[0]} className="space-y-6">
         <div className="sticky top-[140px] z-20 bg-background/95 backdrop-blur-sm pb-4 -mx-4 px-4">
@@ -143,6 +147,9 @@ function Part1Content() {
 
         {Object.entries(part1Topics).map(([key, items], tabIndex) => (
           <TabsContent key={key} value={key}>
+            <h3 className="text-xl font-semibold mb-4">
+              {part1TabLabels[key]} - IELTS Part 1 Sample Questions & Answers
+            </h3>
             <Accordion type="single" collapsible defaultValue={tabIndex === 0 ? "item-0" : undefined} className="space-y-4">
               {items.map((item, index) => (
                 <AccordionItem
@@ -182,7 +189,7 @@ function Part2Content() {
         <CardHeader>
           <CardTitle className="text-accent flex items-center gap-2">
             <BookOpen className="w-5 h-5" />
-            About Part 2 & Part 3
+            IELTS Cue Cards (Part 2) & Discussion Questions (Part 3)
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-muted-foreground">
@@ -199,6 +206,10 @@ function Part2Content() {
           <p>• Requires expressing and justifying opinions with examples</p>
         </CardContent>
       </Card>
+
+      <p className="text-muted-foreground mb-6">
+        Browse IELTS Speaking Part 2 cue card topics and Part 3 discussion questions from the January-April 2026 test period. Each topic includes the full cue card with bullet points, Band 9 sample answers, and related follow-up questions.
+      </p>
 
       <Tabs defaultValue={Object.keys(part2And3TabLabels)[0]} className="space-y-6">
         <div className="sticky top-[140px] z-20 bg-background/95 backdrop-blur-sm pb-4">
@@ -220,6 +231,9 @@ function Part2Content() {
           const firstTopicId = tabIndex === 0 ? categoryTopics[0]?.id : undefined;
           return (
           <TabsContent key={key} value={key}>
+            <h3 className="text-xl font-semibold mb-4">
+              {part2And3TabLabels[key]} - IELTS Cue Card Topics & Discussion Questions
+            </h3>
             <Accordion type="single" collapsible defaultValue={firstTopicId} className="space-y-6">
               {categoryTopics.map((topic) => (
                   <AccordionItem
@@ -341,10 +355,10 @@ export function SpeakingQuestionsContent() {
                   className="text-2xl font-bold text-foreground flex items-center gap-2"
                 >
                   <MessageCircle className="w-6 h-6 text-primary" />
-                  IELTS Speaking Questions 2026
+                  IELTS Speaking Test Questions 2026
                 </h1>
                 <p itemProp="description" className="text-muted-foreground mt-1">
-                  Latest real test questions from January-April 2026 with band 9 sample answers
+                  Real exam questions with Band 9 sample answers for Part 1, 2 & 3
                 </p>
                 <meta itemProp="author" content="Learne" />
                 <meta itemProp="publisher" content="Learne" />
