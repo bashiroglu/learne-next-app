@@ -46,6 +46,9 @@ function transformArticle(article: Record<string, unknown>): ReadingArticle {
     display_order: article.display_order as number,
     is_published: article.is_published as boolean,
     has_quiz: article.has_quiz as boolean,
+    video_url: (article.video_url as string | null) ?? null,
+    grammar_test_slug: (article.grammar_test_slug as string | null) ?? null,
+    grammar_topic_slug: (article.grammar_topic_slug as string | null) ?? null,
     reading_categories: categories,
   };
 }
@@ -101,6 +104,9 @@ export async function getReadingArticles(categorySlug?: string): Promise<Reading
       display_order: 0,
       is_published: true,
       has_quiz: false,
+      video_url: null,
+      grammar_test_slug: null,
+      grammar_topic_slug: null,
       reading_categories: categories,
     };
   });
@@ -173,6 +179,9 @@ export async function getReadingArticlesPaginated(
         display_order: 0,
         is_published: true,
         has_quiz: false,
+        video_url: null,
+        grammar_test_slug: null,
+        grammar_topic_slug: null,
         reading_categories: categories,
       };
     }),
@@ -347,6 +356,9 @@ export async function getRelatedArticles(
       display_order: 0,
       is_published: true,
       has_quiz: false,
+      video_url: null,
+      grammar_test_slug: null,
+      grammar_topic_slug: null,
       reading_categories: categories,
     };
   });

@@ -14,17 +14,15 @@ import { Button } from "@/components/ui/button";
 import {
   MessageCircle,
   BookOpen,
-  Users,
   ChevronLeft,
   ChevronRight,
+  Users,
 } from "lucide-react";
 import {
   part1Topics,
-  part2Topics,
-  part3Topics,
   part1TabLabels,
-  part2TabLabels,
-  part3TabLabels,
+  part2And3Topics,
+  part2And3TabLabels,
 } from "./speaking-data";
 
 function ScrollableTabs({
@@ -41,7 +39,7 @@ function ScrollableTabs({
   const checkScroll = () => {
     const container = scrollContainerRef.current;
     if (container) {
-      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollLeft(container.scrollLeft > 1);
       setCanScrollRight(
         container.scrollLeft < container.scrollWidth - container.clientWidth - 1
       );
@@ -49,9 +47,10 @@ function ScrollableTabs({
   };
 
   useEffect(() => {
-    checkScroll();
     const container = scrollContainerRef.current;
     if (container) {
+      container.scrollLeft = 0;
+      checkScroll();
       container.addEventListener("scroll", checkScroll);
       window.addEventListener("resize", checkScroll);
       return () => {
@@ -64,9 +63,8 @@ function ScrollableTabs({
   const scroll = (direction: "left" | "right") => {
     const container = scrollContainerRef.current;
     if (container) {
-      const scrollAmount = 200;
       container.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
+        left: direction === "left" ? -200 : 200,
         behavior: "smooth",
       });
     }
@@ -94,12 +92,15 @@ function ScrollableTabs({
           <ChevronRight className="h-5 w-5" />
         </Button>
       )}
-      <TabsList
+      {/* Use a plain div as the scroll container for full control */}
+      <div
         ref={scrollContainerRef}
-        className={`w-full inline-flex h-auto overflow-x-auto overflow-y-hidden scrollbar-hide ${className}`}
+        className="overflow-x-auto overflow-y-hidden scrollbar-hide"
       >
-        {children}
-      </TabsList>
+        <TabsList className={`inline-flex h-auto w-max ${className}`}>
+          {children}
+        </TabsList>
+      </div>
     </div>
   );
 }
@@ -125,7 +126,7 @@ function Part1Content() {
         </CardContent>
       </Card>
 
-      <Tabs defaultValue="general" className="space-y-6">
+      <Tabs defaultValue={Object.keys(part1Topics)[0]} className="space-y-6">
         <div className="sticky top-[140px] z-20 bg-background/95 backdrop-blur-sm pb-4 -mx-4 px-4">
           <ScrollableTabs>
             {Object.keys(part1Topics).map((key) => (
@@ -140,9 +141,9 @@ function Part1Content() {
           </ScrollableTabs>
         </div>
 
-        {Object.entries(part1Topics).map(([key, items]) => (
+        {Object.entries(part1Topics).map(([key, items], tabIndex) => (
           <TabsContent key={key} value={key}>
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible defaultValue={tabIndex === 0 ? "item-0" : undefined} className="space-y-4">
               {items.map((item, index) => (
                 <AccordionItem
                   key={index}
@@ -154,9 +155,10 @@ function Part1Content() {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4">
                     {item.answer ? (
-                      <p className="text-muted-foreground leading-relaxed">
-                        {item.answer}
-                      </p>
+                      <p
+                        className="text-muted-foreground leading-relaxed [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
+                        dangerouslySetInnerHTML={{ __html: item.answer }}
+                      />
                     ) : (
                       <p className="text-muted-foreground/60 italic">
                         Sample answer coming soon...
@@ -180,155 +182,142 @@ function Part2Content() {
         <CardHeader>
           <CardTitle className="text-accent flex items-center gap-2">
             <BookOpen className="w-5 h-5" />
-            About Part 2
+            About Part 2 & Part 3
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-muted-foreground">
+          <p className="font-medium text-foreground">Part 2 - Long Turn:</p>
           <p>
             • Duration: 3-4 minutes total (1 minute preparation + 1-2 minutes
             speaking)
           </p>
           <p>• You will receive a task card with a topic and points to cover</p>
           <p>• Use the preparation time to make notes</p>
-          <p>• Speak continuously for 1-2 minutes on the topic</p>
-          <p>• The examiner may ask 1-2 follow-up questions</p>
-        </CardContent>
-      </Card>
-
-      <Tabs defaultValue="people" className="space-y-6">
-        <div className="sticky top-[140px] z-20 bg-background/95 backdrop-blur-sm pb-4 -mx-4 px-4">
-          <ScrollableTabs>
-            {Object.keys(part2Topics).map((key) => (
-              <TabsTrigger
-                key={key}
-                value={key}
-                className="py-3 px-6 whitespace-nowrap"
-              >
-                {part2TabLabels[key]}
-              </TabsTrigger>
-            ))}
-          </ScrollableTabs>
-        </div>
-
-        {Object.entries(part2Topics).map(([key, topics]) => (
-          <TabsContent key={key} value={key}>
-            <Accordion type="single" collapsible className="space-y-6">
-              {topics.map((topic, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="border rounded-lg shadow-sm hover:shadow-md transition-all bg-gradient-to-br from-card to-secondary/20"
-                >
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                    <div className="text-left">
-                      <h3 className="text-xl font-semibold">{topic.title}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        You should say:
-                      </p>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <ul className="space-y-2 mb-4">
-                      {topic.points.map((point, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <span className="text-primary mr-2">•</span>
-                          <span className="text-muted-foreground">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="border-t pt-4 mt-4">
-                      <p className="font-semibold mb-2 text-primary">
-                        Sample Answer:
-                      </p>
-                      {topic.answer ? (
-                        <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                          {topic.answer}
-                        </p>
-                      ) : (
-                        <p className="text-muted-foreground/60 italic">
-                          Sample answer coming soon...
-                        </p>
-                      )}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </TabsContent>
-        ))}
-      </Tabs>
-    </div>
-  );
-}
-
-function Part3Content() {
-  return (
-    <div className="space-y-6">
-      <Card className="bg-gradient-to-br from-card to-primary/10 border-primary/20">
-        <CardHeader>
-          <CardTitle className="text-primary flex items-center gap-2">
-            <Users className="w-5 h-5" />
-            About Part 3
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2 text-muted-foreground">
+          <p className="font-medium text-foreground mt-4">Part 3 - Discussion:</p>
           <p>• Duration: 4-5 minutes</p>
-          <p>• Two-way discussion with the examiner on abstract topics</p>
-          <p>
-            • Questions related to the theme of Part 2 but more general and
-            analytical
-          </p>
-          <p>
-            • Requires expressing and justifying opinions, analyzing, and
-            speculating
-          </p>
-          <p>• Give detailed, well-developed answers with examples</p>
+          <p>• The examiner will ask follow-up questions related to the Part 2 topic</p>
+          <p>• Requires expressing and justifying opinions with examples</p>
         </CardContent>
       </Card>
 
-      <Tabs defaultValue="education" className="space-y-6">
-        <div className="sticky top-[140px] z-20 bg-background/95 backdrop-blur-sm pb-4 -mx-4 px-4">
+      <Tabs defaultValue={Object.keys(part2And3TabLabels)[0]} className="space-y-6">
+        <div className="sticky top-[140px] z-20 bg-background/95 backdrop-blur-sm pb-4">
           <ScrollableTabs>
-            {Object.keys(part3Topics).map((key) => (
+            {Object.keys(part2And3TabLabels).map((key) => (
               <TabsTrigger
                 key={key}
                 value={key}
                 className="py-3 px-6 whitespace-nowrap"
               >
-                {part3TabLabels[key]}
+                {part2And3TabLabels[key]}
               </TabsTrigger>
             ))}
           </ScrollableTabs>
         </div>
 
-        {Object.entries(part3Topics).map(([key, items]) => (
+        {Object.keys(part2And3TabLabels).map((key, tabIndex) => {
+          const categoryTopics = part2And3Topics.filter((topic) => topic.category === key);
+          const firstTopicId = tabIndex === 0 ? categoryTopics[0]?.id : undefined;
+          return (
           <TabsContent key={key} value={key}>
-            <Accordion type="single" collapsible className="space-y-4">
-              {items.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="border rounded-lg shadow-sm hover:shadow-md transition-all bg-card"
-                >
-                  <AccordionTrigger className="px-6 py-4 text-lg font-medium hover:no-underline text-left">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
-                    {item.answer ? (
-                      <p className="text-muted-foreground leading-relaxed">
-                        {item.answer}
-                      </p>
-                    ) : (
-                      <p className="text-muted-foreground/60 italic">
-                        Sample answer coming soon...
-                      </p>
-                    )}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+            <Accordion type="single" collapsible defaultValue={firstTopicId} className="space-y-6">
+              {categoryTopics.map((topic) => (
+                  <AccordionItem
+                    key={topic.id}
+                    value={topic.id}
+                    className="border rounded-lg shadow-sm hover:shadow-md transition-all bg-gradient-to-br from-card to-secondary/20"
+                  >
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                      <div className="text-left">
+                        <h3 className="text-xl font-semibold">{topic.title}</h3>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      {/* Part 2 Section */}
+                      <div className="mb-6">
+                        <div className="flex items-center gap-2 mb-3">
+                          <BookOpen className="w-5 h-5 text-primary" />
+                          <h4 className="font-semibold text-lg text-primary">Part 2 - You should say:</h4>
+                        </div>
+                        <ul className="space-y-2 mb-4 pl-7">
+                          {topic.points.map((point, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-primary mr-2">•</span>
+                              <span className="text-muted-foreground">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        {/* Part 2 Sample Answer */}
+                        <Accordion type="single" collapsible className="mt-4">
+                          <AccordionItem value="sample-answer" className="border rounded-lg bg-card/50">
+                            <AccordionTrigger className="px-4 py-3 text-base font-medium hover:no-underline">
+                              <span className="flex items-center gap-2">
+                                📝 Sample Answer
+                              </span>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4">
+                              {topic.answer ? (
+                                <p
+                                  className="text-muted-foreground leading-relaxed whitespace-pre-line [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
+                                  dangerouslySetInnerHTML={{ __html: topic.answer }}
+                                />
+                              ) : (
+                                <p className="text-muted-foreground/60 italic">
+                                  Sample answer coming soon...
+                                </p>
+                              )}
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                      </div>
+
+                      {/* Divider */}
+                      <div className="border-t border-border my-6" />
+
+                      {/* Part 3 Section */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <Users className="w-5 h-5 text-primary" />
+                          <h4 className="font-semibold text-lg text-primary">Part 3 - Related Discussion Questions:</h4>
+                        </div>
+
+                        <Accordion type="single" collapsible className="space-y-3">
+                          {topic.part3Questions.map((q, idx) => (
+                            <AccordionItem
+                              key={idx}
+                              value={`part3-${idx}`}
+                              className="border rounded-lg bg-card/50"
+                            >
+                              <AccordionTrigger className="px-4 py-3 text-base font-medium hover:no-underline text-left">
+                                <span className="flex items-start gap-2">
+                                  <span className="text-primary font-semibold">{idx + 1}.</span>
+                                  <span>{q.question}</span>
+                                </span>
+                              </AccordionTrigger>
+                              <AccordionContent className="px-4 pb-4">
+                                {q.answer ? (
+                                  <p
+                                    className="text-muted-foreground leading-relaxed [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
+                                    dangerouslySetInnerHTML={{ __html: q.answer }}
+                                  />
+                                ) : (
+                                  <p className="text-muted-foreground/60 italic">
+                                    Sample answer coming soon...
+                                  </p>
+                                )}
+                              </AccordionContent>
+                            </AccordionItem>
+                          ))}
+                        </Accordion>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
             </Accordion>
           </TabsContent>
-        ))}
+        );
+        })}
       </Tabs>
     </div>
   );
@@ -352,24 +341,23 @@ export function SpeakingQuestionsContent() {
                   className="text-2xl font-bold text-foreground flex items-center gap-2"
                 >
                   <MessageCircle className="w-6 h-6 text-primary" />
-                  IELTS Speaking Questions
+                  IELTS Speaking Questions 2026
                 </h1>
                 <p itemProp="description" className="text-muted-foreground mt-1">
-                  Practice questions and sample answers for all three parts of the
-                  IELTS speaking test
+                  Latest real test questions from January-April 2026 with band 9 sample answers
                 </p>
                 <meta itemProp="author" content="Learne" />
                 <meta itemProp="publisher" content="Learne" />
               </div>
 
-              {/* Part switcher tabs */}
+              {/* Part switcher tabs - Now only Part 1 and Part 2 */}
               <nav aria-label="Speaking test parts">
                 <Tabs
                   value={activeTab}
                   onValueChange={setActiveTab}
                   className="w-auto"
                 >
-                  <TabsList className="grid grid-cols-3 w-[300px]">
+                  <TabsList className="grid grid-cols-2 w-[200px]">
                     <TabsTrigger
                       value="part1"
                       className="flex items-center gap-1.5"
@@ -382,14 +370,7 @@ export function SpeakingQuestionsContent() {
                       className="flex items-center gap-1.5"
                     >
                       <BookOpen className="w-4 h-4" />
-                      Part 2
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="part3"
-                      className="flex items-center gap-1.5"
-                    >
-                      <Users className="w-4 h-4" />
-                      Part 3
+                      Part 2 & 3
                     </TabsTrigger>
                   </TabsList>
                 </Tabs>
@@ -412,17 +393,9 @@ export function SpeakingQuestionsContent() {
             <TabsContent value="part2" className="mt-0">
               <section aria-labelledby="part2-heading">
                 <h2 id="part2-heading" className="sr-only">
-                  Part 2: Long Turn Cue Cards
+                  Part 2 & Part 3: Long Turn Cue Cards and Discussion Questions
                 </h2>
                 <Part2Content />
-              </section>
-            </TabsContent>
-            <TabsContent value="part3" className="mt-0">
-              <section aria-labelledby="part3-heading">
-                <h2 id="part3-heading" className="sr-only">
-                  Part 3: Discussion Questions
-                </h2>
-                <Part3Content />
               </section>
             </TabsContent>
           </Tabs>

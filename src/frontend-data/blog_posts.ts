@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "1",
     slug: "mastering-english-articles-a-an-the",
-    title: "Mastering English Articles: A, An, and The",
+    title: "How to Use A, An and The",
     excerpt: "Learn when to use 'a', 'an', and 'the' in English. This guide covers all the essential rules with clear examples.",
     content: `
 <p>Articles are small words that come before nouns, but they cause big problems for English learners. Let's break down the rules for using <strong>a</strong>, <strong>an</strong>, and <strong>the</strong> correctly.</p>
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "2",
     slug: "zero-conditional-complete-guide",
-    title: "Zero Conditional: The Grammar of Facts and Truths",
+    title: "Zero Conditional Rules",
     excerpt: "Master the zero conditional to express scientific facts, general truths, and cause-effect relationships. Learn the structure and see clear examples.",
     content: `
 <p>The <strong>zero conditional</strong> is one of the simplest yet most powerful structures in English. We use it to talk about things that are <em>always true</em>—scientific facts, natural laws, and universal truths. If you want to sound confident and accurate when discussing facts, this is the conditional you need to master.</p>
@@ -461,7 +461,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "3",
     slug: "first-conditional-complete-guide",
-    title: "First Conditional: Talking About Real Possibilities",
+    title: "First Conditional Rules",
     excerpt: "Learn to express real future possibilities, make predictions, promises, and warnings using the first conditional. Master the structure with clear examples.",
     content: `
 <p>The <strong>first conditional</strong> is your go-to structure for talking about <em>real possibilities</em> in the future. Unlike the zero conditional (which deals with facts), the first conditional helps you discuss things that <strong>might happen</strong>—predictions, plans, promises, and warnings that depend on certain conditions.</p>
@@ -835,7 +835,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "4",
     slug: "second-conditional-complete-guide",
-    title: "Second Conditional: Imagining Different Realities",
+    title: "Second Conditional Rules",
     excerpt: "Learn to talk about hypothetical situations, dreams, and unlikely scenarios using the second conditional. Master the structure for expressing 'what if' in English.",
     content: `
 <p>The <strong>second conditional</strong> lets you step into the world of imagination. It's how we talk about <em>hypothetical situations</em>—things that aren't real, aren't likely, or are simply impossible. When you want to dream, give advice, or explore "what if" scenarios, this is the conditional you need.</p>
@@ -1489,7 +1489,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "6",
     slug: "irregular-verbs-complete-guide",
-    title: "Irregular Verbs: The Complete Guide with Tables",
+    title: "Irregular Verbs List and Examples",
     excerpt: "Master English irregular verbs with our comprehensive guide. Includes complete verb tables organized by pattern, pronunciation tips, memory techniques, and common mistakes to avoid.",
     content: `
 <p>If you've ever wondered why we say "go-went-gone" instead of "go-goed-goed," you've encountered <strong>irregular verbs</strong>. These verbs don't follow the standard rules and must be memorized. This comprehensive guide will help you master the most important irregular verbs in English.</p>
@@ -2007,7 +2007,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "7",
     slug: "third-conditional-complete-guide",
-    title: "Third Conditional: Reflecting on the Past",
+    title: "Third Conditional Rules",
     excerpt: "Learn to talk about past regrets, missed opportunities, and imaginary past situations using the third conditional. Master the structure for expressing 'what could have been' in English.",
     content: `
 <p>The <strong>third conditional</strong> is your time machine in English. It lets you travel back to the past and imagine <em>different outcomes</em>—things that didn't happen but could have. When you want to express regret, analyze past decisions, or simply wonder "what if," the third conditional is your tool.</p>
@@ -2426,7 +2426,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "8",
     slug: "mixed-conditionals-complete-guide",
-    title: "Mixed Conditionals: Connecting Past and Present",
+    title: "Mixed Conditionals Rules",
     excerpt: "Master mixed conditionals to express how past actions affect the present, and how present situations relate to past events. Learn the two main types with clear examples.",
     content: `
 <p>You've learned the zero, first, second, and third conditionals. But what happens when you need to connect <strong>different time periods</strong>? That's where <strong>mixed conditionals</strong> come in. They allow you to talk about how a past action affects your present situation, or how a present reality relates to a past event.</p>
@@ -2809,7 +2809,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "9",
     slug: "comparative-adjectives-complete-guide",
-    title: "Comparative Adjectives: How to Compare Things in English",
+    title: "Comparative Adjectives Rules",
     excerpt: "Learn how to form and use comparative adjectives to compare two things in English. Master the rules for short adjectives, long adjectives, and irregular forms.",
     content: `
 <p>When you want to compare two people, places, or things in English, you need <strong>comparative adjectives</strong>. Whether you're saying that something is bigger, more expensive, or better, understanding how to form comparatives correctly is essential for clear communication.</p>
@@ -3289,7 +3289,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "10",
     slug: "adjectives-complete-guide",
-    title: "Adjectives: The Complete Guide to Describing Words",
+    title: "What Are Adjectives",
     excerpt: "Master English adjectives with this comprehensive guide. Learn what adjectives are, where to place them, the different types, and how to use them correctly in sentences.",
     content: `
 <p><strong>Adjectives</strong> are the words that bring your English to life. They transform "I saw a dog" into "I saw a big, fluffy, brown dog." Without adjectives, language would be flat and colorless. This guide covers everything you need to know about using adjectives correctly and effectively.</p>
@@ -3813,7 +3813,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "11",
     slug: "superlative-adjectives-complete-guide",
-    title: "Superlative Adjectives: Expressing the Extreme",
+    title: "Superlative Adjectives Rules",
     excerpt: "Learn how to form and use superlative adjectives to describe the highest degree of a quality. Master the rules for -est endings, 'most', and irregular forms like best and worst.",
     content: `
 <p>When you want to say that something is the biggest, the most beautiful, or the best in a group, you need <strong>superlative adjectives</strong>. While comparatives compare two things, superlatives identify the extreme—the one that stands above all others.</p>
@@ -4331,7 +4331,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "12",
     slug: "adverbs-complete-guide",
-    title: "Adverbs: The Complete Guide to Modifying Verbs, Adjectives, and More",
+    title: "What Are Adverbs",
     excerpt: "Master English adverbs with this comprehensive guide. Learn what adverbs are, how to form them, where to place them, and the different types including manner, frequency, time, place, and degree.",
     content: `
 <p><strong>Adverbs</strong> are the versatile words that tell us <em>how</em>, <em>when</em>, <em>where</em>, <em>how often</em>, and <em>to what degree</em> something happens. While adjectives describe nouns, adverbs modify verbs, adjectives, and even other adverbs. Mastering adverbs will make your English more precise and expressive.</p>
@@ -4942,7 +4942,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "13",
     slug: "adverbs-of-time-complete-guide",
-    title: "Adverbs of Time: When Things Happen in English",
+    title: "Adverbs of Time Rules",
     excerpt: "Master adverbs of time to express when actions occur. Learn about now, then, already, yet, still, just, recently, and more with clear examples and positioning rules.",
     content: `
 <p><strong>Adverbs of time</strong> answer the question "When?" They tell us when an action happens, how long it lasts, or how often it occurs. From simple words like "now" and "yesterday" to more nuanced ones like "already" and "yet," these adverbs are essential for expressing time relationships in English.</p>
@@ -5505,7 +5505,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "14",
     slug: "adverbs-of-frequency-complete-guide",
-    title: "Adverbs of Frequency: How Often Things Happen",
+    title: "Adverbs of Frequency Rules",
     excerpt: "Master adverbs of frequency to express how often actions occur. Learn always, usually, often, sometimes, rarely, never, and more with clear position rules and examples.",
     content: `
 <p><strong>Adverbs of frequency</strong> answer the question "How often?" They tell us whether an action happens all the time, sometimes, or never. From "always" to "never," these essential adverbs help you describe habits, routines, and how regularly things occur.</p>
@@ -6072,7 +6072,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "15",
     slug: "adverbs-of-manner-complete-guide",
-    title: "Adverbs of Manner: Describing How Actions Happen",
+    title: "Adverbs of Manner Rules",
     excerpt: "Master adverbs of manner to describe how actions are performed. Learn to form adverbs from adjectives, understand irregular forms like well and fast, and use them correctly in sentences.",
     content: `
 <p><strong>Adverbs of manner</strong> answer the question "How?" They describe the way an action is performed—whether someone does something quickly, carefully, beautifully, or badly. These are among the most commonly used adverbs in English and are essential for vivid, descriptive communication.</p>
@@ -6662,7 +6662,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "16",
     slug: "comparative-adverbs-complete-guide",
-    title: "Comparative Adverbs: How to Compare Actions in English",
+    title: "Comparative Adverbs Rules",
     excerpt: "Learn how to use comparative adverbs to compare actions, speeds, and manners. Master the rules for forming comparatives with -er, more, and irregular forms.",
     content: `
 <p>When we want to compare <strong>how</strong> people do things—how fast, how carefully, how well—we use <strong>comparative adverbs</strong>. These essential grammar tools help you express differences between actions, making your English more precise and expressive.</p>
@@ -6932,7 +6932,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "17",
     slug: "superlative-adverbs-complete-guide",
-    title: "Superlative Adverbs: Expressing the Extreme in Actions",
+    title: "Superlative Adverbs Rules",
     excerpt: "Master superlative adverbs to describe the highest degree of how actions are performed. Learn the rules for 'most', irregular forms like 'best' and 'worst', and avoid common mistakes.",
     content: `
 <p>When you want to say that someone does something <em>the fastest</em>, <em>the most carefully</em>, or <em>the best</em> in a group, you need <strong>superlative adverbs</strong>. While superlative adjectives describe nouns at their extreme, superlative adverbs describe <em>actions</em> at their extreme—how something is done to the highest or lowest degree.</p>
@@ -7266,7 +7266,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "18",
     slug: "nouns-complete-guide",
-    title: "Nouns: The Complete Guide to Naming Words",
+    title: "What Are Nouns",
     excerpt: "Master English nouns with this comprehensive guide. Learn about common, proper, abstract, concrete, countable, and uncountable nouns with clear examples.",
     content: `
 <p><strong>Nouns</strong> are the building blocks of every sentence. They name people, places, things, and ideas. Without nouns, we couldn't talk about anything! This guide covers everything you need to know about nouns in English.</p>
@@ -7581,7 +7581,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "19",
     slug: "countable-uncountable-nouns-complete-guide",
-    title: "Countable and Uncountable Nouns: The Complete Guide",
+    title: "Countable and Uncountable Nouns",
     excerpt: "Master the difference between countable and uncountable nouns. Learn the rules, common mistakes, and how to use determiners like much, many, some, and any correctly.",
     content: `
 <p>One of the trickiest aspects of English grammar is knowing whether a noun is <strong>countable</strong> or <strong>uncountable</strong>. This distinction affects which determiners you use, whether to add -s for plurals, and how to form questions. This comprehensive guide will help you master this essential grammar concept.</p>
@@ -7972,7 +7972,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "20",
     slug: "irregular-plurals-complete-guide",
-    title: "Irregular Plurals: Mastering Unusual Noun Forms",
+    title: "Irregular Plural Nouns",
     excerpt: "Learn the rules for irregular plural nouns in English. Master words like children, teeth, mice, and other tricky plurals that don't follow the standard -s rule.",
     content: `
 <p>Most English nouns form their plural by simply adding <strong>-s</strong> or <strong>-es</strong>. But many common words break this rule completely. These <strong>irregular plurals</strong> must be memorized because they follow older patterns from Old English, Latin, Greek, and other languages. This guide covers all the major types of irregular plurals you need to know.</p>
@@ -8327,7 +8327,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "21",
     slug: "quantifiers-complete-guide",
-    title: "Quantifiers: The Complete Guide to Expressing Amount",
+    title: "Quantifiers in English",
     excerpt: "Master English quantifiers like some, any, much, many, few, little, and more. Learn which quantifiers work with countable and uncountable nouns with clear examples and visual guides.",
     content: `
 <p>How do you talk about amounts in English? Whether you want to say you have <em>a lot of</em> friends, <em>little</em> time, or <em>no</em> money, you need <strong>quantifiers</strong>. These essential words tell us <em>how much</em> or <em>how many</em> of something we're talking about.</p>
@@ -8867,7 +8867,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "22",
     slug: "possessives-complete-guide",
-    title: "Possessives: The Complete Guide to Showing Ownership",
+    title: "Possessive Nouns and Pronouns",
     excerpt: "Master English possessives including possessive nouns ('s and s'), possessive adjectives (my, your), and possessive pronouns (mine, yours). Learn all the rules with clear examples.",
     content: `
 <p>How do you show that something belongs to someone in English? You use <strong>possessives</strong>! Whether it's <em>John's car</em>, <em>my book</em>, or <em>the dog's tail</em>, possessives are essential for expressing ownership, relationships, and connections between people and things.</p>
@@ -9608,7 +9608,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "23",
     slug: "compound-nouns-spelling-rules",
-    title: "Compound Nouns: Spelling Rules and Formation Guide",
+    title: "How to Spell Compound Nouns",
     excerpt: "Master compound noun spelling in English. Learn when to write compounds as one word, two words, or with hyphens, plus rules for forming plurals and possessives.",
     content: `
 <p>Is it <em>ice cream</em>, <em>ice-cream</em>, or <em>icecream</em>? What about <em>mother in law</em> or <em>mother-in-law</em>? <strong>Compound nouns</strong> combine two or more words to create a new meaning, but their spelling can be confusing. This guide covers all the rules you need to write compound nouns correctly.</p>
@@ -10167,7 +10167,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "24",
     slug: "modal-verb-should-complete-guide",
-    title: "Should: The Complete Guide to Advice, Expectations & More",
+    title: "How to Use Should",
     excerpt: "Master the modal verb 'should' for giving advice, expressing expectations, and making recommendations. Learn all uses with clear examples and common mistakes to avoid.",
     content: `
 <p>The modal verb <strong>should</strong> is one of the most useful words in English. Whether you're giving advice, expressing expectations, or making polite suggestions, <em>should</em> helps you communicate with nuance and tact. This guide covers all the ways to use <em>should</em> correctly.</p>
@@ -10689,7 +10689,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "25",
     slug: "must-have-to-complete-guide",
-    title: "Must vs Have To: Understanding Obligation in English",
+    title: "Must vs Have To",
     excerpt: "Master the difference between 'must' and 'have to' for expressing obligation, necessity, and prohibition. Learn when to use each with clear examples and comparison tables.",
     content: `
 <p>Both <strong>must</strong> and <strong>have to</strong> express obligation and necessity, but they're not always interchangeable. Understanding the subtle differences between them will help you communicate more precisely and naturally in English.</p>
@@ -11283,7 +11283,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "26",
     slug: "can-could-complete-guide",
-    title: "Can vs Could: Ability, Permission, Possibility & Requests",
+    title: "Can vs Could",
     excerpt: "Master 'can' and 'could' for expressing ability, asking permission, making requests, and talking about possibility. Learn all uses with clear comparisons and examples.",
     content: `
 <p><strong>Can</strong> and <strong>could</strong> are two of the most frequently used modal verbs in English. While <em>could</em> is often described as the past of <em>can</em>, these two words have many different uses—and understanding when to use each one will make your English more natural and polite.</p>
@@ -11974,7 +11974,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "27",
     slug: "will-would-complete-guide",
-    title: "Will vs Would: Future, Requests, Habits & Conditionals",
+    title: "Will vs Would",
     excerpt: "Master 'will' and 'would' for talking about the future, making requests, expressing habits, and using conditionals. Learn all uses with clear comparisons and examples.",
     content: `
 <p><strong>Will</strong> and <strong>would</strong> are essential modal verbs that go far beyond simple future tense. From making polite requests to talking about hypothetical situations, these versatile words appear in almost every English conversation. Understanding their many uses will dramatically improve your fluency.</p>
@@ -12731,7 +12731,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "28",
     slug: "may-might-complete-guide",
-    title: "May vs Might: Permission, Possibility & Probability",
+    title: "May vs Might",
     excerpt: "Master 'may' and 'might' for expressing possibility, asking permission, and making polite requests. Learn the subtle differences with clear examples and comparison tables.",
     content: `
 <p><strong>May</strong> and <strong>might</strong> are often used interchangeably, but there are subtle differences that can make your English more precise and natural. Both express possibility and permission, but understanding when to use each will elevate your grammar to the next level.</p>
@@ -13381,7 +13381,7 @@ This formal structure is used in toasts, prayers, and ceremonial language.
   {
     id: "29",
     slug: "can-could-be-able-to-manage-to-guide",
-    title: "Expressing Ability: Can, Could, Be Able To & Manage To",
+    title: "Expressing Ability in English",
     excerpt: "Master all ways to express ability in English. Learn when to use can, could, be able to, and manage to for present, past, and future ability with clear examples.",
     content: `
 <p>English has several ways to express ability: <strong>can</strong>, <strong>could</strong>, <strong>be able to</strong>, and <strong>manage to</strong>. While they all relate to ability, each has specific uses and nuances. Mastering when to use each expression will make your English more precise and natural.</p>
@@ -14066,7 +14066,7 @@ This formal structure is used in toasts, prayers, and ceremonial language.
   {
     id: "30",
     slug: "modal-verbs-complete-guide",
-    title: "Modal Verbs: The Ultimate Comprehensive Guide",
+    title: "Modal Verbs Overview",
     excerpt: "Master all English modal verbs in one complete guide. Learn can, could, may, might, will, would, shall, should, must, ought to, need, and dare with detailed explanations and examples.",
     content: `
 <p><strong>Modal verbs</strong> are the essential building blocks of English that express ability, possibility, permission, obligation, and more. This comprehensive guide covers every modal verb in English, their uses, structures, and the subtle differences between them.</p>
@@ -17039,135 +17039,79 @@ points="115,178 205,168 295,127 375,107"/>
 
 <p style="text-align: center; font-weight: 700; color: #78350f; font-size: 1.1rem; margin-bottom: 24px;">The Chocolate Production Process</p>
 
-<svg viewBox="0 0 800 420" style="width: 100%; max-width: 800px; margin: 0 auto; display: block;">
+<svg viewBox="0 0 750 200" style="width: 100%; max-width: 750px; margin: 0 auto; display: block;">
 
-  <!-- Row 1: Harvesting to Fermenting -->
-  <g transform="translate(20, 30)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#166534" opacity="0.15" stroke="#166534" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#166534" font-weight="600">1. Harvesting</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#14532d">Cocoa pods picked</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#14532d">from trees</text>
+  <!-- Step 1: Harvesting -->
+  <g transform="translate(10, 20)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#166534" opacity="0.15" stroke="#166534" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#166534" font-weight="600">1. Harvesting</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#14532d">Pods picked</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#14532d">from trees</text>
   </g>
 
-  <path d="M145 70 L175 70" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M108 55 L118 55" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
 
-  <g transform="translate(180, 30)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#ca8a04" opacity="0.15" stroke="#ca8a04" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#a16207" font-weight="600">2. Extraction</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#854d0e">Pods split open</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#854d0e">Beans removed</text>
+  <!-- Step 2: Fermenting -->
+  <g transform="translate(125, 20)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#dc2626" opacity="0.15" stroke="#dc2626" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#b91c1c" font-weight="600">2. Fermenting</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#991b1b">Beans fermented</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#991b1b">(5-7 days)</text>
   </g>
 
-  <path d="M305 70 L335 70" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M223 55 L233 55" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
 
-  <g transform="translate(340, 30)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#dc2626" opacity="0.15" stroke="#dc2626" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#b91c1c" font-weight="600">3. Fermenting</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#991b1b">Beans fermented</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#991b1b">in boxes (5-7 days)</text>
+  <!-- Step 3: Drying -->
+  <g transform="translate(240, 20)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#d97706" font-weight="600">3. Drying</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#b45309">Sun-dried</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#b45309">(1-2 weeks)</text>
   </g>
 
-  <path d="M465 70 L495 70" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M338 55 L348 55" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
 
-  <g transform="translate(500, 30)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#d97706" font-weight="600">4. Drying</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#b45309">Sun-dried on</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#b45309">mats (7-14 days)</text>
+  <!-- Step 4: Roasting -->
+  <g transform="translate(355, 20)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#ea580c" opacity="0.15" stroke="#ea580c" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#c2410c" font-weight="600">4. Roasting</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#9a3412">Beans roasted</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#9a3412">(120-150C)</text>
   </g>
 
-  <path d="M560 115 L560 145" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M402 95 L402 115" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
 
-  <!-- Row 2 -->
-  <g transform="translate(500, 150)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#ea580c" opacity="0.15" stroke="#ea580c" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">5. Roasting</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#9a3412">Beans roasted</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#9a3412">at 120-150C</text>
+  <!-- Step 5: Grinding -->
+  <g transform="translate(355, 120)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#7c3aed" opacity="0.15" stroke="#7c3aed" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#6d28d9" font-weight="600">5. Grinding</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#5b21b6">Ground into</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#5b21b6">cocoa liquor</text>
   </g>
 
-  <path d="M495 190 L465 190" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <path d="M453 155 L463 155" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
 
-  <g transform="translate(340, 150)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#7c3aed" opacity="0.15" stroke="#7c3aed" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#6d28d9" font-weight="600">6. Winnowing</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#5b21b6">Shells removed</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#5b21b6">Nibs collected</text>
+  <!-- Step 6: Mixing -->
+  <g transform="translate(470, 120)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#be185d" opacity="0.15" stroke="#be185d" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#9d174d" font-weight="600">6. Mixing</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#831843">Sugar, milk added</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#831843">Heated and stirred</text>
   </g>
 
-  <path d="M335 190 L305 190" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <path d="M568 155 L578 155" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
 
-  <g transform="translate(180, 150)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#4f46e5" opacity="0.15" stroke="#4f46e5" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#4338ca" font-weight="600">7. Grinding</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#3730a3">Nibs ground into</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#3730a3">cocoa liquor</text>
-  </g>
-
-  <path d="M175 190 L145 190" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
-
-  <g transform="translate(20, 150)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#0891b2" opacity="0.15" stroke="#0891b2" stroke-width="2"/>
-    <text x="60" y="30" text-anchor="middle" font-size="11" fill="#0e7490" font-weight="600">8. Pressing</text>
-    <text x="60" y="47" text-anchor="middle" font-size="9" fill="#155e75">Liquor pressed</text>
-    <text x="60" y="60" text-anchor="middle" font-size="8" fill="#155e75">Cocoa butter +</text>
-    <text x="60" y="71" text-anchor="middle" font-size="8" fill="#155e75">powder separated</text>
-  </g>
-
-  <path d="M80 235 L80 265" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-
-  <!-- Row 3 -->
-  <g transform="translate(20, 270)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#be185d" opacity="0.15" stroke="#be185d" stroke-width="2"/>
-    <text x="60" y="30" text-anchor="middle" font-size="11" fill="#9d174d" font-weight="600">9. Mixing</text>
-    <text x="60" y="47" text-anchor="middle" font-size="8" fill="#831843">Cocoa butter + liquor</text>
-    <text x="60" y="59" text-anchor="middle" font-size="8" fill="#831843">+ sugar + milk</text>
-    <text x="60" y="71" text-anchor="middle" font-size="8" fill="#831843">combined</text>
-  </g>
-
-  <path d="M145 310 L175 310" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-
-  <g transform="translate(180, 270)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#db2777" opacity="0.15" stroke="#db2777" stroke-width="2"/>
-    <text x="60" y="30" text-anchor="middle" font-size="11" fill="#be185d" font-weight="600">10. Conching</text>
-    <text x="60" y="47" text-anchor="middle" font-size="9" fill="#9d174d">Mixture heated</text>
-    <text x="60" y="60" text-anchor="middle" font-size="9" fill="#9d174d">and stirred</text>
-    <text x="60" y="73" text-anchor="middle" font-size="8" fill="#9d174d">(12-72 hours)</text>
-  </g>
-
-  <path d="M305 310 L335 310" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-
-  <g transform="translate(340, 270)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#4f46e5" font-weight="600">11. Tempering</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#4338ca">Cooled and</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#4338ca">reheated carefully</text>
-  </g>
-
-  <path d="M465 310 L495 310" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-
-  <g transform="translate(500, 270)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#059669" opacity="0.15" stroke="#059669" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#047857" font-weight="600">12. Moulding</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#065f46">Poured into</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#065f46">bar moulds</text>
-  </g>
-
-  <path d="M625 310 L655 310" stroke="#78350f" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-
-  <g transform="translate(660, 270)">
-    <rect x="0" y="0" width="120" height="80" rx="8" fill="#78350f" opacity="0.15" stroke="#78350f" stroke-width="2"/>
-    <text x="60" y="35" text-anchor="middle" font-size="11" fill="#78350f" font-weight="600">13. Packaging</text>
-    <text x="60" y="52" text-anchor="middle" font-size="9" fill="#92400e">Wrapped and</text>
-    <text x="60" y="65" text-anchor="middle" font-size="9" fill="#92400e">boxed for sale</text>
+  <!-- Step 7: Moulding -->
+  <g transform="translate(585, 120)">
+    <rect x="0" y="0" width="95" height="70" rx="8" fill="#78350f" opacity="0.15" stroke="#78350f" stroke-width="2"/>
+    <text x="47" y="28" text-anchor="middle" font-size="10" fill="#78350f" font-weight="600">7. Moulding</text>
+    <text x="47" y="42" text-anchor="middle" font-size="8" fill="#92400e">Shaped into bars</text>
+    <text x="47" y="54" text-anchor="middle" font-size="8" fill="#92400e">and packaged</text>
   </g>
 
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <marker id="arrow1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#78350f"/>
-    </marker>
-    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#78350f"/>
     </marker>
   </defs>
 
@@ -17190,7 +17134,7 @@ points="115,178 205,168 295,127 375,107"/>
 
 <div style="background: #f0fdf4; border-radius: 8px; padding: 16px; border-left: 4px solid #22c55e;">
 <p style="font-weight: 700; color: #166534; margin-bottom: 8px;">How many stages are there?</p>
-<p style="color: #14532d; margin: 0;">13 stages, from harvesting to packaging.</p>
+<p style="color: #14532d; margin: 0;">7 stages, from harvesting to moulding and packaging.</p>
 </div>
 
 <div style="background: #fef3c7; border-radius: 8px; padding: 16px; border-left: 4px solid #f59e0b;">
@@ -17202,8 +17146,7 @@ points="115,178 205,168 295,127 375,107"/>
 <p style="font-weight: 700; color: #7e22ce; margin-bottom: 8px;">Can you group the stages?</p>
 <ul style="color: #6b21a8; margin: 0; padding-left: 20px;">
 <li>Stages 1-4: Harvesting and preparing the beans</li>
-<li>Stages 5-8: Processing the beans</li>
-<li>Stages 9-13: Making the chocolate</li>
+<li>Stages 5-7: Processing into chocolate</li>
 </ul>
 </div>
 
@@ -17241,12 +17184,12 @@ points="115,178 205,168 295,127 375,107"/>
 <tr style="background-color: rgba(245, 158, 11, 0.1)">
 <td><strong>3. Body 1</strong></td>
 <td>Describe first half of stages</td>
-<td>Stages 1-6 or 1-7</td>
+<td>Stages 1-4</td>
 </tr>
 <tr style="background-color: rgba(139, 92, 246, 0.1)">
 <td><strong>4. Body 2</strong></td>
 <td>Describe second half of stages</td>
-<td>Remaining stages to the end</td>
+<td>Stages 5-7</td>
 </tr>
 </tbody>
 </table>
@@ -17427,27 +17370,27 @@ points="115,178 205,168 295,127 375,107"/>
 <p>Summarise the whole process. Mention: number of stages, start point, end point.</p>
 
 <div style="background: #fae8ff; border-radius: 8px; padding: 16px; margin: 12px 0; border-left: 4px solid #a855f7;">
-<p style="color: #7e22ce; margin: 0;"><em>"Overall, there are 13 stages in the chocolate-making process. It begins with cocoa pods being harvested from trees and ends with the finished chocolate bars being wrapped and packaged for distribution. The process can be broadly divided into three phases: preparing the raw beans, processing them into cocoa liquor, and finally transforming the liquor into chocolate."</em></p>
+<p style="color: #7e22ce; margin: 0;"><em>"Overall, there are seven stages in the chocolate-making process. It begins with cocoa pods being harvested from trees and ends with the chocolate being moulded into bars and packaged for sale. The process can be broadly divided into two phases: preparing the raw beans (stages 1-4) and processing them into chocolate (stages 5-7)."</em></p>
 </div>
 
 <br/>
 
-<h3>Paragraph 3: Body 1 - First Half</h3>
+<h3>Paragraph 3: Body 1 - Stages 1-4</h3>
 
-<p>Describe stages 1-8 using passive voice and sequencing words:</p>
+<p>Describe the first four stages using passive voice and sequencing words:</p>
 
 <div style="background: #fae8ff; border-radius: 8px; padding: 16px; margin: 12px 0; border-left: 4px solid #a855f7;">
-<p style="color: #7e22ce; margin: 0;"><em>"At the first stage, ripe cocoa pods are harvested from the trees. These pods are then split open and the cocoa beans inside are extracted. Next, the beans are placed in wooden boxes where they undergo fermentation for 5 to 7 days. Following this, they are spread out on mats and sun-dried for 7 to 14 days. Once dried, the beans are roasted at temperatures between 120 and 150 degrees Celsius. After roasting, the outer shells are removed through a process called winnowing, leaving the inner nibs. These nibs are subsequently ground into a thick paste known as cocoa liquor, which is then pressed to separate the cocoa butter from the cocoa powder."</em></p>
+<p style="color: #7e22ce; margin: 0;"><em>"At the first stage, ripe cocoa pods are harvested from the trees. The beans inside are then extracted and placed in containers where they undergo fermentation for 5 to 7 days. Following this, the beans are spread out and sun-dried for one to two weeks. Once dried, the beans are roasted at temperatures between 120 and 150 degrees Celsius to develop the chocolate flavour."</em></p>
 </div>
 
 <br/>
 
-<h3>Paragraph 4: Body 2 - Second Half</h3>
+<h3>Paragraph 4: Body 2 - Stages 5-7</h3>
 
-<p>Describe stages 9-13:</p>
+<p>Describe the final three stages:</p>
 
 <div style="background: #fae8ff; border-radius: 8px; padding: 16px; margin: 12px 0; border-left: 4px solid #a855f7;">
-<p style="color: #7e22ce; margin: 0;"><em>"In the next stage, the cocoa butter and liquor are recombined and mixed with sugar and milk to create the chocolate mixture. This mixture then undergoes conching, a process in which it is continuously heated and stirred for 12 to 72 hours to develop the flavour. After conching, the chocolate is carefully cooled and reheated through tempering, which gives it a smooth texture and glossy appearance. The tempered chocolate is then poured into moulds to form bars. Finally, the hardened chocolate bars are removed from the moulds, wrapped, and packaged ready for sale."</em></p>
+<p style="color: #7e22ce; margin: 0;"><em>"In the fifth stage, the roasted beans are ground into a thick paste known as cocoa liquor. This liquor is then mixed with sugar and milk, and the mixture is heated and stirred to combine the ingredients thoroughly. Finally, the chocolate is poured into moulds where it is shaped into bars and left to harden before being packaged for sale."</em></p>
 </div>
 
 <br/>
@@ -17460,15 +17403,15 @@ points="115,178 205,168 295,127 375,107"/>
 
 <p style="color: #1e293b; line-height: 1.9; margin-bottom: 16px;">The diagram illustrates the process by which chocolate is produced, from the initial harvesting of cocoa beans to the final packaging of chocolate bars.</p>
 
-<p style="color: #1e293b; line-height: 1.9; margin-bottom: 16px;">Overall, there are 13 stages in the chocolate-making process. It begins with cocoa pods being harvested from trees and ends with the finished chocolate bars being wrapped and packaged for distribution. The process can be broadly divided into three phases: preparing the raw beans, processing them into cocoa liquor, and finally transforming the liquor into chocolate.</p>
+<p style="color: #1e293b; line-height: 1.9; margin-bottom: 16px;">Overall, there are seven stages in the chocolate-making process. It begins with cocoa pods being harvested from trees and ends with the chocolate being moulded into bars and packaged for sale. The process can be broadly divided into two phases: preparing the raw beans (stages 1-4) and processing them into chocolate (stages 5-7).</p>
 
-<p style="color: #1e293b; line-height: 1.9; margin-bottom: 16px;">At the first stage, ripe cocoa pods are harvested from the trees. These pods are then split open and the cocoa beans inside are extracted. Next, the beans are placed in wooden boxes where they undergo fermentation for 5 to 7 days. Following this, they are spread out on mats and sun-dried for 7 to 14 days. Once dried, the beans are roasted at temperatures between 120 and 150 degrees Celsius. After roasting, the outer shells are removed through a process called winnowing, leaving the inner nibs. These nibs are subsequently ground into a thick paste known as cocoa liquor, which is then pressed to separate the cocoa butter from the cocoa powder.</p>
+<p style="color: #1e293b; line-height: 1.9; margin-bottom: 16px;">At the first stage, ripe cocoa pods are harvested from the trees. The beans inside are then extracted and placed in containers where they undergo fermentation for 5 to 7 days. Following this, the beans are spread out and sun-dried for one to two weeks. Once dried, the beans are roasted at temperatures between 120 and 150 degrees Celsius to develop the chocolate flavour.</p>
 
-<p style="color: #1e293b; line-height: 1.9; margin: 0;">In the next stage, the cocoa butter and liquor are recombined and mixed with sugar and milk to create the chocolate mixture. This mixture then undergoes conching, a process in which it is continuously heated and stirred for 12 to 72 hours to develop the flavour. After conching, the chocolate is carefully cooled and reheated through tempering, which gives it a smooth texture and glossy appearance. The tempered chocolate is then poured into moulds to form bars. Finally, the hardened chocolate bars are removed from the moulds, wrapped, and packaged ready for sale.</p>
+<p style="color: #1e293b; line-height: 1.9; margin: 0;">In the fifth stage, the roasted beans are ground into a thick paste known as cocoa liquor. This liquor is then mixed with sugar and milk, and the mixture is heated and stirred to combine the ingredients thoroughly. Finally, the chocolate is poured into moulds where it is shaped into bars and left to harden before being packaged for sale.</p>
 
 </div>
 
-<p style="text-align: center; color: #64748b; font-size: 0.9rem;"><em>Word count: 285 words (detailed for learning; aim for 170-200 in exam)</em></p>
+<p style="text-align: center; color: #64748b; font-size: 0.9rem;"><em>Word count: 178 words (aim for 150-190 in the exam)</em></p>
 
 <br/>
 
@@ -17584,5 +17527,3336 @@ points="115,178 205,168 295,127 375,107"/>
     is_published: true,
     display_order: 35,
     topic: "writing-task-1",
+  },
+  {
+    id: "36",
+    slug: "ielts-writing-task-2-opinion-essay",
+    title: "IELTS Writing Task 2: Opinion Essay (Agree or Disagree)",
+    excerpt: "Master the IELTS opinion essay with this complete guide. Learn how to structure your response, express your view clearly, and write a Band 7+ essay with model answers and expert tips.",
+    content: `
+<p>The <strong>opinion essay</strong> (also called the <strong>agree/disagree essay</strong> or <strong>argumentative essay</strong>) is one of the most common question types in IELTS Writing Task 2. You are presented with a statement or viewpoint and asked whether you agree or disagree with it. This guide will teach you everything you need to write a high-scoring opinion essay.</p>
+
+<h2>What is an Opinion Essay?</h2>
+
+<p>In an opinion essay, the examiner wants to know <strong>your personal view</strong> on a given topic. Unlike a discussion essay where you present both sides neutrally, an opinion essay requires you to:</p>
+
+<ul>
+<li><strong>State your position clearly</strong> — Do you agree, disagree, or partially agree?</li>
+<li><strong>Support your opinion with reasons</strong> — Explain why you think this way</li>
+<li><strong>Provide evidence and examples</strong> — Use specific examples to strengthen your argument</li>
+<li><strong>Maintain a consistent view</strong> — Your opinion must not change throughout the essay</li>
+</ul>
+
+<h2>How to Identify an Opinion Essay</h2>
+
+<p>IELTS will never tell you "This is an opinion essay." You must identify it yourself by looking at the instructions. Here are the most common question formats:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Question Format</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Do you agree or disagree?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Give your opinion on the statement</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>To what extent do you agree or disagree?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Same as above — degree of agreement is your choice</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What is your opinion?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">State your view on the topic</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Do you think...?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Give your personal view</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Do you agree?</strong></td>
+<td style="padding: 0.875rem 1rem;">You can still disagree or partially agree</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note">
+<strong>Important:</strong> "To what extent" does NOT mean you must partially agree. You can fully agree, fully disagree, or take a balanced view. The phrase simply invites you to explain your position thoroughly.
+</div>
+
+<h2>Three Possible Positions</h2>
+
+<p>No matter how the question is worded, you have three options for your response:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; width: 25%;">Position</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">What It Means</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; width: 30%;">Essay Structure</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Fully Agree</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">You completely support the given statement</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">2 body paragraphs supporting</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Fully Disagree</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">You completely oppose the given statement</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">2 body paragraphs opposing</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Partial Agreement</strong></td>
+<td style="padding: 0.875rem 1rem;">You agree with some aspects but not others</td>
+<td style="padding: 0.875rem 1rem;">1 paragraph agree + 1 paragraph disagree</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tip">
+<strong>Which position is easiest?</strong> Fully agreeing or fully disagreeing is often easier to write because you only need to argue one side. A partial agreement requires more sophisticated reasoning.
+</div>
+
+<h2>Essay Structure: The 4-Paragraph Approach</h2>
+
+<p>A clear structure is essential for a high band score. Here is the recommended format for an opinion essay:</p>
+
+<div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(99, 102, 241, 0.15);">
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Introduction</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Paraphrase the topic + State your opinion clearly</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Body Paragraph 1</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Main reason 1 + Explanation + Example</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Body Paragraph 2</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Main reason 2 + Explanation + Example</p>
+</div>
+
+<div>
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Conclusion</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">1-2 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Restate your opinion (different words)</p>
+</div>
+
+</div>
+
+<h2>Writing the Introduction</h2>
+
+<p>Your introduction has two essential jobs: <strong>introduce the topic</strong> and <strong>state your opinion</strong>. Keep it short — 2-3 sentences maximum.</p>
+
+<h3>Step 1: Paraphrase the Question</h3>
+
+<p>Never copy the question word for word. Use synonyms and change the sentence structure.</p>
+
+<div class="example-block">
+<strong>Question:</strong> Some people think that only electric cars should be allowed on the road by 2040.<br/><br/>
+<strong>Paraphrase:</strong> There is a growing belief that traditional petrol and diesel vehicles should be completely replaced by electric alternatives within the next two decades.
+</div>
+
+<h3>Step 2: State Your Opinion Clearly</h3>
+
+<p>Your opinion must be unmistakably clear. The examiner should know your position after reading the first paragraph.</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(239, 68, 68, 0.04));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700; color: #dc2626;">❌ Weak Opinion Statements</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This essay will discuss both sides of the argument.</td></tr>
+<tr style="background: rgba(239, 68, 68, 0.03);"><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">There are advantages and disadvantages to this idea.</td></tr>
+<tr><td style="padding: 0.75rem 1rem;">Some people agree while others disagree.</td></tr>
+</tbody>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.04));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; color: #16a34a;">✓ Strong Opinion Statements</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>I completely agree</strong> with this view because...</td></tr>
+<tr style="background: rgba(34, 197, 94, 0.03);"><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>I strongly disagree</strong> with this statement for several reasons.</td></tr>
+<tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>In my opinion</strong>, this policy would be beneficial.</td></tr>
+<tr style="background: rgba(34, 197, 94, 0.03);"><td style="padding: 0.75rem 1rem;"><strong>While I agree</strong> that electric cars have benefits, <strong>I believe</strong> a complete ban on other vehicles is impractical.</td></tr>
+</tbody>
+</table>
+
+<h3>Introduction Examples</h3>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Fully Agree Introduction:</strong><br/>
+There is a growing belief that traditional petrol and diesel vehicles should be completely replaced by electric alternatives within the next two decades. <strong>I fully agree with this proposal</strong> because it would significantly reduce pollution and accelerate the transition to sustainable transportation.
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Fully Disagree Introduction:</strong><br/>
+There is a growing belief that traditional petrol and diesel vehicles should be completely replaced by electric alternatives within the next two decades. <strong>However, I strongly disagree</strong> with this view because such a sudden transition would be economically disruptive and technologically premature.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #9333ea;">Partial Agreement Introduction:</strong><br/>
+There is a growing belief that traditional petrol and diesel vehicles should be completely replaced by electric alternatives within the next two decades. <strong>While I agree</strong> that promoting electric vehicles is essential for environmental reasons, <strong>I believe</strong> a complete ban on all other vehicles by 2040 is unrealistic.
+</div>
+
+<h2>Writing Body Paragraphs</h2>
+
+<p>Each body paragraph should develop <strong>one main idea</strong> that supports your opinion. Follow this structure:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700; width: 25%;">Element</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700; width: 30%;">Example Starters</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Topic Sentence</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Introduces the main point of the paragraph</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The primary reason... / Firstly...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Explanation</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Develops and explains your point</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This is because... / This means that...</td>
+</tr>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Example</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Provides concrete evidence</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">For instance... / A clear example is...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem;"><strong>Result/Link</strong></td>
+<td style="padding: 0.875rem 1rem;">Connects back to your main opinion</td>
+<td style="padding: 0.875rem 1rem;">Therefore... / As a result...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Body Paragraph Example</h3>
+
+<div class="example-block">
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> The primary reason I support a transition to electric vehicles is the urgent need to combat climate change. <strong style="color: #3b82f6;">[Explanation]</strong> Petrol and diesel cars are among the largest contributors to carbon dioxide emissions, which trap heat in the atmosphere and accelerate global warming. By switching to electric vehicles, which produce zero direct emissions, we can significantly reduce our carbon footprint and slow the rate of climate change. <strong style="color: #22c55e;">[Example]</strong> For instance, Norway has implemented strong incentives for electric car ownership, and as a result, over 80% of new car sales are now electric, leading to a measurable reduction in the country's transport emissions. <strong style="color: #a855f7;">[Result]</strong> This demonstrates that ambitious policies can successfully transform the transport sector for environmental benefit.
+</div>
+
+<h2>Writing the Conclusion</h2>
+
+<p>Your conclusion should be brief — just 1-2 sentences. Its purpose is to <strong>restate your opinion</strong> using different words. Do not introduce new ideas.</p>
+
+<h3>Conclusion Phrases</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Position</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Example Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Agree</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">In conclusion, I firmly believe that transitioning to electric vehicles is essential for a sustainable future.</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Disagree</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">To conclude, while the goal is admirable, I maintain that a complete ban on non-electric vehicles by 2040 is neither practical nor achievable.</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Partial</strong></td>
+<td style="padding: 0.875rem 1rem;">In summary, although electric vehicles should certainly be encouraged, a more gradual and flexible approach would be more realistic than an outright ban.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note">
+<strong>Remember:</strong> Your conclusion must match your introduction. If you said "I agree" at the start, you must still agree at the end. Changing your opinion is a major error.
+</div>
+
+<h2>Complete Model Essay</h2>
+
+<p>Here is a full example of a Band 7+ opinion essay:</p>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">Some people believe that university students should pay the full cost of their education because they benefit personally from it. To what extent do you agree or disagree?</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">It is often argued that students should bear the entire financial burden of their university education since they are the primary beneficiaries. <strong>I strongly disagree with this view</strong> because higher education also benefits society as a whole, and full-cost tuition would create significant inequality.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">The main reason I oppose full-cost tuition is that society, not just individuals, gains from an educated population. University graduates contribute to economic growth through higher productivity, innovation, and tax revenues. They also fill essential roles in healthcare, education, and technology that benefit everyone. For example, doctors and teachers, who require university training, provide services that the entire community relies upon. Therefore, it is fair that governments contribute to education costs through taxation.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Furthermore, requiring students to pay full fees would deepen social inequality. Many talented students from low-income families would be unable to afford higher education, regardless of their academic ability. This would mean that university becomes a privilege for the wealthy rather than an opportunity for the capable. Countries like Germany and Norway, which offer free or subsidized university education, have higher social mobility and more diverse graduate workforces. Consequently, making education more accessible benefits society's long-term development.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, I firmly believe that university costs should be shared between students and the government, as higher education provides substantial benefits to society and should remain accessible to all qualified individuals.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 267 words</p>
+
+<h2>Useful Vocabulary and Phrases</h2>
+
+<h3>Expressing Agreement</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">Phrase</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">Strength</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I completely/fully/strongly agree</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Strong</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I am convinced that...</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Strong</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I believe this is entirely true</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Strong</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I agree to a certain extent</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Moderate</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.75rem 1rem;">I largely agree with this view</td>
+<td style="padding: 0.75rem 1rem;">Moderate</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Expressing Disagreement</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700;">Phrase</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700;">Strength</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I completely/strongly disagree</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Strong</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I reject this notion because...</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Strong</td>
+</tr>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This view is fundamentally flawed</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Strong</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I do not entirely agree</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Moderate</td>
+</tr>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.75rem 1rem;">While this may seem reasonable, I believe...</td>
+<td style="padding: 0.75rem 1rem;">Moderate</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Partial Agreement</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Phrase</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">While I agree that..., I also believe...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Although there is some truth to this, I feel...</td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I agree with this to a limited extent</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;">This argument has merit, but it overlooks...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Linking and Transition Words</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Function</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Adding ideas</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Furthermore, Moreover, Additionally, In addition</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Giving examples</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">For instance, For example, A clear example is</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Showing results</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Therefore, Consequently, As a result, Thus</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Contrasting</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">However, Nevertheless, On the other hand, Although</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem;"><strong>Concluding</strong></td>
+<td style="padding: 0.75rem 1rem;">In conclusion, To conclude, In summary, To sum up</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">1</span>
+<div>
+<strong style="color: #dc2626;">No Clear Opinion</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Writing "This essay will discuss..." or "There are arguments on both sides" does not express YOUR opinion. The examiner must know your position.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">2</span>
+<div>
+<strong style="color: #dc2626;">Sitting on the Fence</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">A partial agreement is NOT the same as having no opinion. You still need to take a clear stance, just acknowledging nuance in your view.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">3</span>
+<div>
+<strong style="color: #dc2626;">Changing Your Opinion</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">If you agree in the introduction, you must agree in the conclusion. Contradicting yourself will significantly lower your score.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">4</span>
+<div>
+<strong style="color: #dc2626;">Turning It Into a Discussion Essay</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">An opinion essay is not the same as a discussion essay. You should not spend equal time presenting both sides — focus on supporting YOUR view.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">5</span>
+<div>
+<strong style="color: #dc2626;">No Examples or Evidence</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Stating an opinion without supporting it is weak. Always include reasons, explanations, and concrete examples.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">6</span>
+<div>
+<strong style="color: #dc2626;">Under or Over Word Count</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">The minimum is 250 words. Aim for 260-290 words. Too short means insufficient development; too long risks more errors and wastes time.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2>Tips for Band 7+</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Plan Before You Write</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Spend 5 minutes planning. Decide your position, your two main reasons, and one example for each. This prevents rambling.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Topic Sentences</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Start each body paragraph with a clear topic sentence that states the paragraph's main point. This helps coherence.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Develop Ideas Fully</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't just state a point — explain WHY it's true and give a specific example. Depth is better than breadth.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Vary Your Vocabulary</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't repeat the same words. Use synonyms and paraphrase. Instead of "important" repeatedly, try "crucial," "essential," "significant."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Complex Sentences</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Mix simple and complex sentences. Use subordinate clauses: "Although...", "Because...", "While...", "If..."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Proofread Carefully</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Save 3-5 minutes to check for spelling, grammar, and punctuation errors. Small mistakes add up and hurt your score.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Time Management:</strong> You have 40 minutes for Task 2. Spend 5 minutes planning, 30 minutes writing, and 5 minutes checking. Task 2 is worth twice as much as Task 1, so give it proper attention.
+</div>
+
+<h2>Quick Checklist</h2>
+
+<p>Before submitting your essay, make sure you can answer YES to all these questions:</p>
+
+<div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1.5rem 0;">
+<ul style="margin: 0; padding-left: 1.5rem; line-height: 2;">
+<li>Is my opinion clearly stated in the introduction?</li>
+<li>Does each body paragraph have ONE main idea?</li>
+<li>Have I given reasons AND examples to support my view?</li>
+<li>Does my conclusion restate my opinion (same position)?</li>
+<li>Have I written at least 250 words?</li>
+<li>Have I checked for spelling and grammar errors?</li>
+<li>Is my handwriting clear and readable?</li>
+</ul>
+</div>
+`,
+    image_url: null,
+    category_id: "2",
+    category_slug: "ielts",
+    author: "Learne Team",
+    published_at: "2026-02-03",
+    updated_at: null,
+    read_time: 18,
+    tags: ["ielts", "writing task 2", "opinion essay", "agree disagree", "band 7", "essay writing"],
+    is_featured: true,
+    is_published: true,
+    display_order: 36,
+    topic: "writing-task-2",
+  },
+  {
+    id: "37",
+    slug: "ielts-writing-task-2-discussion-essay",
+    title: "IELTS Writing Task 2: Discussion Essay (Discuss Both Views)",
+    excerpt: "Master the IELTS discussion essay with this complete guide. Learn how to present both sides of an argument, structure your response, and achieve Band 7+ with model answers and expert tips.",
+    content: `
+<p>The <strong>discussion essay</strong> (also called the <strong>discuss both views essay</strong>) is one of the most common question types in IELTS Writing Task 2. Unlike an opinion essay where you argue for one side, a discussion essay requires you to <strong>present both perspectives</strong> on an issue. This guide will teach you everything you need to write a high-scoring discussion essay.</p>
+
+<h2>What is a Discussion Essay?</h2>
+
+<p>In a discussion essay, you are given a topic where people have <strong>two different viewpoints</strong>. Your job is to:</p>
+
+<ul>
+<li><strong>Present both sides fairly</strong> — Explain each viewpoint with reasons and examples</li>
+<li><strong>Show you understand both perspectives</strong> — Don't dismiss either side</li>
+<li><strong>Give your own opinion</strong> — Usually required at the end (check the question!)</li>
+<li><strong>Maintain balance</strong> — Give roughly equal attention to both views</li>
+</ul>
+
+<div class="note">
+<strong>Key Difference from Opinion Essays:</strong> In an opinion essay, you argue strongly for one side. In a discussion essay, you present both sides objectively before giving your view. Think of it as being a fair judge who listens to both sides before making a decision.
+</div>
+
+<h2>How to Identify a Discussion Essay</h2>
+
+<p>Look for these key phrases in the question instructions:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Question Format</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">What You Must Do</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Discuss both views and give your opinion.</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Present both sides + State YOUR view</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Discuss both sides.</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Present both sides (opinion optional)</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What are the arguments on both sides?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Present both sides objectively</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem;"><strong>Some people think X, while others believe Y. Discuss.</strong></td>
+<td style="padding: 0.875rem 1rem;">Explain both X and Y perspectives</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tip">
+<strong>Important:</strong> If the question says "give your opinion," you MUST include your view. If it only says "discuss both sides," giving your opinion is optional but often recommended to demonstrate critical thinking.
+</div>
+
+<h2>Two Types of Discussion Questions</h2>
+
+<p>Discussion essays can present the two sides in different ways:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700; width: 20%;">Type</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Description</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700; width: 35%;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Opposing Views</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Two sides of the <strong>same issue</strong> — people who agree vs. people who disagree</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>Some people think there should be free healthcare for all, but others disagree.</em></td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem;"><strong>Alternative Views</strong></td>
+<td style="padding: 0.875rem 1rem;">Two <strong>different options</strong> or priorities that compete with each other</td>
+<td style="padding: 0.875rem 1rem;"><em>Some people think urban spaces should be used for parks, while others believe they should be used for housing.</em></td>
+</tr>
+</tbody>
+</table>
+
+<h3>Opposing Views Example</h3>
+
+<div class="example-block">
+<strong>Question:</strong> Some people believe that children should start learning a foreign language at primary school, while others think they should begin at secondary school. Discuss both views and give your opinion.<br/><br/>
+<strong>View 1:</strong> Start at primary school (early learning)<br/>
+<strong>View 2:</strong> Start at secondary school (later learning)
+</div>
+
+<h3>Alternative Views Example</h3>
+
+<div class="example-block">
+<strong>Question:</strong> Some people think governments should spend money on public transportation, while others believe the money should be spent on building more roads. Discuss both views and give your opinion.<br/><br/>
+<strong>View 1:</strong> Spend on public transportation<br/>
+<strong>View 2:</strong> Spend on roads
+</div>
+
+<h2>Essay Structure: The 4-Paragraph Approach</h2>
+
+<p>A clear structure is essential for a high band score. Here is the recommended format:</p>
+
+<div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(99, 102, 241, 0.15);">
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Introduction</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Paraphrase the topic + Outline both views + State your opinion (if required)</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Body Paragraph 1 — First View</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Explain View 1 + Reasons + Example</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Body Paragraph 2 — Second View</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Explain View 2 + Reasons + Example</p>
+</div>
+
+<div>
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Conclusion</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Summarise both views + Give your opinion clearly</p>
+</div>
+
+</div>
+
+<div class="note">
+<strong>Where to put your opinion?</strong> You have two options: (1) State it briefly in the introduction and explain fully in the conclusion, or (2) Only give your opinion in the conclusion. Both approaches are acceptable.
+</div>
+
+<h2>Writing the Introduction</h2>
+
+<p>Your introduction should accomplish three things in 2-3 sentences:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; width: 25%;">Step</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">What to Do</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>1. Paraphrase</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Restate the topic using different words</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>2. Outline views</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Briefly mention both perspectives</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>3. Thesis (optional)</strong></td>
+<td style="padding: 0.875rem 1rem;">Preview your own opinion if the question asks for it</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Introduction Phrases</h3>
+
+<div style="background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 10px; padding: 1.25rem; margin: 1rem 0;">
+<p style="margin: 0 0 0.75rem 0; font-weight: 600; color: #1e40af;">For presenting the debate:</p>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.9;">
+<li>There is an ongoing debate about whether...</li>
+<li>People hold different views regarding...</li>
+<li>The question of whether... has sparked considerable debate.</li>
+<li>Opinions are divided on the issue of...</li>
+</ul>
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.05); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 10px; padding: 1.25rem; margin: 1rem 0;">
+<p style="margin: 0 0 0.75rem 0; font-weight: 600; color: #7c3aed;">For mentioning both views:</p>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.9;">
+<li>While some argue that..., others believe...</li>
+<li>Some people feel that..., whereas others maintain...</li>
+<li>Although some contend that..., others hold the view that...</li>
+</ul>
+</div>
+
+<h3>Introduction Examples</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Without opinion in introduction:</strong><br/>
+The question of whether children should begin learning a foreign language at primary or secondary school has sparked considerable debate. While some argue that early language learning provides cognitive advantages, others believe that older children are better equipped for formal language study. This essay will examine both perspectives before presenting my own view.
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">With opinion in introduction:</strong><br/>
+The question of whether children should begin learning a foreign language at primary or secondary school has sparked considerable debate. While some argue that early language learning provides cognitive advantages, others believe that older children are better equipped for formal language study. Although both views have merit, I believe starting at primary school offers greater long-term benefits.
+</div>
+
+<h2>Writing Body Paragraphs</h2>
+
+<p>Each body paragraph presents <strong>one side of the argument</strong>. You must explain the view objectively, even if you disagree with it.</p>
+
+<h3>Body Paragraph Structure</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700; width: 25%;">Element</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700; width: 35%;">Example Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Topic Sentence</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Introduce the viewpoint</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Those who support... argue that... / Advocates of... believe...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Reason(s)</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain why people hold this view</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This is because... / The main reason is...</td>
+</tr>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Example</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Provide evidence or illustration</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">For instance... / A clear example is...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem;"><strong>Mini-conclusion</strong></td>
+<td style="padding: 0.875rem 1rem;">Wrap up the point</td>
+<td style="padding: 0.875rem 1rem;">Therefore... / Thus...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Phrases for Presenting Views (Not Your Own)</h3>
+
+<p>Since you're presenting other people's views, use phrases that show you're reporting their opinions, not stating facts:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">For View 1 (First Body Paragraph)</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">For View 2 (Second Body Paragraph)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Those who believe in... argue that...</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">On the other hand, opponents contend that...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Supporters of... maintain that...</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">However, others hold the view that...</td>
+</tr>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Proponents of this idea suggest that...</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">In contrast, critics argue that...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;">Some people feel strongly that...</td>
+<td style="padding: 0.75rem 1rem;">Conversely, there are those who believe...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Body Paragraph Examples</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Body Paragraph 1 — View 1 (Primary School):</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> Those who advocate for early language learning argue that young children have a natural ability to absorb new languages. <strong style="color: #3b82f6;">[Reason]</strong> Research in neuroscience has shown that the brain is most receptive to language acquisition before the age of ten, as children can mimic sounds and internalise grammatical patterns more easily than adults. <strong style="color: #22c55e;">[Example]</strong> For instance, children raised in bilingual households typically achieve native-level fluency in both languages, whereas adults learning a second language rarely reach the same proficiency. <strong style="color: #a855f7;">[Mini-conclusion]</strong> Therefore, introducing languages at primary school takes advantage of this critical developmental window.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Body Paragraph 2 — View 2 (Secondary School):</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> On the other hand, those who favour later language instruction believe that secondary school students are better equipped for formal language study. <strong style="color: #3b82f6;">[Reason]</strong> Older students have more developed cognitive skills, including the ability to understand abstract grammar rules and make comparisons between languages. They can also study more efficiently using textbooks and structured lessons. <strong style="color: #22c55e;">[Example]</strong> For example, a teenager can consciously learn verb conjugations and apply them systematically, while a young child may struggle with such explicit instruction. <strong style="color: #a855f7;">[Mini-conclusion]</strong> Thus, some educators argue that waiting until secondary school allows for more effective formal teaching methods.
+</div>
+
+<h2>Writing the Conclusion</h2>
+
+<p>Your conclusion should do two things: <strong>summarise both views briefly</strong> and <strong>state your opinion clearly</strong>.</p>
+
+<h3>Conclusion Structure</h3>
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(34, 197, 94, 0.15);">
+<p style="margin: 0 0 1rem 0;"><strong style="color: #16a34a;">Step 1:</strong> Brief summary of both views (1 sentence)</p>
+<p style="margin: 0;"><strong style="color: #16a34a;">Step 2:</strong> Your opinion with a brief reason (1-2 sentences)</p>
+</div>
+
+<h3>Conclusion Phrases</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Summarising</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">In conclusion, while both views have merit... / To sum up, there are valid arguments on both sides...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Giving opinion</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">I personally believe... / In my view... / I am of the opinion that...</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Balanced view</strong></td>
+<td style="padding: 0.875rem 1rem;">The best approach would be... / A combination of both may be ideal...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Conclusion Examples</h3>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Supporting View 1:</strong><br/>
+In conclusion, while there are valid arguments for both early and late language instruction, I believe that starting at primary school is more beneficial. The cognitive advantages of early learning and the potential for native-like fluency outweigh the benefits of waiting for more mature study skills.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Balanced/Combined View:</strong><br/>
+In conclusion, both perspectives offer valuable insights into language education. In my opinion, the ideal approach would be to introduce languages informally at primary school through games and songs, then transition to more structured grammar instruction at secondary level. This would combine the benefits of early exposure with effective formal teaching.
+</div>
+
+<h2>Complete Model Essay</h2>
+
+<p>Here is a full example of a Band 7+ discussion essay:</p>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">Some people think that governments should invest in public transportation, while others believe the money would be better spent on building more roads. Discuss both views and give your opinion.</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">There is ongoing debate about whether government transport budgets should prioritise public transit systems or road infrastructure. While both approaches have their supporters, I believe that investing in public transportation offers greater long-term benefits for society.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Those who advocate for building more roads argue that this approach directly addresses traffic congestion. They point out that as car ownership rises, existing roads become overwhelmed, leading to longer commute times and economic inefficiency. By expanding the road network, governments can accommodate more vehicles and reduce bottlenecks. For example, cities like Los Angeles have invested heavily in highway expansion to manage their car-dependent population. From this perspective, roads provide a practical solution to immediate transport needs.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">On the other hand, proponents of public transportation contend that buses, trains, and metros are more sustainable and efficient in the long run. A single bus can carry fifty passengers, removing dozens of cars from the road and significantly reducing both congestion and emissions. Furthermore, public transit makes cities more accessible to people who cannot afford cars, promoting social equality. Cities such as Tokyo and Singapore have demonstrated that excellent public transport systems can virtually eliminate the need for private vehicles in urban areas, while also reducing pollution and improving quality of life.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, while road construction may provide short-term relief, I firmly believe that public transportation is the wiser investment. It addresses congestion more effectively, benefits the environment, and creates more equitable cities for all residents.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 276 words</p>
+
+<h2>Discussion Essay vs. Opinion Essay</h2>
+
+<p>Many students confuse these two essay types. Here's how they differ:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700;">Aspect</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700;">Discussion Essay</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700;">Opinion Essay</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Main task</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Present both sides objectively</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Argue for one side</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Body paragraphs</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">One paragraph per view</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Both paragraphs support YOUR view</td>
+</tr>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Your opinion</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Given in conclusion (mainly)</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Given throughout the essay</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Tone</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Balanced and objective</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Persuasive and argumentative</td>
+</tr>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Question keywords</strong></td>
+<td style="padding: 0.875rem 1rem;">"Discuss both views"</td>
+<td style="padding: 0.875rem 1rem;">"Do you agree or disagree?"</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">1</span>
+<div>
+<strong style="color: #dc2626;">Only Discussing One Side</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">You must give adequate coverage to BOTH views. If you only explain one perspective, you haven't answered the question fully.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">2</span>
+<div>
+<strong style="color: #dc2626;">Unbalanced Paragraphs</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Both body paragraphs should be roughly the same length. Writing 150 words for one view and 50 for the other suggests bias.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">3</span>
+<div>
+<strong style="color: #dc2626;">Forgetting Your Opinion</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">If the question asks for your opinion, you MUST give it clearly. Simply presenting both sides without stating your view loses marks.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">4</span>
+<div>
+<strong style="color: #dc2626;">Mixing Views in One Paragraph</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Keep each view in a separate paragraph. Jumping between perspectives creates confusion and hurts your coherence score.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">5</span>
+<div>
+<strong style="color: #dc2626;">Presenting Views as Facts</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Use reporting language ("Some argue that...", "Others believe...") rather than stating views as absolute truths.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">6</span>
+<div>
+<strong style="color: #dc2626;">Treating It Like an Opinion Essay</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't spend both body paragraphs arguing for your own view. You must fairly represent the opposing perspective first.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2>Tips for Band 7+</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Be Fair to Both Sides</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Even if you personally disagree with a view, present it objectively with genuine reasons. Don't use weak arguments just to knock them down.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Clear Signposting</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Use transition phrases to clearly show when you're moving between views: "On the other hand," "In contrast," "Conversely."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Give Specific Examples</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Use real-world examples (countries, studies, statistics) to support each view. This demonstrates knowledge and strengthens your arguments.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Make Your Opinion Distinct</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">When you give your opinion, make it clearly YOUR view using phrases like "I believe," "In my opinion," "I am convinced."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Consider a Nuanced Opinion</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">You don't have to choose one side completely. A thoughtful "both have value, but X is slightly better because..." shows critical thinking.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Plan Before Writing</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Spend 5 minutes planning: identify both views, think of one reason and example for each, decide your opinion. This prevents rambling.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Time Management:</strong> Spend 40 minutes on Task 2. Use 5 minutes planning, 30 minutes writing (roughly 10 minutes per body paragraph, 5 for intro/conclusion), and 5 minutes proofreading.
+</div>
+
+<h2>Quick Checklist</h2>
+
+<p>Before submitting your essay, make sure you can answer YES to all these questions:</p>
+
+<div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1.5rem 0;">
+<ul style="margin: 0; padding-left: 1.5rem; line-height: 2;">
+<li>Have I introduced the topic and both views in my introduction?</li>
+<li>Does Body Paragraph 1 fully explain the FIRST view?</li>
+<li>Does Body Paragraph 2 fully explain the SECOND view?</li>
+<li>Are both body paragraphs roughly equal in length?</li>
+<li>Have I given my opinion clearly (if required)?</li>
+<li>Does my conclusion summarise and state my view?</li>
+<li>Have I written at least 250 words?</li>
+<li>Have I checked for spelling and grammar errors?</li>
+</ul>
+</div>
+`,
+    image_url: null,
+    category_id: "2",
+    category_slug: "ielts",
+    author: "Learne Team",
+    published_at: "2026-02-03",
+    updated_at: null,
+    read_time: 18,
+    tags: ["ielts", "writing task 2", "discussion essay", "discuss both views", "band 7", "essay writing"],
+    is_featured: true,
+    is_published: true,
+    display_order: 37,
+    topic: "writing-task-2",
+  },
+  {
+    id: "38",
+    slug: "ielts-writing-task-2-advantage-disadvantage-essay",
+    title: "IELTS Writing Task 2: Advantage & Disadvantage Essay (Complete Guide)",
+    excerpt: "Master both types of IELTS advantage/disadvantage essays. Learn how to write a standard advantages and disadvantages essay AND the challenging 'outweigh' essay with structures, model answers, and Band 7+ tips.",
+    content: `
+<p>Advantage and disadvantage questions are among the most common in IELTS Writing Task 2. However, many students don't realise there are <strong>two different types</strong> of questions in this category, each requiring a different approach. This guide will teach you how to identify and write both types effectively.</p>
+
+<h2>Two Types of Advantage/Disadvantage Questions</h2>
+
+<p>It's crucial to identify which type of question you're facing, as the structure and approach differ significantly:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700; width: 25%;">Type</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">What It Asks</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700; width: 30%;">Opinion Required?</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Standard A/D Essay</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">What are the advantages and disadvantages?</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">No — just present both sides</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem;"><strong>Outweigh Essay</strong></td>
+<td style="padding: 0.875rem 1rem;">Do the advantages outweigh the disadvantages?</td>
+<td style="padding: 0.875rem 1rem;"><strong>Yes</strong> — you must state and support your opinion</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note">
+<strong>Critical Distinction:</strong> The word "outweigh" changes everything. If the question asks whether advantages outweigh disadvantages, you MUST give your opinion. If it simply asks "what are the advantages and disadvantages," you present both sides neutrally.
+</div>
+
+<h2>How to Identify Each Type</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Standard Advantage/Disadvantage</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Outweigh Essay</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">What are the advantages and disadvantages?</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Do the advantages <strong>outweigh</strong> the disadvantages?</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Discuss the advantages and disadvantages.</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Do the disadvantages <strong>outweigh</strong> the advantages?</td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">What are the benefits and drawbacks?</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Do the benefits <strong>outweigh</strong> the drawbacks?</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;">Examine the pros and cons.</td>
+<td style="padding: 0.75rem 1rem;">Are there <strong>more</strong> advantages than disadvantages?</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<h2 style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.02)); padding: 1rem 1.25rem; border-radius: 8px; border-left: 4px solid #22c55e;">Part 1: Standard Advantage/Disadvantage Essay</h2>
+
+<p>This type is similar to a discussion essay. You present both the positive and negative aspects of an issue <strong>without necessarily giving your opinion</strong>.</p>
+
+<h3>Example Question</h3>
+
+<div class="example-block">
+<strong>Question:</strong> More and more people are choosing to work from home rather than commuting to an office. What are the advantages and disadvantages of remote working?
+</div>
+
+<h3>Essay Structure</h3>
+
+<div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(99, 102, 241, 0.15);">
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Introduction</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Paraphrase the topic + State that you will discuss both sides</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #22c55e; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</span>
+<strong style="font-size: 1.1rem; color: #16a34a;">Body Paragraph 1 — Advantages</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Main advantage(s) + Explanation + Example</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #ef4444; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</span>
+<strong style="font-size: 1.1rem; color: #dc2626;">Body Paragraph 2 — Disadvantages</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Main disadvantage(s) + Explanation + Example</p>
+</div>
+
+<div>
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Conclusion</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">1-2 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Summarise both sides (opinion optional)</p>
+</div>
+
+</div>
+
+<h3>Writing the Introduction</h3>
+
+<p>Your introduction should paraphrase the topic and indicate you will discuss both sides.</p>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Example Introduction:</strong><br/>
+In recent years, there has been a significant shift towards remote working, with many employees now performing their duties from home rather than travelling to a traditional office. While this trend offers several clear benefits, it also presents certain challenges. This essay will examine both the advantages and disadvantages of working from home.
+</div>
+
+<h3>Introduction Phrases</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Introducing topic</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">In recent years... / There is a growing trend towards... / It is increasingly common for...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;"><strong>Signalling both sides</strong></td>
+<td style="padding: 0.75rem 1rem;">While this has certain benefits, it also presents challenges. / This development has both positive and negative aspects.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Writing Body Paragraphs</h3>
+
+<h4>Body Paragraph 1: Advantages</h4>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Example — Advantages Paragraph:</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> The primary advantage of remote working is the significant improvement in work-life balance. <strong style="color: #3b82f6;">[Explanation]</strong> Without the need to commute, employees can save several hours each day, time which can be spent with family, exercising, or pursuing personal interests. This flexibility often leads to reduced stress and increased job satisfaction. <strong style="color: #22c55e;">[Example]</strong> For instance, a study by Stanford University found that remote workers reported 50% lower levels of work-related stress compared to their office-based colleagues. <strong style="color: #a855f7;">[Extension]</strong> Additionally, companies benefit from reduced overhead costs, as they require less office space and resources.
+</div>
+
+<h4>Body Paragraph 2: Disadvantages</h4>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Example — Disadvantages Paragraph:</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> However, working from home also has notable drawbacks, particularly regarding social isolation and collaboration. <strong style="color: #3b82f6;">[Explanation]</strong> Without daily face-to-face interaction with colleagues, remote workers may feel disconnected from their team and company culture. This isolation can lead to decreased motivation and even mental health issues over time. <strong style="color: #22c55e;">[Example]</strong> Research has shown that remote employees are more likely to experience feelings of loneliness and find it harder to build professional relationships. <strong style="color: #a855f7;">[Extension]</strong> Furthermore, the blurred boundary between work and home life can result in employees working longer hours and struggling to "switch off."
+</div>
+
+<h3>Useful Vocabulary</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">Words for Advantages</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700; background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));">Words for Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">benefit, advantage, merit, strength</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">drawback, disadvantage, downside, limitation</td>
+</tr>
+<tr style="background: rgba(100, 116, 139, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">positive aspect, upside, plus point</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">negative aspect, shortcoming, weakness</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;">favourable, beneficial, advantageous</td>
+<td style="padding: 0.75rem 1rem;">problematic, detrimental, unfavourable</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Writing the Conclusion</h3>
+
+<p>Summarise both sides briefly. Giving an opinion is optional for this essay type.</p>
+
+<div style="background: rgba(99, 102, 241, 0.06); border-left: 4px solid #6366f1; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #4f46e5;">Without opinion:</strong><br/>
+In conclusion, remote working offers clear benefits in terms of flexibility and work-life balance, but it also presents challenges related to isolation and work boundaries. Both employers and employees should carefully consider these factors.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">With opinion (optional):</strong><br/>
+In conclusion, while remote working has both advantages and disadvantages, I believe the benefits generally outweigh the drawbacks when proper boundaries are established. The key is finding the right balance between flexibility and connection.
+</div>
+
+<h3>Model Essay: Standard Advantage/Disadvantage</h3>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">Many universities now offer online degree programmes. What are the advantages and disadvantages of studying for a degree online?</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">The availability of online degree programmes has expanded significantly in recent years, offering students an alternative to traditional campus-based education. While this development provides numerous benefits, it also has certain limitations that deserve consideration.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">The main advantage of online education is its flexibility and accessibility. Students can study at their own pace and at times that suit their schedule, making higher education possible for those who work full-time or have family responsibilities. Additionally, online programmes eliminate geographical barriers, allowing people in remote areas or different countries to access courses from prestigious universities. For example, a working professional in rural Indonesia can now earn a degree from a British university without relocating. This democratisation of education has opened opportunities for millions who would otherwise be excluded.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">However, online learning also has significant drawbacks, particularly regarding practical experience and social development. Many subjects, such as medicine, engineering, and laboratory sciences, require hands-on training that cannot be replicated virtually. Furthermore, students miss out on the social aspects of university life, including networking with peers, participating in clubs, and developing interpersonal skills through face-to-face interaction. Research suggests that online students often feel less connected to their institution and have higher dropout rates compared to traditional students.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, online degrees offer valuable flexibility and accessibility, but they cannot fully replace the practical and social benefits of traditional education. The suitability of online learning depends largely on the subject being studied and the individual student's circumstances.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 271 words</p>
+
+<br/>
+
+<h2 style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.02)); padding: 1rem 1.25rem; border-radius: 8px; border-left: 4px solid #f59e0b;">Part 2: The Outweigh Essay</h2>
+
+<p>This is the more challenging type. You must <strong>state your opinion</strong> on whether the advantages are greater than the disadvantages (or vice versa) and support that position throughout your essay.</p>
+
+<h3>Example Question</h3>
+
+<div class="example-block">
+<strong>Question:</strong> International tourism has become a major industry worldwide. Do the advantages of tourism for local communities outweigh the disadvantages?
+</div>
+
+<div class="note">
+<strong>Key Point:</strong> The word "outweigh" requires you to make a judgement. You cannot simply present both sides equally — you must clearly state which side is stronger and explain why.
+</div>
+
+<h3>Three Possible Positions</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700; width: 30%;">Position</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700;">What to Write</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(245, 158, 11, 0.3); font-weight: 700; width: 25%;">Essay Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Advantages outweigh</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The benefits are greater than the drawbacks</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Emphasise advantages</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Disadvantages outweigh</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The drawbacks are greater than the benefits</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Emphasise disadvantages</td>
+</tr>
+<tr style="background: rgba(245, 158, 11, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>It depends</strong></td>
+<td style="padding: 0.875rem 1rem;">The outcome depends on specific circumstances</td>
+<td style="padding: 0.875rem 1rem;">Discuss conditions</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Essay Structure Options</h3>
+
+<p>There are two effective structures for outweigh essays:</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02)); border-radius: 12px; padding: 1.25rem; border: 1px solid rgba(34, 197, 94, 0.15);">
+<h4 style="color: #16a34a; margin-top: 0; margin-bottom: 1rem;">Option A: One-Sided Approach</h4>
+<p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;"><em>Best when you strongly favour one side</em></p>
+<ol style="margin: 0; padding-left: 1.25rem; line-height: 1.8; font-size: 0.95rem;">
+<li><strong>Introduction</strong> — State your position</li>
+<li><strong>Body 1</strong> — Advantage 1 (detailed)</li>
+<li><strong>Body 2</strong> — Advantage 2 (detailed)</li>
+<li><strong>Conclusion</strong> — Acknowledge disadvantages briefly, restate position</li>
+</ol>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02)); border-radius: 12px; padding: 1.25rem; border: 1px solid rgba(59, 130, 246, 0.15);">
+<h4 style="color: #1e40af; margin-top: 0; margin-bottom: 1rem;">Option B: Balanced Comparison</h4>
+<p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;"><em>Best when you want to acknowledge both sides</em></p>
+<ol style="margin: 0; padding-left: 1.25rem; line-height: 1.8; font-size: 0.95rem;">
+<li><strong>Introduction</strong> — State your position</li>
+<li><strong>Body 1</strong> — Disadvantages (shorter)</li>
+<li><strong>Body 2</strong> — Advantages (longer/stronger)</li>
+<li><strong>Conclusion</strong> — Restate that advantages outweigh</li>
+</ol>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Recommended:</strong> Option B (Balanced Comparison) is often safer because it shows you've considered both sides. Put the weaker side first, then argue more strongly for your position in the second body paragraph.
+</div>
+
+<h3>Writing the Introduction</h3>
+
+<p>Your introduction MUST clearly state your position on whether advantages outweigh disadvantages.</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(239, 68, 68, 0.04));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700; color: #dc2626;">❌ Weak — No Clear Position</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This essay will discuss the advantages and disadvantages of tourism.</td></tr>
+<tr style="background: rgba(239, 68, 68, 0.03);"><td style="padding: 0.75rem 1rem;">There are both positive and negative aspects to consider.</td></tr>
+</tbody>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.04));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; color: #16a34a;">✓ Strong — Clear Position</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Although tourism has some negative effects, <strong>I believe its benefits significantly outweigh its drawbacks</strong>.</td></tr>
+<tr style="background: rgba(34, 197, 94, 0.03);"><td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Despite certain challenges, <strong>the advantages of tourism far exceed the disadvantages</strong> in my view.</td></tr>
+<tr><td style="padding: 0.75rem 1rem;"><strong>I strongly believe that the drawbacks outweigh the benefits</strong> when it comes to mass tourism.</td></tr>
+</tbody>
+</table>
+
+<h3>Introduction Examples</h3>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Advantages Outweigh:</strong><br/>
+International tourism has grown exponentially over recent decades, transforming local economies around the world. While this development brings certain challenges, <strong>I firmly believe that the economic and cultural benefits of tourism significantly outweigh its negative effects</strong> for most communities.
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Disadvantages Outweigh:</strong><br/>
+International tourism has grown exponentially over recent decades, transforming local economies around the world. However, <strong>I believe the environmental and social costs of mass tourism now outweigh its economic benefits</strong> in many popular destinations.
+</div>
+
+<h3>Writing Body Paragraphs</h3>
+
+<p>Using Option B (Balanced Comparison), write the weaker side first, then argue more strongly for your position.</p>
+
+<h4>Body Paragraph 1: Acknowledge the Opposing Side (Shorter)</h4>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Example — Disadvantages (if you think advantages outweigh):</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> Admittedly, tourism does bring certain problems to local communities. <strong style="color: #3b82f6;">[Explanation]</strong> Popular destinations often suffer from overcrowding, which can strain local infrastructure and drive up property prices, making housing unaffordable for residents. Additionally, the influx of visitors can commercialise traditional cultures and create environmental damage through increased pollution and waste. <strong style="color: #a855f7;">[Concession]</strong> These are legitimate concerns that should not be ignored.
+</div>
+
+<h4>Body Paragraph 2: Argue for Your Position (Longer/Stronger)</h4>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Example — Advantages (your main argument):</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> However, the economic and social benefits of tourism far exceed these drawbacks. <strong style="color: #3b82f6;">[Reason 1]</strong> Tourism creates substantial employment opportunities, from hotel staff and tour guides to restaurant workers and artisans selling local crafts. In many developing countries, tourism accounts for over 20% of GDP and provides a vital source of income for communities with few other economic options. <strong style="color: #22c55e;">[Reason 2]</strong> Furthermore, tourism promotes cultural exchange and international understanding, as visitors gain appreciation for different ways of life and local traditions. <strong style="color: #a855f7;">[Example]</strong> Countries like Thailand and Spain have used tourism revenue to fund infrastructure improvements, education, and healthcare that benefit all residents. <strong style="color: #6366f1;">[Conclusion]</strong> These profound economic and social benefits clearly outweigh the manageable problems that tourism can create.
+</div>
+
+<h3>Phrases for Outweigh Essays</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Advantages outweigh</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The benefits far exceed... / The advantages significantly outweigh... / The positives clearly outweigh...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Disadvantages outweigh</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The drawbacks outweigh... / The negatives far exceed... / The costs outweigh the benefits...</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Acknowledging other side</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Admittedly... / It is true that... / While some argue... / Despite these concerns...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;"><strong>Emphasising your view</strong></td>
+<td style="padding: 0.75rem 1rem;">However... / Nevertheless... / That said... / On balance...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Writing the Conclusion</h3>
+
+<p>Your conclusion must restate your position clearly.</p>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Advantages Outweigh Conclusion:</strong><br/>
+In conclusion, although tourism does create some challenges for local communities, the economic opportunities, cultural exchange, and infrastructure development it brings far outweigh these drawbacks. With proper management, tourism can be a powerful force for positive change.
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Disadvantages Outweigh Conclusion:</strong><br/>
+In conclusion, while tourism provides economic benefits, the environmental degradation, cultural erosion, and social disruption it causes outweigh these advantages in many destinations. Governments should prioritise sustainable limits over unrestricted growth.
+</div>
+
+<h3>Model Essay: Outweigh Type</h3>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">Some people believe that social media has had a negative impact on society. Do you think the disadvantages of social media outweigh its advantages?</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Social media platforms have transformed how people communicate and access information over the past two decades. While concerns about their negative effects are valid, I believe the advantages of social media still outweigh its disadvantages when used responsibly.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Admittedly, social media does present genuine problems for society. Platforms can spread misinformation rapidly, and their addictive design can lead to excessive screen time, particularly among young people. Studies have linked heavy social media use to increased anxiety, depression, and feelings of inadequacy as users compare themselves to idealised images online. Furthermore, concerns about data privacy and the manipulation of public opinion are legitimate issues that require attention.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">However, the benefits of social media significantly outweigh these drawbacks. Most importantly, these platforms have democratised communication, giving ordinary people a voice and enabling social movements that would have been impossible before. The Arab Spring and various human rights campaigns gained momentum through social media, demonstrating its power to drive positive change. Additionally, social media has transformed business opportunities, allowing small enterprises to reach global audiences without expensive advertising. It also helps families and friends maintain relationships across vast distances, which is especially valuable in our increasingly mobile world. These profound social and economic benefits far exceed the manageable problems that social media creates.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, although social media has notable disadvantages related to mental health and misinformation, its role in connecting people, empowering individuals, and creating economic opportunities means its advantages clearly outweigh its drawbacks. The key is educating users to engage with these platforms mindfully.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 284 words</p>
+
+<h2>Summary: Key Differences</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">Aspect</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">Standard A/D Essay</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">Outweigh Essay</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Question keyword</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">"What are the advantages and disadvantages?"</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">"Do advantages <strong>outweigh</strong> disadvantages?"</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Opinion required?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Optional</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Yes — essential</strong></td>
+</tr>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Balance</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Equal coverage of both sides</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Emphasise the side you support</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Introduction</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Signal you'll discuss both sides</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">State your position clearly</td>
+</tr>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Conclusion</strong></td>
+<td style="padding: 0.875rem 1rem;">Summarise both sides</td>
+<td style="padding: 0.875rem 1rem;">Restate which side is stronger</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">1</span>
+<div>
+<strong style="color: #dc2626;">Confusing the Two Question Types</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Read carefully! "What are the advantages and disadvantages?" requires balanced discussion. "Do advantages outweigh disadvantages?" requires a clear opinion.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">2</span>
+<div>
+<strong style="color: #dc2626;">No Clear Position in Outweigh Essays</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">For outweigh essays, you MUST state whether advantages or disadvantages are greater. Sitting on the fence will lose marks.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">3</span>
+<div>
+<strong style="color: #dc2626;">Equal Coverage in Outweigh Essays</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">If you believe advantages outweigh, your advantages paragraph should be stronger/longer than your disadvantages paragraph.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">4</span>
+<div>
+<strong style="color: #dc2626;">Listing Without Explaining</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't just list advantages and disadvantages. Each point needs explanation and ideally an example.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">5</span>
+<div>
+<strong style="color: #dc2626;">Contradicting Your Position</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">If you say advantages outweigh in the introduction, your conclusion must agree. Don't change your position mid-essay.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2>Tips for Band 7+</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Identify the Question Type First</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Before planning, determine if it's a standard A/D or outweigh question. This determines your entire approach.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Specific Examples</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Support each advantage/disadvantage with real-world examples. "Studies show..." or "Countries like..." adds credibility.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Vary Your Vocabulary</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't repeat "advantage" and "disadvantage." Use synonyms: benefit, merit, drawback, downside, limitation, strength, weakness.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Quality Over Quantity</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">It's better to discuss 1-2 advantages/disadvantages in depth than to list 5 points without explanation.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Concession Language</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">In outweigh essays, acknowledge the other side: "Admittedly...", "While it is true that...", "Despite these concerns..."</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Time Management:</strong> Spend 40 minutes on Task 2. For advantage/disadvantage essays, allocate 5 minutes planning (list 2 advantages, 2 disadvantages), 30 minutes writing, and 5 minutes checking.
+</div>
+
+<h2>Quick Reference Checklist</h2>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<h4 style="color: #16a34a; margin-top: 0;">Standard A/D Essay</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
+<li>Introduced the topic?</li>
+<li>Advantages paragraph complete?</li>
+<li>Disadvantages paragraph complete?</li>
+<li>Both paragraphs roughly equal?</li>
+<li>Conclusion summarises both?</li>
+<li>At least 250 words?</li>
+</ul>
+</div>
+
+<div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 10px; padding: 1.25rem;">
+<h4 style="color: #d97706; margin-top: 0;">Outweigh Essay</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
+<li>Position stated in introduction?</li>
+<li>Weaker side acknowledged?</li>
+<li>Stronger side argued in detail?</li>
+<li>Position restated in conclusion?</li>
+<li>Position consistent throughout?</li>
+<li>At least 250 words?</li>
+</ul>
+</div>
+
+</div>
+`,
+    image_url: null,
+    category_id: "2",
+    category_slug: "ielts",
+    author: "Learne Team",
+    published_at: "2026-02-03",
+    updated_at: null,
+    read_time: 22,
+    tags: ["ielts", "writing task 2", "advantage disadvantage", "outweigh essay", "band 7", "essay writing"],
+    is_featured: true,
+    is_published: true,
+    display_order: 38,
+    topic: "writing-task-2",
+  },
+  {
+    id: "39",
+    slug: "ielts-writing-task-2-problem-solution-essay",
+    title: "IELTS Writing Task 2: Problem & Solution Essay (Complete Guide)",
+    excerpt: "Master the IELTS problem and solution essay with this complete guide. Learn how to identify problems, propose effective solutions, and structure your essay for Band 7+ with model answers and expert tips.",
+    content: `
+<p>The <strong>problem and solution essay</strong> is a common question type in IELTS Writing Task 2. You are presented with a problem or issue and asked to discuss its causes, effects, or solutions. This guide will teach you how to identify, structure, and write a high-scoring problem-solution essay.</p>
+
+<h2>What is a Problem-Solution Essay?</h2>
+
+<p>In this essay type, you must:</p>
+
+<ul>
+<li><strong>Identify the problem(s)</strong> — What issues exist and why are they significant?</li>
+<li><strong>Explain causes or effects</strong> — Some questions ask why the problem exists</li>
+<li><strong>Propose solutions</strong> — Suggest realistic ways to address the problem</li>
+<li><strong>Explain how solutions work</strong> — Show why your solutions would be effective</li>
+</ul>
+
+<div class="note">
+<strong>Key Point:</strong> Unlike opinion essays where you argue for a position, problem-solution essays require you to be <strong>practical and constructive</strong>. Focus on identifying real issues and proposing workable solutions.
+</div>
+
+<h2>How to Identify a Problem-Solution Essay</h2>
+
+<p>Look for these key phrases in the question:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Question Format</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">What You Must Do</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What are the problems and solutions?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Discuss problems + Propose solutions</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What are the causes and solutions?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain causes + Propose solutions</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Why does this happen and what can be done?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain reasons + Suggest measures</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What problems does this cause and how can they be solved?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Discuss effects + Propose solutions</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>How can this problem be addressed?</strong></td>
+<td style="padding: 0.875rem 1rem;">Focus mainly on solutions</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Three Types of Problem-Solution Questions</h2>
+
+<p>Problem-solution questions can be phrased in different ways. Identify which type you have:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700; width: 25%;">Type</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Focus</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700; width: 35%;">Example Question</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Problems + Solutions</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Identify problems, then solve them</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>What problems does plastic pollution cause and how can they be solved?</em></td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Causes + Solutions</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain why it happens, then solve it</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>Why do young people struggle to find jobs? What solutions can you suggest?</em></td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Effects + Solutions</strong></td>
+<td style="padding: 0.875rem 1rem;">Describe impacts, then solve them</td>
+<td style="padding: 0.875rem 1rem;"><em>What effects does traffic congestion have on cities? How can governments address this?</em></td>
+</tr>
+</tbody>
+</table>
+
+<div class="tip">
+<strong>Read Carefully:</strong> The question tells you exactly what to write about. If it asks for "causes and solutions," don't write about effects. If it asks for "problems and solutions," don't write about causes.
+</div>
+
+<h2>Essay Structure: The 4-Paragraph Approach</h2>
+
+<p>A clear structure is essential. Here is the recommended format:</p>
+
+<div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(99, 102, 241, 0.15);">
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Introduction</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Paraphrase the topic + State what you will discuss (problems/causes AND solutions)</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #ef4444; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</span>
+<strong style="font-size: 1.1rem; color: #dc2626;">Body Paragraph 1 — Problems/Causes</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Problem/Cause 1 + Explanation + Problem/Cause 2 + Explanation</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #22c55e; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</span>
+<strong style="font-size: 1.1rem; color: #16a34a;">Body Paragraph 2 — Solutions</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Solution 1 + How it works + Solution 2 + How it works</p>
+</div>
+
+<div>
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Conclusion</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">1-2 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Summarise the issue + Restate key solutions</p>
+</div>
+
+</div>
+
+<div class="note">
+<strong>Alternative Structure:</strong> Some students prefer to match each problem with its solution in the same paragraph. Both approaches work — choose the one that feels more natural to you.
+</div>
+
+<h2>Writing the Introduction</h2>
+
+<p>Your introduction should paraphrase the topic and signal that you will discuss both the problems/causes AND solutions.</p>
+
+<h3>Introduction Phrases</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Introducing the problem</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">... has become a serious issue in many countries. / ... is a growing concern worldwide. / ... poses significant challenges to...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Signalling essay content</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This essay will examine the causes of this issue and propose some solutions. / This essay will discuss the main problems and suggest ways to address them.</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem;"><strong>Showing urgency</strong></td>
+<td style="padding: 0.75rem 1rem;">Unless action is taken... / This issue requires urgent attention because...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Introduction Examples</h3>
+
+<div class="example-block">
+<strong>Question:</strong> Many cities around the world are facing serious traffic congestion. What are the causes of this problem and what solutions can be implemented?
+</div>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Example Introduction:</strong><br/>
+Traffic congestion has become a critical issue in urban areas worldwide, causing significant economic losses and environmental damage. This essay will examine the primary causes of this problem and propose practical solutions that governments and individuals can implement.
+</div>
+
+<div class="example-block">
+<strong>Question:</strong> Many young people today are struggling with mental health issues. Why is this happening and what measures can be taken to address this problem?
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Example Introduction:</strong><br/>
+Mental health problems among young people have reached alarming levels in recent years, with rising rates of anxiety and depression being reported globally. This essay will explore the key reasons behind this trend and suggest measures that can help address this growing crisis.
+</div>
+
+<h2>Writing the Problems/Causes Paragraph</h2>
+
+<p>In this paragraph, clearly identify the problems or explain the causes. Use specific examples and explain the consequences.</p>
+
+<h3>Structure for Problems/Causes Paragraph</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700; width: 25%;">Element</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700; width: 30%;">Example Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Topic Sentence</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Introduce the problems/causes</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">There are several reasons why... / The main causes of this issue are...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Problem/Cause 1</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">State the first issue</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The primary cause is... / Firstly...</td>
+</tr>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Explanation/Example</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Develop the point</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This means that... / As a result...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Problem/Cause 2</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">State the second issue</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Another significant factor is... / Additionally...</td>
+</tr>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Explanation/Example</strong></td>
+<td style="padding: 0.875rem 1rem;">Develop the point</td>
+<td style="padding: 0.875rem 1rem;">For instance... / This leads to...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example Problems/Causes Paragraph</h3>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Traffic Congestion — Causes Paragraph:</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> There are several key reasons why traffic congestion has worsened in major cities. <strong style="color: #3b82f6;">[Cause 1]</strong> The primary factor is the rapid increase in private car ownership. As economies grow and living standards improve, more families can afford vehicles, leading to an exponential rise in the number of cars on roads that were not designed for such volumes. <strong style="color: #22c55e;">[Cause 2]</strong> Another significant cause is inadequate public transportation infrastructure. In many cities, bus and train networks are unreliable, overcrowded, or simply do not reach all areas, leaving residents with no choice but to drive. <strong style="color: #a855f7;">[Result]</strong> Together, these factors create gridlock during peak hours, wasting billions of hours annually and contributing to air pollution.
+</div>
+
+<h3>Vocabulary for Problems/Causes</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700;">Category</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(239, 68, 68, 0.3); font-weight: 700;">Useful Words and Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Nouns for problems</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">issue, problem, challenge, difficulty, crisis, concern, obstacle, barrier</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Nouns for causes</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">cause, reason, factor, root, source, origin, contributor</td>
+</tr>
+<tr style="background: rgba(239, 68, 68, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Verbs for causes</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">cause, lead to, result in, contribute to, stem from, arise from, be attributed to</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;"><strong>Describing severity</strong></td>
+<td style="padding: 0.75rem 1rem;">serious, severe, significant, pressing, urgent, critical, alarming, widespread</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Writing the Solutions Paragraph</h2>
+
+<p>This is where you propose practical solutions. Each solution should be <strong>specific</strong>, <strong>realistic</strong>, and <strong>explained properly</strong>.</p>
+
+<h3>Structure for Solutions Paragraph</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; width: 25%;">Element</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700; width: 30%;">Example Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Topic Sentence</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Introduce solutions</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Several measures can be taken to address this issue. / There are practical solutions to this problem.</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Solution 1</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">State the first solution</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The most effective solution would be... / Firstly, governments should...</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>How it works</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain the mechanism</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This would work because... / By doing this...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Solution 2</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">State the second solution</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Another approach is... / Additionally...</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>How it works</strong></td>
+<td style="padding: 0.875rem 1rem;">Explain the benefit</td>
+<td style="padding: 0.875rem 1rem;">This would help because... / As a result...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example Solutions Paragraph</h3>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Traffic Congestion — Solutions Paragraph:</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> There are several practical measures that could effectively reduce traffic congestion. <strong style="color: #3b82f6;">[Solution 1]</strong> The most impactful approach would be significant investment in public transportation. Governments should expand metro networks, introduce more frequent bus services, and ensure these options are affordable and comfortable. <strong style="color: #22c55e;">[How it works]</strong> When public transport is convenient and reliable, commuters are more likely to leave their cars at home, directly reducing the number of vehicles on the road. <strong style="color: #a855f7;">[Solution 2]</strong> Another effective measure is implementing congestion pricing in city centres, where drivers pay a fee to enter during peak hours. <strong style="color: #6366f1;">[How it works]</strong> Cities like London and Singapore have successfully used this approach to discourage unnecessary car journeys and fund transport improvements. Together, these solutions could significantly alleviate urban traffic problems.
+</div>
+
+<h3>Who Can Implement Solutions?</h3>
+
+<p>When proposing solutions, consider who should take action:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">Actor</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(99, 102, 241, 0.3); font-weight: 700;">Types of Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Governments</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Legislation, funding, infrastructure, public services, regulations, taxes, subsidies</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Schools/Educators</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Curriculum changes, awareness programmes, counselling, skills training</td>
+</tr>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Employers/Businesses</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Workplace policies, flexible working, training, corporate responsibility</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Parents/Families</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Education at home, supervision, role modelling, communication</td>
+</tr>
+<tr style="background: rgba(99, 102, 241, 0.03);">
+<td style="padding: 0.75rem 1rem;"><strong>Individuals</strong></td>
+<td style="padding: 0.75rem 1rem;">Personal choices, lifestyle changes, community involvement, awareness</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Vocabulary for Solutions</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">Category</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(34, 197, 94, 0.3); font-weight: 700;">Useful Words and Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Nouns for solutions</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">solution, measure, approach, strategy, initiative, intervention, remedy, step</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Verbs for proposing</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">implement, introduce, establish, adopt, enforce, promote, encourage, invest in</td>
+</tr>
+<tr style="background: rgba(34, 197, 94, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Modal verbs</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">should, could, ought to, need to, must, might</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;"><strong>Describing effectiveness</strong></td>
+<td style="padding: 0.75rem 1rem;">effective, practical, feasible, viable, sustainable, long-term, immediate</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Writing the Conclusion</h2>
+
+<p>Your conclusion should briefly summarise the problem and reinforce your main solutions.</p>
+
+<h3>Conclusion Phrases</h3>
+
+<div style="background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 10px; padding: 1.25rem; margin: 1rem 0;">
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.9;">
+<li>In conclusion, while... poses significant challenges, it can be addressed through...</li>
+<li>To sum up, the problems of... require urgent action, and measures such as... would be effective.</li>
+<li>In summary, by implementing... and..., we can begin to solve the problem of...</li>
+<li>To conclude, tackling... will require effort from both governments and individuals, but solutions such as... offer a clear path forward.</li>
+</ul>
+</div>
+
+<h3>Conclusion Examples</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Traffic Congestion Conclusion:</strong><br/>
+In conclusion, while traffic congestion stems from increased car ownership and inadequate public transport, it can be effectively addressed through investment in reliable transit systems and congestion pricing. These measures, if implemented properly, could significantly improve urban mobility and quality of life.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Mental Health Conclusion:</strong><br/>
+To sum up, the rise in mental health issues among young people is driven by social media pressure and academic stress. However, through better education, accessible counselling services, and reduced emphasis on exam performance, society can help young people build resilience and lead healthier lives.
+</div>
+
+<h2>Complete Model Essay</h2>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">In many countries, the amount of household waste is increasing. What are the causes of this problem and what measures can be taken to reduce the amount of waste produced?</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">The growing volume of household waste has become a pressing environmental concern in nations around the world. This essay will examine the main causes of this problem and propose practical solutions to reduce waste production.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">There are several key reasons why household waste continues to increase. The primary cause is the rise of consumer culture and disposable products. Modern lifestyles encourage frequent purchasing of new items, from fast fashion to electronic gadgets, many of which are designed to be replaced rather than repaired. Additionally, excessive packaging contributes significantly to waste volumes. Products are often wrapped in multiple layers of plastic and cardboard for marketing purposes rather than necessity, and this packaging is immediately discarded after purchase. As a result, the average household now generates far more waste than previous generations did.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Several practical measures could effectively address this problem. Firstly, governments should implement stricter regulations on packaging, requiring companies to use minimal and recyclable materials. This would reduce waste at the source and shift responsibility to manufacturers. Another effective approach is to establish comprehensive recycling programmes and make them convenient for residents. When recycling bins are readily available and collection is regular, households are more likely to separate their waste properly. Furthermore, public awareness campaigns can educate people about reducing consumption and choosing products with less packaging. Countries like Germany have successfully reduced waste through a combination of these strategies, proving that change is achievable.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, while rising household waste results from consumerism and excessive packaging, it can be tackled through government regulations, improved recycling infrastructure, and public education. By implementing these measures, societies can significantly reduce their environmental impact.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 289 words</p>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">1</span>
+<div>
+<strong style="color: #dc2626;">Writing About Causes When Asked for Problems</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Read the question carefully. "Problems" and "causes" are different. Problems are the negative effects; causes are the reasons why something happens.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">2</span>
+<div>
+<strong style="color: #dc2626;">Vague or Unrealistic Solutions</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">"The government should do something" is too vague. Be specific: "Governments should introduce subsidies for electric vehicles." Avoid impossible solutions like "ban all cars."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">3</span>
+<div>
+<strong style="color: #dc2626;">Not Explaining HOW Solutions Work</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't just list solutions. Explain the mechanism: WHY would this solution be effective? HOW would it address the problem?</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">4</span>
+<div>
+<strong style="color: #dc2626;">Unbalanced Essay</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Give roughly equal attention to problems/causes AND solutions. Don't write 200 words on problems and 50 words on solutions.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">5</span>
+<div>
+<strong style="color: #dc2626;">Too Many Points, Not Enough Development</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">It's better to discuss 2 causes and 2 solutions in depth than to mention 5 of each without proper explanation.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2>Tips for Band 7+</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Match Solutions to Problems</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Your solutions should logically address the problems you've identified. If you say the cause is "lack of education," propose an education-based solution.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Real-World Examples</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Reference countries or cities that have successfully addressed similar problems. "Singapore has reduced congestion through..." adds credibility.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Consider Multiple Stakeholders</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Show sophistication by suggesting what different groups can do: governments, businesses, schools, individuals. This demonstrates broader thinking.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Be Specific and Practical</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Avoid generic solutions like "raise awareness." Instead, specify HOW: "Schools should include environmental education in the curriculum from primary level."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Appropriate Modal Verbs</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Use "should," "could," "ought to" for suggestions. Use "must" or "need to" for urgent necessities. This shows range and accuracy.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Time Management:</strong> Spend 40 minutes on Task 2. For problem-solution essays, use 5 minutes to brainstorm 2 problems/causes and 2 solutions, 30 minutes writing, and 5 minutes checking.
+</div>
+
+<h2>Quick Reference Checklist</h2>
+
+<div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1.5rem 0;">
+<ul style="margin: 0; padding-left: 1.5rem; line-height: 2;">
+<li>Did I identify the correct focus (problems, causes, or effects)?</li>
+<li>Did I explain 2 problems/causes with detail?</li>
+<li>Did I propose 2 realistic solutions?</li>
+<li>Did I explain HOW each solution works?</li>
+<li>Do my solutions address the problems I mentioned?</li>
+<li>Is my essay balanced between problems and solutions?</li>
+<li>Did I write at least 250 words?</li>
+<li>Did I proofread for errors?</li>
+</ul>
+</div>
+`,
+    image_url: null,
+    category_id: "2",
+    category_slug: "ielts",
+    author: "Learne Team",
+    published_at: "2026-02-03",
+    updated_at: null,
+    read_time: 20,
+    tags: ["ielts", "writing task 2", "problem solution", "causes and solutions", "band 7", "essay writing"],
+    is_featured: true,
+    is_published: true,
+    display_order: 39,
+    topic: "writing-task-2",
+  },
+  {
+    id: "40",
+    slug: "ielts-writing-task-2-double-question-essay",
+    title: "IELTS Writing Task 2: Double Question Essay (Two-Part Question)",
+    excerpt: "Master the IELTS double question essay with this complete guide. Learn how to identify two-part questions, structure your response to answer both questions fully, and achieve Band 7+ with model answers.",
+    content: `
+<p>The <strong>double question essay</strong> (also called a <strong>two-part question</strong> or <strong>multi-part essay</strong>) is a common but often misunderstood question type in IELTS Writing Task 2. Unlike other essay types, you are given <strong>two separate questions</strong> that you must answer fully. This guide will teach you how to identify, structure, and write a high-scoring double question essay.</p>
+
+<h2>What is a Double Question Essay?</h2>
+
+<p>In this essay type, you are presented with a topic followed by <strong>two distinct questions</strong>. Your task is to:</p>
+
+<ul>
+<li><strong>Answer BOTH questions</strong> — Each question must receive a full response</li>
+<li><strong>Give equal attention to each</strong> — Don't focus heavily on one and neglect the other</li>
+<li><strong>Keep the questions separate</strong> — Typically, one body paragraph per question</li>
+<li><strong>Provide your opinion when asked</strong> — Some questions ask what you think</li>
+</ul>
+
+<div class="note">
+<strong>Key Point:</strong> The biggest mistake students make is treating this as a single-question essay and only answering one part. You MUST address both questions to achieve a good Task Response score.
+</div>
+
+<h2>How to Identify a Double Question Essay</h2>
+
+<p>Look for <strong>two question marks</strong> or <strong>two separate instructions</strong> in the task:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Question Pattern</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Why...? What...?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>Why do people move to cities? What problems does this cause?</em></td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What...? Do you think...?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>What are the reasons for this trend? Do you think it is positive or negative?</em></td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Why...? Is this...?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>Why is this happening? Is this a positive or negative development?</em></td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What...? What...?</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><em>What are the causes? What are the effects?</em></td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Who...? What...?</strong></td>
+<td style="padding: 0.875rem 1rem;"><em>Who should be responsible for this? What measures should be taken?</em></td>
+</tr>
+</tbody>
+</table>
+
+<div class="tip">
+<strong>Quick Check:</strong> Count the question marks. If there are two (or two clear instructions), it's a double question essay. Each question mark = one body paragraph.
+</div>
+
+<h2>Common Question Combinations</h2>
+
+<p>Double question essays typically combine these types of questions:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Question 1 Type</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Question 2 Type</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">What to Write</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Why/Reasons</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Effects/Results</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain causes → Discuss consequences</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Why/Reasons</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Opinion (positive/negative)</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Explain causes → Give your view</td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What (describe)</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Opinion/Evaluation</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Describe the situation → Evaluate it</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Who (responsibility)</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>What (solutions)</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Identify who → Propose actions</td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>What (causes)</strong></td>
+<td style="padding: 0.875rem 1rem;"><strong>What (solutions)</strong></td>
+<td style="padding: 0.875rem 1rem;">Explain causes → Propose solutions</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Essay Structure: The 4-Paragraph Approach</h2>
+
+<p>The structure is straightforward: <strong>one body paragraph for each question</strong>.</p>
+
+<div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(99, 102, 241, 0.15);">
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Introduction</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Paraphrase the topic + Signal you will answer both questions</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</span>
+<strong style="font-size: 1.1rem; color: #1e40af;">Body Paragraph 1 — Answer Question 1</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Fully address the first question with reasons + examples</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #22c55e; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</span>
+<strong style="font-size: 1.1rem; color: #16a34a;">Body Paragraph 2 — Answer Question 2</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Fully address the second question with reasons + examples</p>
+</div>
+
+<div>
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Conclusion</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">1-2 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Briefly summarise your answers to both questions</p>
+</div>
+
+</div>
+
+<div class="note">
+<strong>Simple Rule:</strong> Question 1 = Body Paragraph 1. Question 2 = Body Paragraph 2. Don't mix them together.
+</div>
+
+<h2>Writing the Introduction</h2>
+
+<p>Your introduction should paraphrase the topic and indicate that you will address both questions.</p>
+
+<h3>Introduction Phrases</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Introducing the topic</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">In recent years... / It is increasingly common for... / There is a growing trend of...</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;"><strong>Signalling both questions</strong></td>
+<td style="padding: 0.75rem 1rem;">This essay will explore the reasons for this trend and examine its effects. / This essay will discuss why this is happening and whether it is a positive development.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Introduction Examples</h3>
+
+<div class="example-block">
+<strong>Question:</strong> Many people today prefer to read news online rather than in newspapers. Why is this? Is this a positive or negative development?
+</div>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Example Introduction:</strong><br/>
+In the digital age, an increasing number of people are turning to online platforms for their news rather than traditional newspapers. This essay will examine the reasons behind this shift and discuss whether this development has positive or negative implications for society.
+</div>
+
+<div class="example-block">
+<strong>Question:</strong> More and more people are moving from rural areas to cities. Why is this happening? What effects does this have on rural communities?
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Example Introduction:</strong><br/>
+Rural-to-urban migration has accelerated dramatically in recent decades, with millions of people leaving the countryside for city life each year. This essay will explore the main reasons driving this trend and analyse the consequences it has on the rural communities left behind.
+</div>
+
+<h2>Writing Body Paragraph 1 (Question 1)</h2>
+
+<p>This paragraph should <strong>fully answer the first question</strong>. Follow a clear structure:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700; width: 25%;">Element</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700; width: 30%;">Example Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Topic Sentence</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Introduce your answer to Q1</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">There are several reasons why... / The main causes of this trend are...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Point 1</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">First reason/answer</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Firstly... / The primary reason is...</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Explanation</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Develop the point</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This is because... / This means that...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Point 2</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Second reason/answer</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Another factor is... / Additionally...</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Example (optional)</strong></td>
+<td style="padding: 0.875rem 1rem;">Illustrate your point</td>
+<td style="padding: 0.875rem 1rem;">For instance... / A clear example is...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example Body Paragraph 1</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Question 1: Why do people prefer online news?</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> There are several compelling reasons why people increasingly prefer online news sources. <strong style="color: #3b82f6;">[Point 1]</strong> The primary factor is convenience and accessibility. Online news can be accessed instantly on smartphones, tablets, and computers, allowing people to stay informed anywhere and at any time, whereas newspapers require physical purchase and can only be read in one location. <strong style="color: #22c55e;">[Point 2]</strong> Another significant reason is the real-time nature of digital news. Unlike newspapers, which are printed once daily, online platforms can update stories continuously, providing readers with the latest developments as events unfold. <strong style="color: #a855f7;">[Example]</strong> For instance, during major events like elections or natural disasters, people turn to online sources for minute-by-minute updates that newspapers simply cannot provide.
+</div>
+
+<h2>Writing Body Paragraph 2 (Question 2)</h2>
+
+<p>This paragraph should <strong>fully answer the second question</strong>. Use a clear transition to show you're moving to a new question.</p>
+
+<h3>Transition Phrases Between Questions</h3>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.15); border-radius: 10px; padding: 1.25rem; margin: 1rem 0;">
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.9;">
+<li>Regarding whether this is a positive or negative development...</li>
+<li>As for the effects of this trend...</li>
+<li>Turning to the question of [topic]...</li>
+<li>In terms of the impact this has...</li>
+<li>With regard to [second question topic]...</li>
+</ul>
+</div>
+
+<h3>Example Body Paragraph 2</h3>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Question 2: Is this positive or negative?</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence + Transition]</strong> Regarding whether this shift is positive or negative, I believe it is largely beneficial but comes with some concerns. <strong style="color: #3b82f6;">[Positive Point]</strong> On the positive side, online news has democratised information access, allowing people from all economic backgrounds to stay informed without the cost of newspaper subscriptions. It has also given a platform to diverse voices and perspectives that might not appear in traditional media. <strong style="color: #22c55e;">[Negative Point]</strong> However, there are valid concerns about the spread of misinformation online and the decline of professional journalism as newspapers struggle financially. <strong style="color: #a855f7;">[Overall View]</strong> On balance, I consider this a positive development, provided that readers develop strong critical thinking skills to evaluate the credibility of online sources.
+</div>
+
+<h2>Different Question 2 Types and How to Answer Them</h2>
+
+<h3>Type A: "Is this positive or negative?"</h3>
+
+<p>You must give a clear opinion. You can say:</p>
+<ul>
+<li>Mostly positive (with minor negatives)</li>
+<li>Mostly negative (with minor positives)</li>
+<li>Both positive and negative (balanced)</li>
+</ul>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Example phrases:</strong><br/>
+• I believe this is predominantly a positive development because...<br/>
+• In my view, the negative aspects outweigh the positives...<br/>
+• While there are both benefits and drawbacks, I consider this largely beneficial...
+</div>
+
+<h3>Type B: "What are the effects?"</h3>
+
+<p>Discuss the consequences (positive, negative, or both) on individuals, society, economy, or environment.</p>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Example phrases:</strong><br/>
+• This trend has several significant effects on...<br/>
+• The consequences of this development include...<br/>
+• This has had a profound impact on both individuals and society...
+</div>
+
+<h3>Type C: "What solutions/measures can be taken?"</h3>
+
+<p>Propose practical solutions, specifying who should take action.</p>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Example phrases:</strong><br/>
+• Several measures can be implemented to address this...<br/>
+• Governments should introduce policies that...<br/>
+• Both individuals and institutions can take steps to...
+</div>
+
+<h2>Writing the Conclusion</h2>
+
+<p>Your conclusion should briefly summarise your answers to <strong>both questions</strong>.</p>
+
+<h3>Conclusion Structure</h3>
+
+<div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(99, 102, 241, 0.15);">
+<p style="margin: 0 0 1rem 0;"><strong style="color: #4f46e5;">Sentence 1:</strong> Summary of your answer to Question 1</p>
+<p style="margin: 0;"><strong style="color: #4f46e5;">Sentence 2:</strong> Summary of your answer to Question 2</p>
+</div>
+
+<h3>Conclusion Examples</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Online News Conclusion:</strong><br/>
+In conclusion, people prefer online news primarily because of its convenience, accessibility, and real-time updates. While this shift raises some concerns about misinformation, the overall impact is positive as it has made information more accessible to everyone.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Rural Migration Conclusion:</strong><br/>
+To sum up, rural-to-urban migration is driven by the search for better employment and educational opportunities. The effects on rural communities are largely negative, including economic decline and an ageing population, though some benefits exist through remittances sent back by migrants.
+</div>
+
+<h2>Complete Model Essay</h2>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">Many young people today spend a large amount of their free time playing video games. Why is this? Is this a positive or negative development?</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Video gaming has become one of the most popular leisure activities among young people worldwide, with many dedicating significant portions of their free time to this hobby. This essay will explore the reasons behind this phenomenon and evaluate whether it is a positive or negative development.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">There are several compelling reasons why video games have become so popular among the younger generation. Firstly, modern games offer immersive experiences that provide an escape from the stresses of daily life, including academic pressure and social challenges. The interactive nature of gaming allows players to enter virtual worlds where they have control and can achieve goals, which can be deeply satisfying. Secondly, video games have evolved into social platforms where young people can connect with friends and make new ones, regardless of geographical distance. Multiplayer games enable real-time collaboration and communication, fulfilling the human need for social interaction in a digital age.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Regarding whether this trend is positive or negative, I believe the effects are mixed but lean slightly negative when gaming becomes excessive. On the positive side, certain games can develop problem-solving skills, strategic thinking, and hand-eye coordination. However, spending large amounts of time gaming often comes at the expense of physical activity, face-to-face socialisation, and academic pursuits. Research has linked excessive gaming to health issues such as obesity, poor sleep, and in some cases, addiction. Therefore, while moderate gaming can be beneficial, the current trend of extensive play time is concerning.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, young people are drawn to video games due to their immersive entertainment value and social connectivity features. While gaming offers some cognitive benefits, the trend towards excessive play is largely negative due to its impact on physical health and other life priorities.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 298 words</p>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">1</span>
+<div>
+<strong style="color: #dc2626;">Only Answering One Question</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">This is the most serious mistake. If you only answer one question, you will lose significant marks for Task Response regardless of how well-written your essay is.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">2</span>
+<div>
+<strong style="color: #dc2626;">Unbalanced Response</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Writing 200 words for Question 1 and only 50 words for Question 2. Both questions deserve roughly equal attention and development.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">3</span>
+<div>
+<strong style="color: #dc2626;">Mixing the Questions Together</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Keep each question in its own paragraph. Jumping between questions within paragraphs creates confusion and hurts coherence.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">4</span>
+<div>
+<strong style="color: #dc2626;">No Clear Opinion When Asked</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">If Question 2 asks "Is this positive or negative?" you must clearly state your view. Don't just describe both sides without giving your opinion.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">5</span>
+<div>
+<strong style="color: #dc2626;">Not Signalling the Transition</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Use clear transition phrases when moving from Question 1 to Question 2. This helps the reader follow your structure.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2>Tips for Band 7+</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Underline Both Questions</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Before you start writing, underline or highlight both questions. This ensures you don't forget to address both parts.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Plan Both Answers First</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Spend 5 minutes planning. Write 2 points for Q1 and 2 points for Q2. This ensures balanced coverage before you start.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Clear Topic Sentences</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Start each body paragraph with a sentence that clearly indicates which question you're answering. This helps with coherence.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Develop Each Point Fully</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't just list reasons or effects. Explain WHY and give examples. Two well-developed points are better than four superficial ones.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Check Your Conclusion Covers Both</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Before finishing, verify that your conclusion mentions both questions. This reinforces that you've fully addressed the task.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Time Management:</strong> Spend 40 minutes on Task 2. For double question essays, allocate about 15 minutes per body paragraph to ensure both questions receive equal attention. Use 5 minutes for planning and 5 for checking.
+</div>
+
+<h2>Quick Reference Checklist</h2>
+
+<div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1.5rem 0;">
+<ul style="margin: 0; padding-left: 1.5rem; line-height: 2;">
+<li>Did I identify BOTH questions in the task?</li>
+<li>Does my introduction mention both questions?</li>
+<li>Does Body Paragraph 1 fully answer Question 1?</li>
+<li>Does Body Paragraph 2 fully answer Question 2?</li>
+<li>Are both paragraphs roughly equal in length?</li>
+<li>Did I use a clear transition between questions?</li>
+<li>If asked for my opinion, did I give it clearly?</li>
+<li>Does my conclusion summarise BOTH answers?</li>
+<li>Did I write at least 250 words?</li>
+</ul>
+</div>
+`,
+    image_url: null,
+    category_id: "2",
+    category_slug: "ielts",
+    author: "Learne Team",
+    published_at: "2026-02-03",
+    updated_at: null,
+    read_time: 18,
+    tags: ["ielts", "writing task 2", "double question", "two-part question", "band 7", "essay writing"],
+    is_featured: true,
+    is_published: true,
+    display_order: 40,
+    topic: "writing-task-2",
+  },
+  {
+    id: "41",
+    slug: "ielts-writing-task-2-multi-part-opinion-essay",
+    title: "Multi-Part and Opinion Essays: Complete Guide",
+    excerpt: "Master the multi-part opinion essay that combines descriptive questions with outweigh/opinion elements. Learn the structure, techniques, and model answers for this hybrid essay type.",
+    content: `
+<p>Some IELTS Task 2 questions combine multiple elements: they ask you to <strong>describe or explain</strong> something AND give your <strong>opinion on whether benefits outweigh drawbacks</strong> (or vice versa). This hybrid format requires you to both analyse a topic and make a clear judgement, making it one of the more demanding essay types.</p>
+
+<h2>What is a Multi-Part Opinion Essay?</h2>
+
+<p>A multi-part opinion essay typically asks <strong>two distinct questions</strong> where:</p>
+<ul>
+<li><strong>Question 1</strong> asks you to describe, explain, or analyse something (causes, effects, forms, types)</li>
+<li><strong>Question 2</strong> asks for your opinion on whether benefits outweigh drawbacks, or if the positives outweigh the negatives</li>
+</ul>
+
+<div class="note">
+<strong>Key Difference from Regular Double Question:</strong> In standard double question essays, both questions require objective analysis. In multi-part opinion essays, the second part specifically demands your personal judgement using "outweigh" language.
+</div>
+
+<h2>How to Identify This Essay Type</h2>
+
+<p>Look for question patterns that combine description with judgement:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Part 1 (Descriptive)</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Part 2 (Opinion/Outweigh)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">What problems does this create?</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Do the advantages outweigh the disadvantages?</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">What benefits does this bring?</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Do you think the drawbacks outweigh these benefits?</td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">What effects does this have on society?</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Do the positives outweigh the negatives?</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;">What types of challenges arise?</td>
+<td style="padding: 0.75rem 1rem;">Are these challenges worth the benefits gained?</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example Questions</h3>
+
+<div class="example-block">
+<strong>Example 1:</strong> Working from home has become increasingly common.<br/>
+<em>What challenges does this create for employees?</em> <strong>Do you think the benefits outweigh these challenges?</strong>
+</div>
+
+<div class="example-block">
+<strong>Example 2:</strong> Many countries now require children to learn a foreign language from a young age.<br/>
+<em>What are the potential difficulties of this policy?</em> <strong>Do the advantages outweigh the disadvantages?</strong>
+</div>
+
+<div class="example-block">
+<strong>Example 3:</strong> Social media has changed the way people communicate.<br/>
+<em>What effects has this had on personal relationships?</em> <strong>Are the effects more positive or negative overall?</strong>
+</div>
+
+<h2>Essay Structure</h2>
+
+<div style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(168, 85, 247, 0.02)); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(168, 85, 247, 0.15);">
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(168, 85, 247, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #a855f7; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</span>
+<strong style="font-size: 1.1rem; color: #7c3aed;">Introduction</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">2-3 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Paraphrase the topic + State your opinion on the outweigh question</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(168, 85, 247, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</span>
+<strong style="font-size: 1.1rem; color: #1e40af;">Body Paragraph 1 — Descriptive Part</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Address the first question (challenges, effects, benefits, etc.) with 2-3 developed points</p>
+</div>
+
+<div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px dashed rgba(168, 85, 247, 0.2);">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #22c55e; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</span>
+<strong style="font-size: 1.1rem; color: #16a34a;">Body Paragraph 2 — Opinion/Outweigh Part</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">5-6 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Present the other side (benefits if you discussed problems first) and explain why they outweigh or don't outweigh</p>
+</div>
+
+<div>
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+<span style="background: #6366f1; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</span>
+<strong style="font-size: 1.1rem; color: #4f46e5;">Conclusion</strong>
+<span style="font-size: 0.8rem; color: #64748b; margin-left: auto;">1-2 sentences</span>
+</div>
+<p style="margin: 0; padding-left: 2.75rem; color: #475569;">Summarise the descriptive part + Restate your outweigh opinion</p>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Strategic Tip:</strong> State your opinion clearly in the introduction. If you think benefits outweigh drawbacks, discuss the drawbacks in Body 1 (to answer the descriptive question) and then explain why benefits outweigh them in Body 2.
+</div>
+
+<h2>Writing the Introduction</h2>
+
+<p>Your introduction must do three things:</p>
+<ol>
+<li>Paraphrase the topic</li>
+<li>Acknowledge both parts of the question</li>
+<li>State your opinion on the outweigh aspect</li>
+</ol>
+
+<h3>Introduction Templates</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">If Benefits Outweigh</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">If Drawbacks Outweigh</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">While this creates certain challenges, I believe the advantages far outweigh these difficulties.</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Although there are some benefits, I believe the drawbacks significantly outweigh them.</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Despite the problems this may cause, the benefits are, in my view, considerably greater.</td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Despite certain advantages, I would argue that the negative consequences outweigh the positives.</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.75rem 1rem;">I believe the advantages of this trend clearly outweigh the potential disadvantages.</td>
+<td style="padding: 0.75rem 1rem;">In my opinion, the negative effects of this development are more significant than any benefits.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example Introductions</h3>
+
+<div class="example-block">
+<strong>Question:</strong> Working from home has become increasingly common. What challenges does this create for employees? Do you think the benefits outweigh these challenges?
+</div>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Example Introduction (Benefits Outweigh):</strong><br/>
+Remote work has become a defining feature of modern employment, particularly since the global pandemic accelerated this trend. While working from home presents certain challenges for employees, including issues related to isolation and work-life boundaries, I firmly believe that the benefits of this arrangement far outweigh these difficulties.
+</div>
+
+<div style="background: rgba(168, 85, 247, 0.06); border-left: 4px solid #a855f7; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #7c3aed;">Example Introduction (Drawbacks Outweigh):</strong><br/>
+The shift towards home-based work has transformed employment patterns across numerous industries. This essay will examine the challenges that remote workers face and argue that, despite some advantages, these difficulties outweigh the benefits for the majority of employees.
+</div>
+
+<h2>Writing Body Paragraph 1 (Descriptive Part)</h2>
+
+<p>This paragraph directly answers the first question. You should present <strong>2-3 well-developed points</strong> about the challenges, effects, benefits, or whatever the question asks.</p>
+
+<h3>Paragraph Structure</h3>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700; width: 20%;">Element</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700;">Purpose</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(59, 130, 246, 0.3); font-weight: 700; width: 35%;">Example Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Topic Sentence</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Signal you're answering Q1</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">There are several notable challenges... / This development creates multiple difficulties...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Point 1</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">First challenge/effect</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">The primary challenge is... / Firstly...</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Explanation</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Develop the point</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">This means that... / As a result...</td>
+</tr>
+<tr>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Point 2</strong></td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Second challenge/effect</td>
+<td style="padding: 0.875rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">Another significant challenge is... / Additionally...</td>
+</tr>
+<tr style="background: rgba(59, 130, 246, 0.03);">
+<td style="padding: 0.875rem 1rem;"><strong>Example</strong></td>
+<td style="padding: 0.875rem 1rem;">Illustrate with evidence</td>
+<td style="padding: 0.875rem 1rem;">For instance... / Studies have shown that...</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example Body Paragraph 1</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Question: What challenges does working from home create?</strong><br/><br/>
+<strong style="color: #f59e0b;">[Topic Sentence]</strong> Working from home creates several significant challenges for employees. <strong style="color: #3b82f6;">[Point 1]</strong> The most prominent issue is the difficulty of maintaining clear boundaries between professional and personal life. When the home becomes the office, many workers find themselves unable to "switch off," leading to longer working hours and eventual burnout. <strong style="color: #22c55e;">[Point 2]</strong> Another considerable challenge is the sense of isolation and reduced social interaction. Without the casual conversations and collaborative atmosphere of a physical workplace, employees may experience feelings of disconnection from their colleagues and company culture. <strong style="color: #a855f7;">[Example]</strong> Research by Stanford University found that remote workers reported significantly higher levels of loneliness compared to their office-based counterparts.
+</div>
+
+<h2>Writing Body Paragraph 2 (Opinion/Outweigh Part)</h2>
+
+<p>This paragraph addresses the outweigh question. You must:</p>
+<ol>
+<li>Present the other side (benefits if you discussed challenges in Body 1)</li>
+<li>Clearly explain why one outweighs the other</li>
+<li>Use comparative language to show your judgement</li>
+</ol>
+
+<h3>Transition and Opinion Phrases</h3>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.15); border-radius: 10px; padding: 1.25rem;">
+<strong style="color: #16a34a; font-size: 0.9rem; text-transform: uppercase;">Benefits Outweigh</strong>
+<ul style="margin: 0.75rem 0 0 0; padding-left: 1.25rem; line-height: 1.9;">
+<li>Despite these challenges, the benefits are considerably greater</li>
+<li>However, these difficulties are outweighed by...</li>
+<li>Nevertheless, the advantages clearly exceed the drawbacks</li>
+<li>While these issues exist, they pale in comparison to the benefits</li>
+</ul>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15); border-radius: 10px; padding: 1.25rem;">
+<strong style="color: #dc2626; font-size: 0.9rem; text-transform: uppercase;">Drawbacks Outweigh</strong>
+<ul style="margin: 0.75rem 0 0 0; padding-left: 1.25rem; line-height: 1.9;">
+<li>Although there are some benefits, they do not compensate for...</li>
+<li>However, these advantages are insufficient to outweigh...</li>
+<li>Nevertheless, the negative effects far exceed any positives</li>
+<li>While some benefits exist, they are overshadowed by...</li>
+</ul>
+</div>
+
+</div>
+
+<h3>Example Body Paragraph 2</h3>
+
+<div style="background: rgba(34, 197, 94, 0.06); border-left: 4px solid #22c55e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #16a34a;">Showing Benefits Outweigh Challenges:</strong><br/><br/>
+<strong style="color: #f59e0b;">[Transition + Opinion]</strong> Despite these genuine challenges, I believe the benefits of remote work clearly outweigh them. <strong style="color: #3b82f6;">[Benefit 1]</strong> The most significant advantage is the elimination of commuting, which saves employees substantial time and money while reducing stress. Workers can use these extra hours for personal development, family time, or even additional rest, all of which contribute to improved wellbeing. <strong style="color: #22c55e;">[Benefit 2]</strong> Furthermore, remote work offers unprecedented flexibility that allows people to structure their day around their most productive hours and personal obligations. <strong style="color: #a855f7;">[Comparative Judgement]</strong> While isolation is a real concern, it can be mitigated through regular virtual meetings and occasional office visits, whereas the time and energy saved from commuting represents an irreversible daily benefit. The challenges, though present, are largely manageable with proper strategies, making the overall impact of remote work decidedly positive.
+</div>
+
+<h2>Comparative Language for Outweigh Essays</h2>
+
+<p>Strong comparative language is essential for demonstrating your judgement clearly:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+<thead>
+<tr style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));">
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Category</th>
+<th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(168, 85, 247, 0.3); font-weight: 700;">Phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Strong outweigh</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">far outweigh, significantly exceed, considerably greater than, vastly outweigh</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Moderate outweigh</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">outweigh, exceed, are greater than, are more significant than</td>
+</tr>
+<tr style="background: rgba(168, 85, 247, 0.03);">
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);"><strong>Comparison verbs</strong></td>
+<td style="padding: 0.75rem 1rem; border-bottom: 1px solid rgba(100, 116, 139, 0.1);">pale in comparison to, overshadow, compensate for, offset, counterbalance</td>
+</tr>
+<tr>
+<td style="padding: 0.75rem 1rem;"><strong>Qualifying phrases</strong></td>
+<td style="padding: 0.75rem 1rem;">on balance, taking everything into account, when all factors are considered, overall</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Writing the Conclusion</h2>
+
+<p>Your conclusion should summarise <strong>both</strong> parts of the essay:</p>
+<ol>
+<li>Brief summary of the descriptive part (challenges/effects/benefits)</li>
+<li>Restatement of your outweigh opinion</li>
+</ol>
+
+<h3>Conclusion Templates</h3>
+
+<div style="background: rgba(99, 102, 241, 0.06); border-left: 4px solid #6366f1; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #4f46e5;">Template (Benefits Outweigh):</strong><br/>
+In conclusion, while [topic] does create [challenges/problems mentioned], including [brief list], the benefits—particularly [key benefits]—clearly outweigh these difficulties.
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.06); border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #dc2626;">Template (Drawbacks Outweigh):</strong><br/>
+In conclusion, although [topic] offers certain advantages such as [brief list], the drawbacks—especially [key drawbacks]—are too significant to be outweighed by these benefits.
+</div>
+
+<h3>Example Conclusions</h3>
+
+<div style="background: rgba(59, 130, 246, 0.06); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+<strong style="color: #1e40af;">Working from Home (Benefits Outweigh):</strong><br/>
+In conclusion, while remote work does present challenges such as work-life boundary issues and social isolation, the benefits of eliminated commuting, increased flexibility, and improved work-life balance clearly outweigh these difficulties for most employees.
+</div>
+
+<h2>Complete Model Essay</h2>
+
+<div style="background: rgba(30, 58, 138, 0.04); border: 1px solid rgba(30, 58, 138, 0.15); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Question:</p>
+<p style="background: rgba(30, 58, 138, 0.06); padding: 1rem; border-radius: 8px; font-style: italic; margin-bottom: 1.5rem;">Many parents now use smartphones and tablets to keep their children occupied. What negative effects might this have on children? Do you think the benefits of these devices outweigh the drawbacks?</p>
+
+<p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Answer:</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">In the digital age, it has become increasingly common for parents to rely on electronic devices to entertain their children. While this practice raises several concerns about child development, I believe that, with proper management, the advantages of these devices can outweigh their potential negative effects.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">There are several significant negative effects that excessive screen time can have on children. The most concerning is the impact on physical health, as prolonged device use encourages sedentary behaviour and can contribute to obesity, poor posture, and eye strain. Additionally, excessive screen exposure, particularly before bedtime, has been linked to sleep disturbances and difficulty concentrating. Another notable concern is the potential effect on social development. Children who spend significant time on devices may miss opportunities to develop crucial interpersonal skills through face-to-face interaction with peers and family members. Research has indicated that heavy device users often show delayed language development and reduced ability to read social cues.</p>
+
+<p style="margin-bottom: 1rem; line-height: 1.8;">Despite these legitimate concerns, I believe the benefits of smartphones and tablets can outweigh the drawbacks when used appropriately. These devices offer unprecedented educational opportunities, with interactive applications that can teach languages, mathematics, and problem-solving skills in engaging ways that traditional methods cannot match. Furthermore, in today's digital world, early familiarity with technology equips children with essential skills they will need throughout their education and careers. While the health and social concerns are valid, they can be effectively mitigated through parental controls, time limits, and ensuring that device use supplements rather than replaces physical play and human interaction. The key lies not in eliminating these devices but in managing their use wisely.</p>
+
+<p style="margin-bottom: 0; line-height: 1.8;">In conclusion, while smartphones and tablets can negatively affect children's physical health and social development, the educational benefits and digital literacy they provide outweigh these drawbacks, provided parents implement appropriate usage guidelines.</p>
+
+</div>
+
+<p style="font-size: 0.9rem; color: #64748b; text-align: center; margin-top: 0.5rem;"><strong>Word count:</strong> 312 words</p>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">1</span>
+<div>
+<strong style="color: #dc2626;">Not Giving a Clear Opinion</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">The "outweigh" question demands your judgement. Simply listing advantages and disadvantages without stating which side is greater will cost you marks.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">2</span>
+<div>
+<strong style="color: #dc2626;">Forgetting the Descriptive Part</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Some students focus entirely on the outweigh question and forget to properly address the descriptive question (challenges, effects, etc.). Both parts need full coverage.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">3</span>
+<div>
+<strong style="color: #dc2626;">Inconsistent Opinion</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">If you say benefits outweigh drawbacks in the introduction, your conclusion must agree. Don't change your position mid-essay—it suggests unclear thinking.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">4</span>
+<div>
+<strong style="color: #dc2626;">Weak Comparative Language</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Saying "there are more advantages" is weak. Use strong comparative phrases like "far outweigh," "considerably exceed," or "pale in comparison to."</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #dc2626; font-size: 1.25rem; font-weight: bold;">5</span>
+<div>
+<strong style="color: #dc2626;">Not Explaining WHY One Outweighs the Other</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Simply stating your opinion isn't enough. Explain the reasoning—why are the benefits more significant? What makes the drawbacks less impactful?</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2>Tips for Band 7+</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">State Your Opinion Early</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Make your position on the outweigh question clear in the introduction. This shows confident writing and helps structure your essay logically.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Show Both Sides, But Take a Position</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">A balanced essay that acknowledges both perspectives while still clearly stating which side is greater demonstrates sophisticated thinking.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Use Concession Structures</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Phrases like "While X is true, Y is more significant" or "Although X, this is outweighed by Y" show nuanced argument building.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Develop Points with Examples</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">Don't just list points—develop them with explanations and examples. Two well-developed points are better than four superficial ones.</p>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 10px; padding: 1.25rem;">
+<div style="display: flex; align-items: start; gap: 0.75rem;">
+<span style="color: #16a34a; font-size: 1.25rem;">✓</span>
+<div>
+<strong style="color: #16a34a;">Link Body 2 Back to Body 1</strong>
+<p style="margin: 0.5rem 0 0 0; color: #475569;">When making your outweigh argument, refer back to specific points from Body 1. This shows cohesive essay structure and logical thinking.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip">
+<strong>Time Management:</strong> Spend 5 minutes planning both parts of your answer. Allocate roughly 12-15 minutes for each body paragraph and ensure you leave time to write a strong conclusion that addresses both questions.
+</div>
+
+<h2>Quick Reference Checklist</h2>
+
+<div style="background: rgba(168, 85, 247, 0.05); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1.5rem 0;">
+<ul style="margin: 0; padding-left: 1.5rem; line-height: 2;">
+<li>Did I identify both the descriptive AND the outweigh question?</li>
+<li>Does my introduction state my opinion on which side outweighs?</li>
+<li>Does Body Paragraph 1 fully address the descriptive question?</li>
+<li>Does Body Paragraph 2 explain WHY one side outweighs the other?</li>
+<li>Did I use strong comparative language (outweigh, exceed, etc.)?</li>
+<li>Is my opinion consistent throughout the essay?</li>
+<li>Did I acknowledge both sides while maintaining my position?</li>
+<li>Does my conclusion summarise both parts and restate my opinion?</li>
+<li>Did I write at least 250 words?</li>
+</ul>
+</div>
+`,
+    image_url: null,
+    category_id: "2",
+    category_slug: "ielts",
+    author: "Learne Team",
+    published_at: "2026-02-04",
+    updated_at: null,
+    read_time: 20,
+    tags: ["ielts", "writing task 2", "multi-part essay", "outweigh essay", "opinion essay", "band 7", "essay writing"],
+    is_featured: true,
+    is_published: true,
+    display_order: 41,
+    topic: "writing-task-2",
   },
 ];
