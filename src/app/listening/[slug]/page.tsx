@@ -122,6 +122,8 @@ export default async function ListeningVideoPage({ params }: PageProps) {
         name={video.title}
         description={videoDescription}
         thumbnailUrl={thumbnailUrl}
+        uploadDate={new Date(video.created_at).toISOString()}
+        contentUrl={video.youtube_id ? `https://www.youtube.com/watch?v=${video.youtube_id}` : undefined}
         embedUrl={video.youtube_id ? `https://www.youtube.com/embed/${video.youtube_id}` : undefined}
         educationalLevel={video.level || undefined}
       />
