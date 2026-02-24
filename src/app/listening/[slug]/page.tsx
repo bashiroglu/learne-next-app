@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Headphones } from "lucide-react";
+import { ArrowLeft, Headphones, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -160,6 +160,16 @@ export default async function ListeningVideoPage({ params }: PageProps) {
                     {video.topic}
                   </span>
                 )}
+                <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                  <Calendar className="w-3 h-3" />
+                  <time dateTime={new Date(video.created_at).toISOString()}>
+                    {new Date(video.created_at).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </span>
               </div>
             </div>
           </div>
