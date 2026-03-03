@@ -1,27 +1,29 @@
 import { Metadata } from "next";
 import { SpeakingQuestionsContent } from "./speaking-questions-content";
-import { part1Topics, part2Topics, part3Topics } from "./speaking-data";
+import { part1Topics, part2And3Topics } from "./speaking-data";
 
 export const metadata: Metadata = {
-  title: "IELTS Speaking Questions - Practice for All 3 Parts | Learne",
+  title: "IELTS Speaking Questions 2026 - Latest Real Test Questions & Answers | Learne",
   description:
-    "Master your IELTS speaking test with comprehensive practice questions for Part 1 (Introduction), Part 2 (Long Turn), and Part 3 (Discussion). Free sample answers included.",
+    "Practice with the latest IELTS Speaking test questions from January-April 2026. Real exam questions with band 9 sample answers for Part 1, Part 2, and Part 3. Updated weekly with new topics.",
   keywords: [
-    "IELTS speaking questions",
-    "IELTS speaking practice",
-    "IELTS Part 1 questions",
-    "IELTS Part 2 cue cards",
-    "IELTS Part 3 discussion",
-    "IELTS speaking test preparation",
+    "IELTS speaking questions 2026",
+    "IELTS speaking test 2026",
+    "latest IELTS speaking topics",
+    "IELTS speaking real test questions",
+    "IELTS Part 1 questions 2026",
+    "IELTS Part 2 cue cards 2026",
+    "IELTS Part 3 discussion 2026",
     "IELTS speaking sample answers",
-    "IELTS speaking topics",
-    "IELTS interview questions",
-    "IELTS band 7 speaking",
+    "IELTS speaking recent questions",
+    "IELTS band 9 speaking answers",
+    "IELTS speaking forecast 2026",
+    "IELTS speaking topics January 2026",
   ],
   openGraph: {
-    title: "IELTS Speaking Questions - Practice for All 3 Parts | Learne",
+    title: "IELTS Speaking Questions 2026 - Latest Real Test Questions & Answers",
     description:
-      "Master your IELTS speaking test with comprehensive practice questions for Part 1, Part 2, and Part 3. Free sample answers included.",
+      "Practice with the latest IELTS Speaking test questions from 2026. Real exam questions with band 9 sample answers for all 3 parts. Updated weekly.",
     type: "website",
     url: "https://learne.org/speaking-questions",
   },
@@ -39,33 +41,30 @@ function generateFAQSchema() {
     questions.forEach((item) => {
       if (item.answer && item.answer.trim()) {
         faqItems.push({
-          question: `IELTS Speaking Part 1: ${item.question}`,
-          answer: item.answer,
+          question: `IELTS Speaking 2026 Part 1: ${item.question}`,
+          answer: item.answer.replace(/<\/?u>/g, ''),
         });
       }
     });
   });
 
-  // Add Part 2 questions with answers
-  Object.values(part2Topics).forEach((topics) => {
-    topics.forEach((topic) => {
-      if (topic.answer && topic.answer.trim()) {
-        const pointsList = topic.points.join(", ");
-        faqItems.push({
-          question: `IELTS Speaking Part 2: ${topic.title}`,
-          answer: `You should say: ${pointsList}. Sample answer: ${topic.answer}`,
-        });
-      }
-    });
-  });
+  // Add Part 2 & 3 combined topics
+  part2And3Topics.forEach((topic) => {
+    // Add Part 2 question
+    if (topic.answer && topic.answer.trim()) {
+      const pointsList = topic.points.join(", ");
+      faqItems.push({
+        question: `IELTS Speaking 2026 Part 2: ${topic.title}`,
+        answer: `You should say: ${pointsList}. Sample answer: ${topic.answer.replace(/<\/?u>/g, '')}`,
+      });
+    }
 
-  // Add Part 3 questions with answers
-  Object.values(part3Topics).forEach((questions) => {
-    questions.forEach((item) => {
-      if (item.answer && item.answer.trim()) {
+    // Add Part 3 questions
+    topic.part3Questions.forEach((q) => {
+      if (q.answer && q.answer.trim()) {
         faqItems.push({
-          question: `IELTS Speaking Part 3: ${item.question}`,
-          answer: item.answer,
+          question: `IELTS Speaking 2026 Part 3: ${q.question}`,
+          answer: q.answer.replace(/<\/?u>/g, ''),
         });
       }
     });
@@ -93,9 +92,9 @@ function generateCourseSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "IELTS Speaking Practice Questions",
+    name: "IELTS Speaking Questions 2026 - Latest Real Test Questions",
     description:
-      "Comprehensive IELTS speaking practice with questions and sample answers for Part 1 (Introduction), Part 2 (Long Turn/Cue Cards), and Part 3 (Discussion).",
+      "Practice with the latest IELTS Speaking test questions from January-April 2026. Real exam questions with band 9 sample answers for Part 1, Part 2, and Part 3.",
     provider: {
       "@type": "Organization",
       name: "Learne",
@@ -107,15 +106,15 @@ function generateCourseSchema() {
       courseWorkload: "PT2H",
     },
     about: [
-      "IELTS Speaking Test",
+      "IELTS Speaking Test 2026",
+      "IELTS Real Test Questions",
       "English Language Proficiency",
-      "Interview Skills",
     ],
     teaches: [
       "IELTS Speaking Part 1 techniques",
       "IELTS Cue Card responses",
       "IELTS Discussion skills",
-      "English fluency",
+      "Band 9 speaking strategies",
     ],
     isAccessibleForFree: true,
     inLanguage: "en",
@@ -137,7 +136,7 @@ function generateBreadcrumbSchema() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "IELTS Speaking Questions",
+        name: "IELTS Speaking Questions 2026",
         item: "https://learne.org/speaking-questions",
       },
     ],

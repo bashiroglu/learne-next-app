@@ -54,14 +54,14 @@ export default function Home() {
             Practice speaking, reading, and testing in one place. Track your progress, build streaks, and achieve your language learning goals.
           </p>
           
-          <div className="flex items-center justify-center gap-4">
-            <Link href="https://app.learne.org/signup">
-              <Button size="lg" className="text-lg px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="https://app.learne.org/signup" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto text-lg px-8">
                 Start Learning Free
               </Button>
             </Link>
-            <Link href="https://app.learne.org/login">
-              <Button size="lg" variant="outline" className="text-lg px-8">
+            <Link href="https://app.learne.org/login" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8">
                 Sign In
               </Button>
             </Link>

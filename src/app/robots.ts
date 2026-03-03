@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/", "/static/"],
     },
-    sitemap: "https://learne.org/sitemap.xml",
+    sitemap: [
+      "https://learne.org/sitemap.xml",
+      "https://learne.org/video-sitemap.xml",
+    ],
   };
 }
