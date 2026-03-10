@@ -163,7 +163,7 @@ function Part1Content() {
                   <AccordionContent className="px-6 pb-4">
                     {item.answer ? (
                       <p
-                        className="text-muted-foreground leading-relaxed [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
+                        className="text-muted-foreground leading-relaxed font-medium [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
                         dangerouslySetInnerHTML={{ __html: item.answer }}
                       />
                     ) : (
@@ -273,7 +273,7 @@ function Part2Content() {
                             <AccordionContent className="px-4 pb-4">
                               {topic.answer ? (
                                 <p
-                                  className="text-muted-foreground leading-relaxed whitespace-pre-line [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
+                                  className="text-muted-foreground leading-relaxed whitespace-pre-line font-medium [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
                                   dangerouslySetInnerHTML={{ __html: topic.answer }}
                                 />
                               ) : (
@@ -312,7 +312,7 @@ function Part2Content() {
                               <AccordionContent className="px-4 pb-4">
                                 {q.answer ? (
                                   <p
-                                    className="text-muted-foreground leading-relaxed [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
+                                    className="text-muted-foreground leading-relaxed font-medium [&_u]:text-primary [&_u]:font-medium [&_u]:decoration-primary"
                                     dangerouslySetInnerHTML={{ __html: q.answer }}
                                   />
                                 ) : (
@@ -395,6 +395,7 @@ export function SpeakingQuestionsContent() {
 
         {/* Main content */}
         <main className="container mx-auto px-4 py-8 max-w-5xl" itemProp="articleBody">
+          <div className="speaking-content bg-card rounded-2xl shadow-sm border border-border px-6 py-8 md:px-10 md:py-10">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsContent value="part1" className="mt-0">
               <section aria-labelledby="part1-heading">
@@ -413,6 +414,7 @@ export function SpeakingQuestionsContent() {
               </section>
             </TabsContent>
           </Tabs>
+          </div>
         </main>
       </article>
     </div>

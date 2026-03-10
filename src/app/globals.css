@@ -147,7 +147,7 @@ All colors MUST be HSL.
   .prose li {
     display: list-item !important;
     margin: 0.25rem 0 !important;
-    line-height: 1.75 !important;
+    line-height: 1.9 !important;
   }
 
   .prose li::marker {
@@ -157,6 +157,43 @@ All colors MUST be HSL.
 
   .dark .prose li::marker {
     color: #e2e8f0 !important;
+  }
+
+  .prose h2,
+  .speaking-content h2 {
+    font-size: 1.65rem !important;
+  }
+
+  .prose h3,
+  .speaking-content h3 {
+    font-size: 1.35rem !important;
+  }
+
+  .speaking-content h2,
+  .speaking-content h3,
+  .speaking-content h4 {
+    color: #1a1a4e !important;
+  }
+
+  .speaking-content p,
+  .speaking-content li {
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    line-height: 1.85 !important;
+    color: hsl(var(--foreground) / 0.85) !important;
+  }
+
+  .speaking-content button,
+  .speaking-content button span {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: #1a1a4e !important;
+  }
+
+  .prose p,
+  .prose li,
+  .prose .example-block {
+    font-weight: 500 !important;
   }
 
   .prose blockquote {
@@ -171,10 +208,10 @@ All colors MUST be HSL.
 
   /* Blog special elements */
   .example-block {
-    border-left: 4px solid hsl(var(--primary) / 0.4);
+    border-left: 4px solid hsl(0 0% 0% / 0.15);
     padding: 0.75rem 1rem;
     margin: 0.75rem 0;
-    background: hsl(var(--muted) / 0.4);
+    background: hsl(0 0% 0% / 0.03);
     border-radius: 0 0.5rem 0.5rem 0;
   }
 

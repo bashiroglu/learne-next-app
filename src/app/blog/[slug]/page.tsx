@@ -82,11 +82,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       {/* Article Content */}
       <div className="container mx-auto px-4 pb-16">
-        <article className="mx-auto max-w-3xl">
+        <article className="mx-auto max-w-3xl bg-card rounded-2xl shadow-sm px-6 py-10 md:px-10 md:py-12 border border-border">
           <div
             className="prose prose-slate dark:prose-invert max-w-none prose-lg
-              prose-h2:text-[#1a1a4e] dark:prose-h2:text-slate-100 prose-h2:text-[1.75rem] prose-h2:font-extrabold prose-h2:mt-6 prose-h2:mb-2
-              prose-h3:text-[#1a1a4e] dark:prose-h3:text-slate-100 prose-h3:text-[1.35rem] prose-h3:font-bold prose-h3:mt-5 prose-h3:mb-1.5
+              prose-h2:text-[#1a1a4e] dark:prose-h2:text-slate-100 prose-h2:text-[1.35rem] prose-h2:font-extrabold prose-h2:mt-6 prose-h2:mb-2
+              prose-h3:text-[#1a1a4e] dark:prose-h3:text-slate-100 prose-h3:text-[1.15rem] prose-h3:font-bold prose-h3:mt-5 prose-h3:mb-1.5
               prose-p:text-foreground/85 prose-p:leading-[1.8] prose-p:my-2
               prose-li:text-foreground/85 prose-li:my-0.5 prose-li:leading-[1.8]
               prose-strong:text-foreground prose-strong:font-semibold
